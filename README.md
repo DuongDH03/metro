@@ -3,6 +3,8 @@
 Interactive, data-driven map of current and future urban rail networks: **Hanoi, Ho Chi Minh City, Tokyo and Singapore**.
 See what runs today, what is being built, and what is planned, and watch the network grow year by year.
 
+**Live: https://duongdh03.github.io/metro/** (deployed from `main` by GitHub Actions; e.g. [/#hanoi](https://duongdh03.github.io/metro/#hanoi), [/#tokyo](https://duongdh03.github.io/metro/#tokyo)).
+
 React + TypeScript + Vite + MapLibre GL, on a keyless CARTO/OpenStreetMap basemap.
 
 ![Hanoi's full planned network (2045+) in dark mode: line tree on the left, network stats, legend](docs/images/hanoi-2045.webp)
