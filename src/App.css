@@ -990,6 +990,9 @@ h3 {
   margin: 0;
   padding: 0;
 }
+.station-lines .line-btn {
+  width: 100%; /* buttons shrink-to-fit; stretch so long names ellipsize instead of scrolling */
+}
 .station-lines .line-btn:hover {
   background: var(--hover);
 }

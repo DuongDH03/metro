@@ -89,3 +89,25 @@ const CJK = /[぀-ヿ㐀-䶿一-鿿가-힯ｦ-ﾟ]/;
 export function hasCJK(s: string | undefined): boolean {
   return !!s && CJK.test(s);
 }
+
+type Named = { name: string; nameLocal?: string };
+
+/** The name shown first everywhere: the local-language name (Cầu Giấy, 新宿) when there is one. */
+export function primaryName(x: Named): string {
+  return x.nameLocal?.trim() || x.name;
+}
+
+/** The English / romanised name, shown as the secondary name in detail cards (undefined if same). */
+export function secondaryName(x: Named): string | undefined {
+  const local = x.nameLocal?.trim();
+  return local && local !== x.name ? x.name : undefined;
+}
+
+/**
+ * Map label: the local name. Non-Latin scripts (Japanese, Korean, Chinese) also get the romanised
+ * name on a second line, since most viewers can't read them; Latin-script names (Vietnamese) don't.
+ */
+export function mapLabel(x: Named): string {
+  const second = secondaryName(x);
+  return second && hasCJK(x.nameLocal) ? `${primaryName(x)}\n${second}` : primaryName(x);
+}

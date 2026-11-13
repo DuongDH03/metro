@@ -1,6 +1,7 @@
 import { useEffect, useRef, useState } from 'react';
 import type { Line } from '../types';
 import type { GroupNode } from '../lib/geo';
+import { primaryName, secondaryName } from '../lib/text';
 import { LineBullet, StatusBadge, Icon } from './bits';
 
 interface Props {
@@ -80,7 +81,9 @@ export default function GroupTree(props: Props) {
         <button type="button" className="line-btn" onClick={() => props.onSelectLine(line.id)}>
           <LineBullet line={line} />
           <span className="line-text">
-            <span className="line-name">{line.name}</span>
+            <span className="line-name" title={secondaryName(line)}>
+              {primaryName(line)}
+            </span>
             <span className="line-meta">
               <StatusBadge status={line.status} short />
               {year && <span className="line-year">{year}</span>}

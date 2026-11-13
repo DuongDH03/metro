@@ -5,7 +5,7 @@
 import type { Feature, FeatureCollection, LineString, Point } from 'geojson';
 import type { CityData, Group, Line, LngLat, Station, Status } from '../types';
 import { STATUS_ORDER } from '../types';
-import { compact, hasCJK, normalize, safeColor } from './text';
+import { compact, mapLabel, normalize, safeColor } from './text';
 
 export type BBox = [number, number, number, number]; // west, south, east, north
 
@@ -217,8 +217,7 @@ function buildGeoUncached(city: CityData): GeoModel {
     stations.push(info);
     stationIdx.set(st.id, idx);
     const first = lines.length ? lineById.get(lines[0]) : undefined;
-    const label =
-      st.nameLocal && st.nameLocal !== st.name && hasCJK(st.nameLocal) ? `${st.name}\n${st.nameLocal}` : st.name;
+    const label = mapLabel(st);
     stationFeatures.push({
       type: 'Feature',
       id: idx,

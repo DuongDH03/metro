@@ -1,6 +1,6 @@
 import { useId, useMemo, useState } from 'react';
 import type { GeoModel } from '../lib/geo';
-import { compact, normalize } from '../lib/text';
+import { compact, normalize, primaryName, secondaryName } from '../lib/text';
 import { LineBullet, Icon } from './bits';
 
 type Result = { kind: 'station'; idx: number; score: number } | { kind: 'line'; id: string; score: number };
@@ -122,7 +122,10 @@ export default function SearchBox({ geo, onPickStation, onPickLine }: Props) {
                   onClick={() => pick(r)}
                 >
                   <LineBullet line={line} size="sm" />
-                  <span className="sr-name">{line.name}</span>
+                  <span className="sr-name">
+                    {primaryName(line)}
+                    {secondaryName(line) && <span className="local"> {secondaryName(line)}</span>}
+                  </span>
                   <span className="sr-kind">line</span>
                 </li>
               );
@@ -146,10 +149,8 @@ export default function SearchBox({ geo, onPickStation, onPickLine }: Props) {
                   })}
                 </span>
                 <span className="sr-name">
-                  {st.station.name}
-                  {st.station.nameLocal && st.station.nameLocal !== st.station.name && (
-                    <span className="local"> {st.station.nameLocal}</span>
-                  )}
+                  {primaryName(st.station)}
+                  {secondaryName(st.station) && <span className="local"> {secondaryName(st.station)}</span>}
                 </span>
                 {st.station.codes?.length ? <span className="sr-kind">{st.station.codes.slice(0, 2).join(' · ')}</span> : null}
               </li>

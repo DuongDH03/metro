@@ -2,7 +2,7 @@ import type { ReactNode } from 'react';
 import type { Line, Source } from '../types';
 import type { GeoModel } from '../lib/geo';
 import { groupPath, STATUS_RANK } from '../lib/geo';
-import { formatKm } from '../lib/text';
+import { formatKm, primaryName, secondaryName } from '../lib/text';
 import { Icon, LineBullet, StatusBadge } from './bits';
 
 export type Selection = { kind: 'line'; id: string } | { kind: 'station'; idx: number } | null;
@@ -58,7 +58,7 @@ function LineDetail({ geo, line, onSelectStation }: { geo: GeoModel; line: Line;
   for (const seg of line.segments) for (const id of seg.stations) if (!stationIds.includes(id)) stationIds.push(id);
   const stationName = (id: string) => {
     const idx = geo.stationIdx.get(id);
-    return idx === undefined ? id : geo.stations[idx].station.name;
+    return idx === undefined ? id : primaryName(geo.stations[idx].station);
   };
 
   return (
@@ -66,8 +66,8 @@ function LineDetail({ geo, line, onSelectStation }: { geo: GeoModel; line: Line;
       <div className="card-title">
         <LineBullet line={line} size="lg" />
         <div>
-          <h2>{line.name}</h2>
-          {line.nameLocal && line.nameLocal !== line.name && <div className="local">{line.nameLocal}</div>}
+          <h2>{primaryName(line)}</h2>
+          {secondaryName(line) && <div className="local">{secondaryName(line)}</div>}
         </div>
       </div>
       <div className="card-tags">
@@ -125,7 +125,7 @@ function LineDetail({ geo, line, onSelectStation }: { geo: GeoModel; line: Line;
               return (
                 <li key={id}>
                   <button type="button" className="link-btn" onClick={() => onSelectStation(idx)}>
-                    {st.station.name}
+                    {primaryName(st.station)}
                   </button>
                   {st.interchange && (
                     <span className="mini-bullets">
@@ -180,8 +180,8 @@ function StationDetail({
       <div className="card-title">
         <span className={`station-glyph${st.interchange ? ' is-ic' : ''}${s.approx ? ' is-approx' : ''}`} />
         <div>
-          <h2>{s.name}</h2>
-          {s.nameLocal && s.nameLocal !== s.name && <div className="local">{s.nameLocal}</div>}
+          <h2>{primaryName(s)}</h2>
+          {secondaryName(s) && <div className="local">{secondaryName(s)}</div>}
         </div>
       </div>
       <div className="card-tags">
@@ -208,7 +208,7 @@ function StationDetail({
             >
               <LineBullet line={line} />
               <span className="line-text">
-                <span className="line-name">{line.name}</span>
+                <span className="line-name">{primaryName(line)}</span>
                 <span className="line-meta">
                   <StatusBadge status={status} short />
                   {year !== undefined && <span className="line-year">{year}</span>}

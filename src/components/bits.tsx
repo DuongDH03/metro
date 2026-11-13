@@ -10,7 +10,7 @@ export function LineBullet({ line, size = 'md' }: { line: Line; size?: 'sm' | 'm
       className={`bullet bullet-${size}${code.length > 2 ? ' bullet-wide' : ''}${code ? '' : ' bullet-empty'}`}
       style={{ background: bg, color: fg }}
       aria-hidden="true"
-      title={line.name}
+      title={line.nameLocal || line.name}
     >
       {code}
     </span>
