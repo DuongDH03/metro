@@ -35,6 +35,11 @@ export interface CityIndexEntry {
   file: string;
   center: LngLat;
   zoom: number;
+  /**
+   * [west, south, east, north] covering the city's network. Lets the app suggest switching city
+   * when the user pans into another city's area. Kept up to date by `npm run index`.
+   */
+  bbox?: [number, number, number, number];
 }
 
 export interface CityData {

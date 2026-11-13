@@ -232,6 +232,8 @@ async function runCity(configFile: string, flags: Flags): Promise<RunResult> {
     const out = join(ROOT, 'public/data', `${config.id}.json`);
     writeFileSync(out, json);
     upsertIndex(entry);
+    // Refresh every city's bbox (used for "switch to this city" suggestions when panning).
+    spawnSync(process.execPath, [join(ROOT, 'scripts/update-index.mjs')], { stdio: 'ignore' });
     console.log(`  wrote ${rel(out)} and updated ${rel(join(ROOT, 'public/data/cities.json'))}`);
     status = spawnSync(process.execPath, [VALIDATOR, config.id], { stdio: 'inherit' }).status ?? 1;
   }

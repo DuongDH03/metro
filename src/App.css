@@ -1287,6 +1287,113 @@ h3 {
 }
 
 /* ---------- Medium screens: avoid card / year badge collision ---------- */
+/* ---- "this area has a metro map" suggestion ---- */
+.city-suggest {
+  position: absolute;
+  z-index: 7;
+  bottom: 40px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: min(400px, calc(100% - 2 * var(--gap)));
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  padding: 6px;
+  background: var(--panel-solid);
+  animation: cs-in 180ms ease-out;
+}
+.app.sidebar-open .city-suggest {
+  /* centre over the visible map, not under the sidebar */
+  left: calc(50% + var(--sidebar-w) / 2);
+  width: min(400px, calc(100% - var(--sidebar-w) - 4 * var(--gap)));
+}
+@keyframes cs-in {
+  from {
+    opacity: 0;
+    transform: translate(-50%, 6px);
+  }
+}
+.cs-main {
+  flex: 1;
+  min-width: 0;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  padding: 6px 8px;
+  border: 0;
+  border-radius: 9px;
+  background: transparent;
+  color: var(--text);
+  text-align: left;
+  cursor: pointer;
+}
+.cs-main:hover {
+  background: var(--hover);
+}
+.cs-icon {
+  flex: none;
+  display: inline-grid;
+  place-items: center;
+  width: 32px;
+  height: 32px;
+  border-radius: 9px;
+  color: var(--accent);
+  background: color-mix(in srgb, var(--accent) 14%, transparent);
+}
+.cs-text {
+  flex: 1;
+  min-width: 0;
+  display: flex;
+  flex-direction: column;
+}
+.cs-title {
+  font-weight: 650;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+.cs-title .local {
+  font-weight: 450;
+  color: var(--muted);
+}
+.cs-sub {
+  font-size: 12.5px;
+  color: var(--muted);
+}
+.cs-go {
+  flex: none;
+  padding: 6px 10px;
+  border-radius: 8px;
+  font-size: 13px;
+  font-weight: 600;
+  color: var(--accent-text);
+  background: var(--accent);
+}
+.cs-close {
+  flex: none;
+  width: 32px;
+  height: 32px;
+  box-shadow: none;
+  background: transparent;
+  border-color: transparent;
+}
+@media (max-width: 767px) {
+  /* phones: below the year badge, clear of the toolbar column on the right */
+  .city-suggest,
+  .app.sidebar-open .city-suggest {
+    top: 100px;
+    bottom: auto;
+    left: var(--gap);
+    right: calc(2 * var(--gap) + 38px);
+    width: auto;
+    transform: none;
+    animation: none;
+  }
+  .cs-sub {
+    display: none;
+  }
+}
+
 @media (max-width: 1120px) and (min-width: 768px) {
   .app.card-open.sidebar-open .year-badge {
     display: none;

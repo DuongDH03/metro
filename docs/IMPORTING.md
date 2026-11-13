@@ -365,6 +365,8 @@ so the number of cities doesn't affect load time.
 
 ### Many cities
 - `public/data/cities.json` is the registry; the importer upserts entries and keeps the order. Reorder by hand.
+  Each entry carries a `bbox` for the "switch to this city" prompt when panning; `npm run index` refreshes
+  all of them after you edit data by hand.
 - Past ~12 cities the switcher should group by `country` (small UI change in `Sidebar.tsx`; not done yet).
 - Keep one research note per city (`research/<id>.md`): what's official vs approximate, open questions, the
   date researched. Future you needs this when a plan changes.

@@ -2,7 +2,9 @@
 
 The app renders whatever is in `public/data/`. Nothing city-specific is in the React code.
 
-- `public/data/cities.json`: list of cities (`CityIndexEntry[]`)
+- `public/data/cities.json`: list of cities (`CityIndexEntry[]`). Each entry's `bbox` (the area its network covers) lets the app
+  offer "this area has a metro map" when you pan into another city; `npm run index` recomputes it
+  (the `data:*` scripts and the importer do this automatically).
 - `public/data/<city>.json`: one `CityData` document per city
 
 To import or maintain cities, see [docs/IMPORTING.md](docs/IMPORTING.md).

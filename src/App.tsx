@@ -17,6 +17,8 @@ import { MAX_IMPORT_BYTES, importErrorMessage, runImport, stem, type ImportedCit
 import { downloadCityJson } from './lib/download';
 import { useFileDrop } from './lib/useFileDrop';
 import type { BBox } from './lib/geo';
+import { pruneDismissed, suggestCity, type MapView as CameraView } from './lib/nearbyCity';
+import CitySuggestion from './components/CitySuggestion';
 import './App.css';
 
 type CityState =
@@ -124,7 +126,10 @@ export default function App() {
       window.history.replaceState(null, '', url);
     }
   }, [cityId]);
-  const selectCity = useCallback((id: string) => {
+  // City switched from the "this area has a metro map" prompt: keep the camera where the user is.
+  const keepCameraFor = useRef<string | null>(null);
+  const selectCity = useCallback((id: string, keepCamera = false) => {
+    keepCameraFor.current = keepCamera ? id : null;
     if (id !== readHash()) {
       const url = `${window.location.pathname}${window.location.search}#${encodeURIComponent(id)}`;
       window.history.pushState(null, '', url);
@@ -254,7 +259,7 @@ export default function App() {
 
   // Move the camera when a city is chosen / loaded.
   useEffect(() => {
-    if (entry) mapApi.current?.jumpTo(entry.center, entry.zoom);
+    if (entry && keepCameraFor.current !== entry.id) mapApi.current?.jumpTo(entry.center, entry.zoom);
   }, [entry]);
   // Line ids to frame once the next city model is built (lines merged in from a GeoJSON / KML import).
   const pendingFit = useRef<string[] | null>(null);
@@ -277,8 +282,27 @@ export default function App() {
         return;
       }
     }
+    if (keepCameraFor.current === geo.city.id) {
+      keepCameraFor.current = null;
+      return;
+    }
     mapApi.current?.jumpTo(geo.city.center, geo.city.zoom);
   }, [geo]);
+
+  // ---- "this area has a metro map" suggestion while panning ----
+  const [camera, setCamera] = useState<CameraView | null>(null);
+  const [dismissedCities, setDismissedCities] = useState<ReadonlySet<string>>(EMPTY);
+  const onViewChange = useCallback(
+    (v: CameraView) => {
+      setCamera(v);
+      if (cities) setDismissedCities((d) => pruneDismissed(d, cities, v));
+    },
+    [cities],
+  );
+  const suggestion = useMemo(
+    () => (cities && entry ? suggestCity(cities, entry, camera, dismissedCities) : null),
+    [cities, entry, camera, dismissedCities],
+  );
 
   const selectLine = useCallback(
     (id: string) => {
@@ -467,7 +491,17 @@ export default function App() {
         onSelectLine={selectLine}
         onSelectStation={selectStation}
         onClearSelection={clearSelection}
+        onViewChange={onViewChange}
       />
+
+      {suggestion && !banner && (
+        <CitySuggestion
+          key={suggestion.id}
+          city={suggestion}
+          onShow={() => selectCity(suggestion.id, true)}
+          onDismiss={() => setDismissedCities((d) => new Set(d).add(suggestion.id))}
+        />
+      )}
 
       <Sidebar
         open={sidebarOpen}

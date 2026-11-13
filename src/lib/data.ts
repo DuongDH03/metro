@@ -75,6 +75,10 @@ export async function loadCityIndex(): Promise<CityIndexEntry[]> {
       file: c.file,
       center: isCoord(c.center) ? [c.center[0], c.center[1]] : [0, 0],
       zoom: isNum(c.zoom) ? c.zoom : 10,
+      bbox:
+        Array.isArray(c.bbox) && c.bbox.length === 4 && c.bbox.every(isNum) && c.bbox[0] < c.bbox[2] && c.bbox[1] < c.bbox[3]
+          ? [c.bbox[0], c.bbox[1], c.bbox[2], c.bbox[3]]
+          : undefined,
     });
   }
   if (wantsFixture() && !list.some((c) => c.id === FIXTURE_ENTRY.id)) list.push(FIXTURE_ENTRY);

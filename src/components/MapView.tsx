@@ -56,6 +56,8 @@ interface Props {
   onSelectLine(lineId: string): void;
   onSelectStation(idx: number): void;
   onClearSelection(): void;
+  /** Called after every pan / zoom (and once on load) with the visible bounds and zoom. */
+  onViewChange?(view: { center: LngLat; bounds: BBox; zoom: number }): void;
 }
 
 type StateMap = Map<number, string>;
@@ -173,6 +175,17 @@ export default function MapView(props: Props) {
 
     map.on('style.load', () => setupOverlay(map));
     map.on('error', (e) => console.warn('[map]', e.error?.message ?? e));
+    const reportView = () => {
+      const c = map.getCenter();
+      const b = map.getBounds();
+      propsRef.current.onViewChange?.({
+        center: [c.lng, c.lat],
+        bounds: [b.getWest(), b.getSouth(), b.getEast(), b.getNorth()],
+        zoom: map.getZoom(),
+      });
+    };
+    map.on('moveend', reportView);
+    map.once('load', reportView);
 
     const hitLayers = () => [LAYER.stations, LAYER.hit].filter((id) => map.getLayer(id));
     const box = (p: { x: number; y: number }, r: number): [PointLike, PointLike] => [
