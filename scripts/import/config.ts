@@ -53,6 +53,15 @@ export function loadConfig(file: string, root: string): LoadedConfig {
   }
   if (config.timeline && config.timeline.min > config.timeline.max) problems.push('timeline: min is greater than max');
   const groupIds = new Set((config.groups ?? []).map((g) => g.id));
+  // A group may nest under one of the base dataset's groups (e.g. Tokyo's "subway").
+  if (config.base && existsSync(join(root, config.base))) {
+    try {
+      const base = JSON.parse(readFileSync(join(root, config.base), 'utf8')) as { groups?: { id: string }[] };
+      for (const g of base.groups ?? []) groupIds.add(g.id);
+    } catch {
+      /* unreadable base: reported when the import loads it */
+    }
+  }
   (config.groups ?? []).forEach((g, i) => {
     if (g.parent && !groupIds.has(g.parent)) problems.push(`groups[${i}].parent: unknown group "${g.parent}"`);
   });

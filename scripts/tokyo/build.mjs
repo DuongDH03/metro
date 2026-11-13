@@ -1,16 +1,19 @@
 #!/usr/bin/env node
-// Builds public/data/tokyo.json from OpenStreetMap route relations (via Overpass)
-// plus the curated metadata in ./lines.mjs.
+// Builds the curated Tokyo core (JR, Shinkansen, Tokyo Metro, Toei, projects) into
+// scripts/tokyo/out/tokyo-core.json from OpenStreetMap route relations (via Overpass)
+// plus the curated metadata in ./lines.mjs. The importer then layers the private railways
+// on top (cities/tokyo/city.config.json, `base`) and writes public/data/tokyo.json:
+// `npm run data:tokyo` runs both steps.
 // Usage (from repo root): node scripts/tokyo/build.mjs [--debug]
 // Raw Overpass responses are cached in scripts/tokyo/.cache/ (delete to refresh).
-import { writeFileSync } from 'node:fs';
+import { mkdirSync, writeFileSync } from 'node:fs';
 import { join, dirname } from 'node:path';
 import { fileURLToPath } from 'node:url';
 import { overpass } from './overpass.mjs';
 import { BBOX, GROUPS, SOURCES, LINES, NAME_ALIASES, EN_OVERRIDES } from './lines.mjs';
 
 const root = join(dirname(fileURLToPath(import.meta.url)), '..', '..');
-const OUT = join(root, 'public', 'data', 'tokyo.json');
+const OUT = join(root, 'scripts', 'tokyo', 'out', 'tokyo-core.json');
 const DEBUG = process.argv.includes('--debug');
 const UPDATED = '2026-11-13';
 const SIMPLIFY_M = 15;
@@ -532,6 +535,7 @@ async function main() {
       'Not included: private railways (Tokyu, Odakyu, Keio, Seibu, Tobu, Keisei, Keikyu, Sotetsu, TX, Rinkai Line), monorails/AGT, and the Tama Monorail extension (construction, FY2034).',
   };
   const json = JSON.stringify(data);
+  mkdirSync(dirname(OUT), { recursive: true });
   writeFileSync(OUT, json);
   console.log(`wrote ${OUT}: ${outLines.length} lines, ${stations.length} stations, ${(json.length / 1024).toFixed(0)} KB`);
 }

@@ -390,6 +390,13 @@ export const importOsm: Adapter<OsmSpec> = async (spec, ctx) => {
           }
         }
       }
+      // A stop_area may hold a differently named station object (a station building, another
+      // operator's station): prefer a station named like the stop itself when there is one nearby.
+      if (st && ownName) {
+        const nk = nameKey(ownName);
+        const named = (s: OsmElement) => nameKey(cleanStationName(s.tags?.name)) === nk || nameKey(cleanStationName(latinName(s.tags))) === nk;
+        if (!named(st)) st = nearestStation(c, nk, STATION_RADIUS_M) ?? st;
+      }
     }
     if (!st && ownName) st = nearestStation(c, nameKey(ownName), STATION_RADIUS_M);
     if (!st && !ownName) st = nearestStation(c, undefined, 150);
@@ -523,9 +530,13 @@ export const importOsm: Adapter<OsmSpec> = async (spec, ctx) => {
     const pieces = rts.flatMap((r) => splitPieces(r, warn));
     const keysOf = (p: Piece) => p.route.stops.slice(p.from, p.to + 1).map((s) => s.key);
     const statusRank = (p: Piece) => (p.route.status ? 1 : 0);
+    // Routes whose track could not be followed (no geometry, or stops far off it) come last, so a
+    // variant with complete geometry becomes the main segment.
+    const pathRank = (p: Piece) => (!p.route.match ? 2 : p.route.match.off.some((d) => d > 1000) ? 1 : 0);
     pieces.sort(
       (a, b) =>
         statusRank(a) - statusRank(b) ||
+        pathRank(a) - pathRank(b) ||
         new Set(keysOf(b)).size - new Set(keysOf(a)).size ||
         Number(b.loop) - Number(a.loop) ||
         a.route.rel.id - b.route.rel.id,
@@ -666,6 +677,21 @@ function buildChain(route: Route, ways: LngLat[][], warn: (m: string) => void) {
   }
   // Closed ring + loop service: rotate the ring to start at the first stop.
   const loop = route.stops.length > 2 && route.stops[0].key === route.stops[route.stops.length - 1].key;
+  // Stops listed out of order in OSM (e.g. one stop appended at the end of the member list): when the
+  // monotone match leaves stops far from the track but every stop lies on it, order them along the track.
+  if (!loop && match.off.some((d) => d > REORDER_M)) {
+    const free = track.map((p) => projectOnPath(chain, p));
+    if (free.every((f) => f.d <= REORDER_M)) {
+      const order = route.stops.map((s, i) => ({ s, pos: free[i].pos })).sort((a, b) => a.pos - b.pos);
+      const stops: Stop[] = [];
+      for (const { s } of order) if (stops[stops.length - 1]?.key !== s.key) stops.push(s);
+      if (stops.length >= 2) {
+        route.stops = stops;
+        match = matchStops(chain, stops.map((s) => s.track));
+        warn(`${route.name} (relation ${route.rel.id}): stops are out of order in OSM, reordered along the track`);
+      }
+    }
+  }
   if (loop && distM(chain[0], chain[chain.length - 1]) < 100) {
     const m0 = matchStops(chain, [track[0]]);
     const i = m0.idx[0];
@@ -683,6 +709,27 @@ function buildChain(route: Route, ways: LngLat[][], warn: (m: string) => void) {
   }
   route.chain = chain;
   route.match = match;
+}
+
+/** Stops farther than this from the monotone match trigger reordering along the track. */
+const REORDER_M = 300;
+
+/** Closest point of the path to p: distance and position along the path (segment index + fraction). */
+function projectOnPath(path: LngLat[], p: LngLat): { d: number; pos: number } {
+  const proj = projector(p[1]);
+  const q = proj(p);
+  let best = { d: Infinity, pos: 0 };
+  for (let i = 0; i < path.length - 1; i++) {
+    const a = proj(path[i]);
+    const b = proj(path[i + 1]);
+    const dx = b[0] - a[0];
+    const dy = b[1] - a[1];
+    const l2 = dx * dx + dy * dy;
+    const t = l2 ? Math.max(0, Math.min(1, ((q[0] - a[0]) * dx + (q[1] - a[1]) * dy) / l2)) : 0;
+    const d = Math.hypot(a[0] + t * dx - q[0], a[1] + t * dy - q[1]);
+    if (d < best.d) best = { d, pos: i + t };
+  }
+  return best;
 }
 
 function distToPath(path: LngLat[], p: LngLat): number {

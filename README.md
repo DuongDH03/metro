@@ -42,7 +42,7 @@ length, target year, sections with their own status, interchanges, and sources.
 ## Features
 
 - City switcher, light/dark basemap (follows your system theme, toggle in the top-right)
-- Group tree with checkboxes (Tokyo: JR > JR East / Shinkansen, Subway > Tokyo Metro / Toei / planned)
+- Group tree with checkboxes (Tokyo: JR > JR East / Shinkansen, Subway > Tokyo Metro / Toei / Yokohama / planned, Private railways > Tokyu / Odakyu / Keio / Seibu / Tobu / Keisei / Keikyu / Sotetsu / third-sector / monorail & AGT)
 - Status filters: operating / under construction / approved / planned / proposed, each drawn differently
 - Timeline slider with Play that animates the network growing year by year, with live line/station/km stats
 - Station & line search (diacritics-insensitive), line and station detail cards with sources
@@ -80,7 +80,7 @@ Nothing city-specific is in the React code. Everything comes from `public/data/*
 |---|---|---|
 | Hanoi | `npm run data:hanoi` | [research/hanoi.md](research/hanoi.md) |
 | HCMC | `npm run data:hcmc` | [research/hcmc.md](research/hcmc.md) |
-| Tokyo | `npm run data:tokyo` | [research/tokyo.md](research/tokyo.md) |
+| Tokyo | `npm run data:tokyo` (curated JR / subway core in [scripts/tokyo/](scripts/tokyo/), then the importer adds private railways from [cities/tokyo/](cities/tokyo/)) | [research/tokyo.md](research/tokyo.md) |
 | Singapore | `npm run import -- singapore` (importer, [cities/singapore/](cities/singapore/)) | [research/singapore.md](research/singapore.md) |
 
 Curated line tables live in each `scripts/<city>/` folder; operating track geometry comes from OpenStreetMap (Overpass).

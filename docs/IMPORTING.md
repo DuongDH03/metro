@@ -36,7 +36,9 @@ and what to watch as the project grows. The data contract itself (fields, status
   app exactly as the CLI would build it.
 
 Hanoi, HCMC and Tokyo predate the importer and keep their own hand-tuned pipelines in `scripts/<city>/`
-(see section 3). Everything new should go through the importer.
+(see section 3). Tokyo is a hybrid: its curated core (JR, Shinkansen, Tokyo Metro, Toei) is built by
+`scripts/tokyo/`, and the importer layers the private railways on top of it (`cities/tokyo/`, `base`).
+Everything new should go through the importer.
 
 ## 2. Pick your path
 
@@ -61,10 +63,18 @@ These three are curated by hand from research (official plans, operator sites, p
 |---|---|---|---|
 | Hanoi | [scripts/hanoi/lines.mjs](../scripts/hanoi/lines.mjs) (`STATIONS`, `LINES`, `SOURCES`) | `npm run data:hanoi` | [research/hanoi.md](../research/hanoi.md) |
 | HCMC | [scripts/hcmc/build-hcmc.mjs](../scripts/hcmc/build-hcmc.mjs) (`S(...)` station calls, `LINES`, `SOURCES`) | `npm run data:hcmc` | [research/hcmc.md](../research/hcmc.md) |
-| Tokyo | [scripts/tokyo/lines.mjs](../scripts/tokyo/lines.mjs) (`LINES`, `GROUPS`, `SOURCES`) | `npm run data:tokyo` | [research/tokyo.md](../research/tokyo.md) |
+| Tokyo (curated core + importer layer) | JR / Shinkansen / Tokyo Metro / Toei: [scripts/tokyo/lines.mjs](../scripts/tokyo/lines.mjs) (`LINES`, `GROUPS`, `SOURCES`). Private railways, third-sector lines, monorails/AGT/trams, Yokohama subway and their future projects: [cities/tokyo/city.config.json](../cities/tokyo/city.config.json) + [cities/tokyo/future-private.geojson](../cities/tokyo/future-private.geojson) | `npm run data:tokyo` | [research/tokyo.md](../research/tokyo.md) |
 
 Each `data:*` command rebuilds the JSON and runs the validator. Rebuilding with no edits produces a
-byte-identical file, so any diff you see is your change.
+byte-identical file, so any diff you see is your change (for Tokyo, only the `updated` date changes when
+the importer layer is rebuilt on another day).
+
+**Tokyo's two layers.** `node scripts/tokyo/build.mjs` writes the curated core to
+`scripts/tokyo/out/tokyo-core.json` (committed, so the importer step needs no network). `npm run import -- tokyo`
+then reads it as `base`, adds the OSM private-railway imports and the drawn projects, merges stations into
+shared interchanges by name, and writes `public/data/tokyo.json`. `npm run data:tokyo` runs both. Edit JR /
+subway data in `lines.mjs`, everything else in `cities/tokyo/`. To pull newer OSM data for the private
+railways use `npm run import -- tokyo --refresh` (or delete `cities/tokyo/.cache/`).
 
 ### Common edits
 
@@ -346,7 +356,7 @@ as warnings, so typos don't fail silently.
 ### Size budgets (per city file)
 | Size | Status | Action |
 |---|---|---|
-| < 1 MB | Good (all current cities are < 200 KB) | none |
+| < 1 MB | Good (Tokyo with private railways is the largest, see research/tokyo.md) | none |
 | 1–4 MB | OK; slower first load on mobile | raise `simplifyMeters` to 25–40 |
 | > 4 MB | Too big | raise simplification, split into two cities (e.g. "Tokyo – private railways"), or trim the bbox |
 
@@ -359,9 +369,12 @@ so the number of cities doesn't affect load time.
 - **Prefer `groupBy: "route_master"`** (default) so services sharing a line (express/local) collapse into one
   line; switch to `"route"` only when services really are separate lines.
 - **Clip with `bbox`** to keep regional lines from running 200 km into the countryside.
-- For something like adding Tokyo's private railways (Tokyu, Odakyu, Keio, Seibu…), add a new importer city
-  with `base: "public/data/tokyo.json"` and one `osm` import per operator group. Tokyo's curated file stays
-  untouched.
+- **Layer a curated core and an importer config.** Tokyo does this: `scripts/tokyo/build.mjs` writes the
+  hand-curated JR / subway core to `scripts/tokyo/out/tokyo-core.json`, and `cities/tokyo/city.config.json`
+  uses it as `base` with one `osm` import per private operator (Tokyu, Odakyu, Keio, Seibu, Tobu, Keisei,
+  Keikyu, Sotetsu, third-sector, monorail/AGT), nested under a `private` group. Station names match across the
+  layers, so Shibuya, Shinjuku, Yokohama etc. become one interchange. Groups may nest under a base group
+  (`"parent": "subway"`).
 
 ### Many cities
 - `public/data/cities.json` is the registry; the importer upserts entries and keeps the order. Reorder by hand.
@@ -390,7 +403,7 @@ app, create `cities/<id>/` with that file as a `geojson` import, then delete `sc
 
 | Message | Meaning / fix |
 |---|---|
-| `"hanoi" is built by its own pipeline` | Use `npm run data:hanoi` (section 3). |
+| `"hanoi" is built by its own pipeline` | Use `npm run data:hanoi` (section 3). (Tokyo has a `cities/tokyo/` config, so `npm run import -- tokyo` works; it rebuilds only the private-railway layer on top of the committed core.) |
 | `no station within 150 m of the start, added approximate station` | Line end has no Point; add one there, or set `from`/`to`. |
 | `station "X" is not near any line` | The point is >150 m from every drawing: move it, set `line`, or raise `options.snapMeters`. |
 | `fewer than 2 distinct stations, dropped` | All stations of a segment merged into one; usually two points with the same name close together. |

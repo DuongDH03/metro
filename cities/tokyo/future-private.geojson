@@ -1,0 +1,132 @@
+{
+  "type": "FeatureCollection",
+  "features": [
+    {
+      "type": "Feature",
+      "properties": {
+        "line": "tobu-kitasenju",
+        "id": "tobu-skytree",
+        "status": "operating",
+        "year": 1899,
+        "label": "Ushida – Kita-Senju – Kosuge (Kita-Senju stop is missing from the OSM route relations; drawn to connect the interchange)"
+      },
+      "geometry": {"type": "LineString", "coordinates": [[139.81214, 35.74466], [139.80867, 35.74418], [139.80753, 35.74422], [139.80586, 35.745], [139.80496, 35.74641], [139.80493, 35.74763], [139.80646, 35.752], [139.81125, 35.75698], [139.81264, 35.75867]]}
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "line": "shin-kuko",
+        "id": "shin-kuko",
+        "name": "Shin-Kūkō Line (Kamakama Line)",
+        "nameLocal": "新空港線（蒲蒲線）",
+        "group": "tokyu",
+        "mode": "commuter",
+        "color": "#7a2e8e",
+        "status": "approved",
+        "year": 2040,
+        "label": "Phase 1: Yaguchinowatashi – Kamata (underground) – Keikyū Kamata (~1.7 km)",
+        "sources": "ota-kamakama,aviationwire-kamakama,trafficnews-kamakama",
+        "description": "Phase 1 of the Kamata–Keikyū-Kamata link (~0.8 km of new line plus the underground approach from the Tōkyū Tamagawa Line). Plan certified by MLIT on 2025-10-03 (Haneda Airport Line Co. builds, Tōkyū operates; through service from the Tamagawa Line, some trains from the Tōyoko Line). Surveys and design started 2026; construction not yet started. Opening target 'early Reiwa 20s' (2038-2042), shown as 2040; works run to March 2042. Phase 2 (towards Haneda over the Keikyū Airport Line, different gauge) is still a study. Alignment and the underground Kamata / Keikyū Kamata stations are approximate. Colour is not official."
+      },
+      "geometry": {"type": "LineString", "coordinates": [[139.70026, 35.56258], [139.705, 35.5637], [139.71, 35.564], [139.714, 35.5631], [139.71587, 35.5625], [139.72, 35.5617], [139.72416, 35.56133]]}
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "line": "tx-tokyo",
+        "id": "tsukuba-express",
+        "status": "planned",
+        "label": "Akihabara – Tokyo extension (~2 km, planned, no official year)",
+        "sources": "tabiris-tx,trafficnews-tx,mlit-198"
+      },
+      "geometry": {"type": "LineString", "coordinates": [[139.77361, 35.69841], [139.7738, 35.693], [139.7725, 35.687], [139.77, 35.683], [139.7678, 35.6812]]}
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "line": "tama-hakonegasaki",
+        "id": "tama-monorail",
+        "status": "approved",
+        "year": 2035,
+        "label": "Kamikitadai – Hakonegasaki extension (~7 km, 7 new stations, mid-2030s)",
+        "sources": "tama-monorail-2026,trafficnews-tama-monorail,tmg-tama-monorail"
+      },
+      "geometry": {"type": "LineString", "coordinates": [[139.41586, 35.74588], [139.41, 35.7478], [139.4, 35.751], [139.39, 35.754], [139.38, 35.7568], [139.37, 35.76], [139.36, 35.764], [139.352, 35.768], [139.34671, 35.77141]]}
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "line": "tama-machida",
+        "id": "tama-monorail",
+        "status": "planned",
+        "label": "Tama-Center – Machida extension (~16 km, route B, planned, no official year)",
+        "sources": "tmg-mono-machida,mlit-198"
+      },
+      "geometry": {"type": "LineString", "coordinates": [[139.42287, 35.62394], [139.429, 35.612], [139.435, 35.599], [139.43, 35.586], [139.425, 35.576], [139.429, 35.565], [139.438, 35.556], [139.444, 35.547], [139.44541, 35.54206]]}
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "line": "blue-ext",
+        "id": "yokohama-blue",
+        "status": "planned",
+        "label": "Azamino – Shin-Yurigaoka extension (6.5 km; official target 2030 under review)",
+        "sources": "trafficnews-blue,tetsudo-ch-blue,mlit-198"
+      },
+      "geometry": {"type": "LineString", "coordinates": [[139.55343, 35.56868], [139.545, 35.573], [139.535, 35.579], [139.525, 35.586], [139.517, 35.593], [139.511, 35.599], [139.50768, 35.60387]]}
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "line": "sr-iwatsuki",
+        "id": "saitama-railway",
+        "status": "planned",
+        "year": 2041,
+        "label": "Urawa-Misono – Iwatsuki extension (7.2 km, target April 2041)",
+        "sources": "impress-sr,saitama-pref-sr"
+      },
+      "geometry": {"type": "LineString", "coordinates": [[139.72763, 35.89382], [139.7265, 35.902], [139.723, 35.912], [139.721, 35.925], [139.718, 35.937], [139.71, 35.944], [139.7, 35.948], [139.69291, 35.95016]]}
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "line": "odakyu-tama-ext",
+        "id": "odakyu-tama",
+        "status": "planned",
+        "label": "Karakida – Sagamihara – Kamimizo extension (~8.8 km, planned, no official year)",
+        "sources": "sagamihara-odakyu,mlit-198"
+      },
+      "geometry": {"type": "LineString", "coordinates": [[139.41113, 35.61585], [139.402, 35.61], [139.392, 35.602], [139.382, 35.593], [139.37073, 35.58144], [139.368, 35.57], [139.36326, 35.55772]]}
+    },
+    {"type": "Feature", "properties": {"name": "Ushida", "nameLocal": "牛田", "line": "tobu-kitasenju"}, "geometry": {"type": "Point", "coordinates": [139.81214, 35.74466]}},
+    {"type": "Feature", "properties": {"name": "Kita-Senju", "nameLocal": "北千住", "line": "tobu-kitasenju"}, "geometry": {"type": "Point", "coordinates": [139.805, 35.7478]}},
+    {"type": "Feature", "properties": {"name": "Kosuge", "nameLocal": "小菅", "line": "tobu-kitasenju"}, "geometry": {"type": "Point", "coordinates": [139.81264, 35.75867]}},
+    {"type": "Feature", "properties": {"name": "Yaguchi-no-watashi", "nameLocal": "矢口渡", "line": "shin-kuko"}, "geometry": {"type": "Point", "coordinates": [139.70026, 35.56258]}},
+    {"type": "Feature", "properties": {"name": "Kamata", "nameLocal": "蒲田", "line": "shin-kuko", "approx": true}, "geometry": {"type": "Point", "coordinates": [139.71587, 35.5625]}},
+    {"type": "Feature", "properties": {"name": "Keikyu Kamata", "nameLocal": "京急蒲田", "line": "shin-kuko", "approx": true}, "geometry": {"type": "Point", "coordinates": [139.72416, 35.56133]}},
+    {"type": "Feature", "properties": {"name": "Akihabara", "nameLocal": "秋葉原", "line": "tx-tokyo"}, "geometry": {"type": "Point", "coordinates": [139.77361, 35.69841]}},
+    {"type": "Feature", "properties": {"name": "Tokyo", "nameLocal": "東京", "line": "tx-tokyo", "approx": true}, "geometry": {"type": "Point", "coordinates": [139.7678, 35.6812]}},
+    {"type": "Feature", "properties": {"name": "Kamikitadai", "nameLocal": "上北台", "line": "tama-hakonegasaki"}, "geometry": {"type": "Point", "coordinates": [139.41586, 35.74588]}},
+    {"type": "Feature", "properties": {"name": "No. 1 (provisional)", "nameLocal": "（仮称）No.1駅", "line": "tama-hakonegasaki", "approx": true}, "geometry": {"type": "Point", "coordinates": [139.406, 35.749]}},
+    {"type": "Feature", "properties": {"name": "No. 2 (provisional)", "nameLocal": "（仮称）No.2駅", "line": "tama-hakonegasaki", "approx": true}, "geometry": {"type": "Point", "coordinates": [139.396, 35.7522]}},
+    {"type": "Feature", "properties": {"name": "No. 3 (provisional)", "nameLocal": "（仮称）No.3駅", "line": "tama-hakonegasaki", "approx": true}, "geometry": {"type": "Point", "coordinates": [139.386, 35.7551]}},
+    {"type": "Feature", "properties": {"name": "No. 4 (provisional)", "nameLocal": "（仮称）No.4駅", "line": "tama-hakonegasaki", "approx": true}, "geometry": {"type": "Point", "coordinates": [139.376, 35.758]}},
+    {"type": "Feature", "properties": {"name": "No. 5 (provisional)", "nameLocal": "（仮称）No.5駅", "line": "tama-hakonegasaki", "approx": true}, "geometry": {"type": "Point", "coordinates": [139.366, 35.7615]}},
+    {"type": "Feature", "properties": {"name": "No. 6 (provisional)", "nameLocal": "（仮称）No.6駅", "line": "tama-hakonegasaki", "approx": true}, "geometry": {"type": "Point", "coordinates": [139.3565, 35.7658]}},
+    {"type": "Feature", "properties": {"name": "No. 7 (provisional)", "nameLocal": "（仮称）No.7駅", "line": "tama-hakonegasaki", "approx": true}, "geometry": {"type": "Point", "coordinates": [139.35, 35.7695]}},
+    {"type": "Feature", "properties": {"name": "Hakonegasaki", "nameLocal": "箱根ヶ崎", "line": "tama-hakonegasaki"}, "geometry": {"type": "Point", "coordinates": [139.34671, 35.77141]}},
+    {"type": "Feature", "properties": {"name": "Tama-Center", "nameLocal": "多摩センター", "line": "tama-machida"}, "geometry": {"type": "Point", "coordinates": [139.42287, 35.62394]}},
+    {"type": "Feature", "properties": {"name": "Machida", "nameLocal": "町田", "line": "tama-machida", "approx": true}, "geometry": {"type": "Point", "coordinates": [139.44541, 35.54206]}},
+    {"type": "Feature", "properties": {"name": "Azamino", "nameLocal": "あざみ野", "line": "blue-ext"}, "geometry": {"type": "Point", "coordinates": [139.55343, 35.56868]}},
+    {"type": "Feature", "properties": {"name": "Kenzan / Susukino (provisional)", "nameLocal": "（仮称）嶮山・すすき野付近", "line": "blue-ext", "approx": true}, "geometry": {"type": "Point", "coordinates": [139.535, 35.579]}},
+    {"type": "Feature", "properties": {"name": "Yonetty Ōzenji (provisional)", "nameLocal": "（仮称）ヨネッティー王禅寺付近", "line": "blue-ext", "approx": true}, "geometry": {"type": "Point", "coordinates": [139.517, 35.593]}},
+    {"type": "Feature", "properties": {"name": "Shin-Yurigaoka", "nameLocal": "新百合ヶ丘", "line": "blue-ext", "approx": true}, "geometry": {"type": "Point", "coordinates": [139.50768, 35.60387]}},
+    {"type": "Feature", "properties": {"name": "Urawa-Misono", "nameLocal": "浦和美園", "line": "sr-iwatsuki"}, "geometry": {"type": "Point", "coordinates": [139.72763, 35.89382]}},
+    {"type": "Feature", "properties": {"name": "Saitama Stadium (provisional, event days)", "nameLocal": "（仮称）埼玉スタジアム", "line": "sr-iwatsuki", "approx": true}, "geometry": {"type": "Point", "coordinates": [139.723, 35.912]}},
+    {"type": "Feature", "properties": {"name": "Intermediate station (provisional, Ukiya)", "nameLocal": "（仮称）中間駅", "line": "sr-iwatsuki", "approx": true}, "geometry": {"type": "Point", "coordinates": [139.718, 35.937]}},
+    {"type": "Feature", "properties": {"name": "Iwatsuki", "nameLocal": "岩槻", "line": "sr-iwatsuki", "approx": true}, "geometry": {"type": "Point", "coordinates": [139.69291, 35.95016]}},
+    {"type": "Feature", "properties": {"name": "Karakida", "nameLocal": "唐木田", "line": "odakyu-tama-ext"}, "geometry": {"type": "Point", "coordinates": [139.41113, 35.61585]}},
+    {"type": "Feature", "properties": {"name": "Sagamihara", "nameLocal": "相模原", "line": "odakyu-tama-ext", "approx": true}, "geometry": {"type": "Point", "coordinates": [139.37073, 35.58144]}},
+    {"type": "Feature", "properties": {"name": "Kamimizo", "nameLocal": "上溝", "line": "odakyu-tama-ext", "approx": true}, "geometry": {"type": "Point", "coordinates": [139.36326, 35.55772]}}
+  ]
+}
