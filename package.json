@@ -15,7 +15,12 @@
     "data:hcmc": "node scripts/hcmc/fetch-osm.mjs && node scripts/hcmc/build-hcmc.mjs && node scripts/validate-data.mjs hcmc && node scripts/update-index.mjs",
     "data:tokyo": "node scripts/tokyo/build.mjs && npm run import -- tokyo",
     "data:nagoya": "node scripts/nagoya/build.mjs && node scripts/validate-data.mjs nagoya && node scripts/update-index.mjs",
-    "data:london": "node scripts/london/build.mjs && node scripts/validate-data.mjs london && node scripts/update-index.mjs"
+    "data:london": "node scripts/london/build.mjs && node scripts/validate-data.mjs london && node scripts/update-index.mjs",
+    "data:taipei": "node scripts/taiwan/build.mjs taipei && node scripts/validate-data.mjs taipei",
+    "data:taichung": "node scripts/taiwan/build.mjs taichung && node scripts/validate-data.mjs taichung",
+    "data:tainan": "node scripts/taiwan/build.mjs tainan && node scripts/validate-data.mjs tainan",
+    "data:kaohsiung": "node scripts/taiwan/build.mjs kaohsiung && node scripts/validate-data.mjs kaohsiung",
+    "data:taiwan": "npm run data:taipei && npm run data:taichung && npm run data:tainan && npm run data:kaohsiung"
   },
   "dependencies": {
     "maplibre-gl": "^6.18.0",
