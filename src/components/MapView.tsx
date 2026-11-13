@@ -238,22 +238,37 @@ export default function MapView(props: Props) {
       else propsRef.current.onSelectLine(hit.id);
     });
 
+    /** Never let padding swallow the viewport. */
+    const clampPadding = (padding: Padding): Padding => {
+      const w = container.clientWidth;
+      const h = container.clientHeight;
+      const pad = {
+        top: Math.min(padding.top, h * 0.4),
+        bottom: Math.min(padding.bottom, h * 0.6),
+        left: Math.min(padding.left, w * 0.6),
+        right: Math.min(padding.right, w * 0.4),
+      };
+      if (w - pad.left - pad.right < 80) pad.left = pad.right = 20;
+      if (h - pad.top - pad.bottom < 80) pad.top = pad.bottom = 20;
+      return pad;
+    };
     const api: MapApi = {
       flyTo(center, zoom, padding) {
-        map.flyTo({ center, zoom: zoom ?? Math.max(map.getZoom(), 14), padding, duration: 1200, essential: true });
+        // Centre the station in the uncovered part of the map with an `offset`, not `padding`:
+        // camera padding sticks to the map (map.setPadding) and MapLibre adds it on top of the
+        // padding of every later fitBounds — after one station click, the sidebar + card padding
+        // counted twice left no room and "zoom to line" silently did nothing.
+        const pad = padding ? clampPadding(padding) : null;
+        map.flyTo({
+          center,
+          zoom: zoom ?? Math.max(map.getZoom(), 14),
+          offset: pad ? [(pad.left - pad.right) / 2, (pad.top - pad.bottom) / 2] : [0, 0],
+          duration: 1200,
+          essential: true,
+        });
       },
       fitBounds(b, padding, maxZoom = 15) {
-        const w = container.clientWidth;
-        const h = container.clientHeight;
-        // Never let padding swallow the viewport.
-        const pad = {
-          top: Math.min(padding.top, h * 0.4),
-          bottom: Math.min(padding.bottom, h * 0.6),
-          left: Math.min(padding.left, w * 0.6),
-          right: Math.min(padding.right, w * 0.4),
-        };
-        if (w - pad.left - pad.right < 80) pad.left = pad.right = 20;
-        if (h - pad.top - pad.bottom < 80) pad.top = pad.bottom = 20;
+        const pad = clampPadding(padding);
         map.fitBounds(
           [
             [b[0], b[1]],
