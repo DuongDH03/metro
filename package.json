@@ -20,7 +20,8 @@
     "data:taichung": "node scripts/taiwan/build.mjs taichung && node scripts/validate-data.mjs taichung",
     "data:tainan": "node scripts/taiwan/build.mjs tainan && node scripts/validate-data.mjs tainan",
     "data:kaohsiung": "node scripts/taiwan/build.mjs kaohsiung && node scripts/validate-data.mjs kaohsiung",
-    "data:taiwan": "npm run data:taipei && npm run data:taichung && npm run data:tainan && npm run data:kaohsiung"
+    "data:taiwan": "npm run data:taipei && npm run data:taichung && npm run data:tainan && npm run data:kaohsiung",
+    "data:kansai": "node scripts/kansai/build.mjs && node scripts/validate-data.mjs kansai && node scripts/update-index.mjs"
   },
   "dependencies": {
     "maplibre-gl": "^6.18.0",
