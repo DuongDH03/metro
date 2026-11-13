@@ -37,22 +37,9 @@ export interface Padding {
   right: number;
 }
 
-export interface FocusOptions {
-  /** Cap on how many zoom levels the camera may zoom OUT (e.g. after clicking a line on the map). */
-  maxZoomOut?: number;
-  /** Point that stays fixed on screen when the zoom-out is capped (the click position). */
-  around?: LngLat;
-  maxZoom?: number;
-}
-
 export interface MapApi {
   flyTo(center: LngLat, zoom?: number, padding?: Padding): void;
   fitBounds(b: BBox, padding: Padding, maxZoom?: number): void;
-  /**
-   * Bring bounds into view with as little camera movement as possible: nothing if they're already
-   * comfortably visible, otherwise fit them, but never zoom out more than `maxZoomOut` levels.
-   */
-  focusBounds(b: BBox, padding: Padding, opts?: FocusOptions): void;
   jumpTo(center: LngLat, zoom: number): void;
 }
 
@@ -66,8 +53,7 @@ interface Props {
   initialView: { center: LngLat; zoom: number };
   apiRef: RefObject<MapApi | null>;
   onHoverLine(lineId: string | null): void;
-  /** `at` is the clicked map position (only for clicks on the map itself). */
-  onSelectLine(lineId: string, at?: LngLat): void;
+  onSelectLine(lineId: string): void;
   onSelectStation(idx: number): void;
   onClearSelection(): void;
   /** Called after every pan / zoom (and once on load) with the visible bounds and zoom. */
@@ -249,69 +235,38 @@ export default function MapView(props: Props) {
       const hit = pick(map.queryRenderedFeatures(box(e.point, 8), { layers }));
       if (!hit) propsRef.current.onClearSelection();
       else if (hit.kind === 'station') propsRef.current.onSelectStation(hit.idx);
-      else propsRef.current.onSelectLine(hit.id, [e.lngLat.lng, e.lngLat.lat]);
+      else propsRef.current.onSelectLine(hit.id);
     });
 
-    /** Never let padding swallow the viewport. */
-    const clampPadding = (padding: Padding): Padding => {
-      const w = container.clientWidth;
-      const h = container.clientHeight;
-      const pad = {
-        top: Math.min(padding.top, h * 0.4),
-        bottom: Math.min(padding.bottom, h * 0.6),
-        left: Math.min(padding.left, w * 0.6),
-        right: Math.min(padding.right, w * 0.4),
-      };
-      if (w - pad.left - pad.right < 80) pad.left = pad.right = 20;
-      if (h - pad.top - pad.bottom < 80) pad.top = pad.bottom = 20;
-      return pad;
-    };
     const api: MapApi = {
       flyTo(center, zoom, padding) {
         map.flyTo({ center, zoom: zoom ?? Math.max(map.getZoom(), 14), padding, duration: 1200, essential: true });
       },
       fitBounds(b, padding, maxZoom = 15) {
+        const w = container.clientWidth;
+        const h = container.clientHeight;
+        // Never let padding swallow the viewport.
+        const pad = {
+          top: Math.min(padding.top, h * 0.4),
+          bottom: Math.min(padding.bottom, h * 0.6),
+          left: Math.min(padding.left, w * 0.6),
+          right: Math.min(padding.right, w * 0.4),
+        };
+        if (w - pad.left - pad.right < 80) pad.left = pad.right = 20;
+        if (h - pad.top - pad.bottom < 80) pad.top = pad.bottom = 20;
         map.fitBounds(
           [
             [b[0], b[1]],
             [b[2], b[3]],
           ],
-          { padding: clampPadding(padding), maxZoom, duration: 1000, essential: true },
+          { padding: pad, maxZoom, duration: 1000, essential: true },
         );
-      },
-      focusBounds(b, padding, opts = {}) {
-        const pad = clampPadding(padding);
-        const w = container.clientWidth;
-        const h = container.clientHeight;
-        const tl = map.project([b[0], b[3]]);
-        const br = map.project([b[2], b[1]]);
-        const innerW = w - pad.left - pad.right;
-        const innerH = h - pad.top - pad.bottom;
-        const slack = 12; // px; a line framed by a previous fit sits right on the padding edge
-        const inside =
-          tl.x >= pad.left - slack && tl.y >= pad.top - slack && br.x <= w - pad.right + slack && br.y <= h - pad.bottom + slack;
-        const bigEnough = br.x - tl.x >= innerW * 0.3 || br.y - tl.y >= innerH * 0.3;
-        if (inside && bigEnough) return; // already well framed: don't move at all
-        const bounds: [[number, number], [number, number]] = [
-          [b[0], b[1]],
-          [b[2], b[3]],
-        ];
-        const maxZoom = opts.maxZoom ?? 15;
-        const target = map.cameraForBounds(bounds, { padding: pad, maxZoom });
-        const cur = map.getZoom();
-        if (target?.zoom !== undefined && opts.maxZoomOut !== undefined && target.zoom < cur - opts.maxZoomOut) {
-          // Fitting would zoom out a lot: step back a little around the click instead.
-          map.easeTo({ zoom: cur - opts.maxZoomOut, around: opts.around, duration: 700, essential: true });
-          return;
-        }
-        map.fitBounds(bounds, { padding: pad, maxZoom, duration: 900, essential: true });
       },
       jumpTo(center, zoom) {
         map.jumpTo({ center, zoom });
       },
     };
     props.apiRef.current = api;
-    if (import.meta.env.DEV) (window as unknown as { __mapApi?: MapApi }).__mapApi = api;
 
     return () => {
       cancelAnimationFrame(raf);

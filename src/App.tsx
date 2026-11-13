@@ -1,5 +1,5 @@
 import { useCallback, useEffect, useMemo, useRef, useState } from 'react';
-import type { CityData, CityIndexEntry, LngLat, Status } from './types';
+import type { CityData, CityIndexEntry, Status } from './types';
 import { STATUS_ORDER } from './types';
 import { DataError, loadCity, loadCityIndex } from './lib/data';
 import { buildGeo, buildGroupTree, type GeoModel } from './lib/geo';
@@ -304,34 +304,8 @@ export default function App() {
     [cities, entry, camera, dismissedCities],
   );
 
-  /** Bounds of the part of a line drawn right now (year + status filters), else the whole line. */
-  const visibleLineBounds = useCallback(
-    (id: string): BBox | undefined => {
-      if (!geo) return undefined;
-      let b: BBox | null = null;
-      const shown = new Set(vis?.segs ?? []);
-      for (const idx of geo.segmentsByLine.get(id) ?? []) {
-        if (!shown.has(idx)) continue;
-        for (const [x, y] of geo.segments[idx].coords) {
-          b = b ? [Math.min(b[0], x), Math.min(b[1], y), Math.max(b[2], x), Math.max(b[3], y)] : [x, y, x, y];
-        }
-      }
-      return b ?? geo.lineBounds.get(id);
-    },
-    [geo, vis],
-  );
-
-  const zoomToLine = useCallback(
-    (id: string) => {
-      const b = visibleLineBounds(id);
-      if (b) mapApi.current?.focusBounds(b, padding(true));
-    },
-    [visibleLineBounds, padding],
-  );
-
-  /** `at` = where the line was clicked on the map (then the camera barely moves). */
   const selectLine = useCallback(
-    (id: string, at?: LngLat) => {
+    (id: string) => {
       if (!geo) return;
       setSelection({ kind: 'line', id });
       setHoverLine(null);
@@ -342,13 +316,10 @@ export default function App() {
         n.delete(id);
         return n;
       });
-      const b = visibleLineBounds(id);
-      if (!b) return;
-      // Clicked on the map: the user is already looking at the line. Zoom out at most 1.5 levels
-      // around the click; the card's "Zoom to line" shows all of it. From the list/search: frame it.
-      mapApi.current?.focusBounds(b, padding(true), at ? { maxZoomOut: 1.5, around: at } : undefined);
+      const b = geo.lineBounds.get(id);
+      if (b) mapApi.current?.fitBounds(b, padding(true));
     },
-    [geo, padding, visibleLineBounds],
+    [geo, padding],
   );
   const selectStation = useCallback(
     (idx: number) => {
@@ -609,7 +580,6 @@ export default function App() {
           onSelectLine={selectLine}
           onSelectStation={selectStation}
           onHoverLine={setHoverLine}
-          onZoomLine={zoomToLine}
         />
       )}
 
