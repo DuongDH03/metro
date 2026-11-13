@@ -96,6 +96,11 @@ skills/         Claude skills for researching, quizzing and designing metro netw
 docs/           Import guide and README screenshots
 ```
 
+## Claude skills
+`skills/` holds five Claude skills built from this project (sources in `skills/<name>/`, shared helpers in
+`skills/_shared/`, edit those and run `python skills/build_skills.py` to rebuild `skills/dist/*.skill`):
+`metro-city-research`, `fantasy-metro-designer`, `metro-plan-update`, `metro-timeline-story`, `metro-quiz`.
+
 ---
 
 Map data © OpenStreetMap contributors (ODbL), basemap © CARTO.

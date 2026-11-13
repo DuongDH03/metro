@@ -13,3 +13,5 @@ cities/*/.cache
 .DS_Store
 Thumbs.db
 *.log
+.geocode-cache.json
+skills/dist

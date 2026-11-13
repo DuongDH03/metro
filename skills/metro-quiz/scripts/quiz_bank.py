@@ -126,7 +126,9 @@ def gen(net, rnd):
 
 
 def main():
-    if len(sys.argv) < 2:
+    if hasattr(sys.stdout, "reconfigure"):
+        sys.stdout.reconfigure(encoding="utf-8")  # Windows consoles default to cp1252
+    if any(a in ("-h", "--help") for a in sys.argv) or len(sys.argv) < 2:
         print(__doc__)
         sys.exit(2)
     a = sys.argv[1:]

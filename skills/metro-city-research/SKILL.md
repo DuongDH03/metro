@@ -35,8 +35,11 @@ Use parallel subagents (one per few lines) if the network is large and you have 
 document and the conventions file.
 
 ### 4. Locate stations
-- Operating lines: OpenStreetMap coordinates (station nodes; Nominatim at ≤1 req/s with a generic
-  User-Agent) or the operator's map.
+- Use `python scripts/geocode.py --city "<City>, <Country>" "<place>" "<street A> & <street B>" ...` (or
+  `--file list.txt`): OpenStreetMap lookup, accent-insensitive, intersections via `A & B`, cached and rate
+  limited. Pass native paths (on Windows `D:\...`). If lookups fail (no network in the sandbox), estimate
+  from what you know and mark the station `approx: true`.
+- Operating lines: OpenStreetMap station coordinates (query "<name> station") or the operator's map.
 - Planned lines with published station lists: place each at its named intersection/landmark, `approx: true`.
 - Lines described only by places ("via Ring Road 3 to Linh Dam"): add waypoint stations at those places,
   `approx: true`, and say so in the line's `description`.
@@ -57,7 +60,8 @@ document and the conventions file.
 ### 6. Check before handing over
 Run `python scripts/network_stats.py <file>` (works on GeoJSON or CityData). Fix what it flags: segments
 with <2 stations, unattached stations, 300 m duplicates, unexplained >6 km gaps, lines with no interchange
-that should have one. Paste its summary table in your reply.
+that should have one, crossings with no shared station (often a missing interchange in your data, sometimes
+true in the plan: then say so). Paste its summary table in your reply.
 
 ## Reply format
 Short summary first (number of lines/km by status, the plan you followed), then the files, then

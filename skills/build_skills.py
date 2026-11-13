@@ -14,9 +14,10 @@ DIST = ROOT / "dist"
 
 # skill -> files from _shared to bundle (scripts/ or references/)
 BUNDLES = {
-    "metro-city-research": ["references/conventions.md", "scripts/metro_data.py", "scripts/network_stats.py"],
+    "metro-city-research": ["references/conventions.md", "scripts/metro_data.py", "scripts/network_stats.py",
+                            "scripts/geocode.py"],
     "fantasy-metro-designer": ["references/conventions.md", "scripts/metro_data.py", "scripts/network_stats.py",
-                               "scripts/geojson_to_kml.py"],
+                               "scripts/geojson_to_kml.py", "scripts/geocode.py"],
     "metro-plan-update": ["references/conventions.md"],
     "metro-timeline-story": ["scripts/metro_data.py", "scripts/timeline_stats.py"],
     "metro-quiz": ["scripts/metro_data.py", "scripts/quiz_bank.py"],

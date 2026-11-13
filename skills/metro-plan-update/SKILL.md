@@ -1,6 +1,6 @@
 ---
 name: metro-plan-update
-description: Turn metro/rail project news into a precise update of a city's network data - read an article, press release, government decision or link about a line opening, groundbreaking, approval, delay, new station list, renamed or cancelled plan, then work out exactly which line/section it affects, what the status and year should become under strict definitions, and apply the change with a dated source (in a metro-vision repo: edit the right table or config, rebuild, validate, update research notes). Use it whenever someone pastes or links metro/railway news, says "line X opened / started construction / got delayed", asks "is our map still up to date?", or wants to refresh a city's metro data - even if they don't mention files.
+description: Turn metro/rail project news into a precise update of a city's network data - read an article, press release, government decision or link about a line opening, groundbreaking, approval, delay, new station list, renamed or cancelled plan, then work out exactly which line/section it affects, what the status and year should become under strict definitions, and apply the change with a dated source (in a metro-vision repo, edit the right table or config, rebuild, validate, update research notes). Use it whenever someone pastes or links metro/railway news, says "line X opened / started construction / got delayed", asks "is our map still up to date?", or wants to refresh a city's metro data - even if they don't mention files.
 ---
 
 # Metro plan update

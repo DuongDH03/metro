@@ -16,7 +16,8 @@ memory, especially about future plans, which change constantly.
 2. Ask (in one message, with defaults): city, difficulty (easy / medium / hard / mixed, default mixed),
    rounds (default 10), mode (solo, or party mode with player names for a trivia night).
 3. Generate a pool: `python scripts/quiz_bank.py <file> --n 40 --level <level>` → JSON questions with
-   `question`, `answer`, `choices`, `explain`, `type`. Keep the pool to yourself.
+   `question`, `answer`, `choices`, `explain`, `type`. Keep the pool to yourself. Pass native paths (on
+   Windows `D:\...`) and set `PYTHONIOENCODING=utf-8` so non-Latin names print.
 
 ## Playing
 - One question per message. Show the question, then the choices as A–D. For `color` questions show a

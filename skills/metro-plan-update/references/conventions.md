@@ -40,7 +40,7 @@ Line feature properties:
 | `opened`, `lengthKm`, `sources` | `sources` = comma list of source ids |
 | `stations` | optional explicit ordered list of station `id`s or names; disables snapping |
 | `from`, `to` | names for automatic end stations when no Point is at an end |
-| `id` | force the line id; same id as an existing line in the same import = append segments to it |
+| `id` | the line id (kebab-case). Without it the id is derived: `line-<code>` if there's a code and the name doesn't start with "Line", else the slugged name. Set it explicitly so every tool agrees. Same id as an existing line in the same import = append segments to it |
 
 Station (Point) properties: `name` (required), `nameLocal`, `codes` (comma list), `approx` (true when the
 location is estimated), `id` (kebab-case ascii), `line` (comma list: attach only to these lines).

@@ -146,7 +146,11 @@ def _from_geojson(fc, snap_m=150):
         else:
             continue
         key = str(p.get("line") or p.get("name") or f"line-{len(lines) + 1}")
-        line = lines.setdefault(key, {"id": p.get("id") or slug(key), "name": p.get("name") or key,
+        nm = p.get("name") or key
+        code = p.get("code")
+        # Same id rule as the metro-vision importer: explicit `id`, else from code, else from name.
+        auto_id = slug(f"line-{code}" if code and not re.match(r"(?i)^line", nm) else nm)
+        line = lines.setdefault(key, {"id": p.get("id") or auto_id, "name": nm,
                                       "code": p.get("code"), "color": p.get("color") or p.get("stroke"),
                                       "group": p.get("group"), "opened": norm_year(p.get("opened")),
                                       "segments": []})

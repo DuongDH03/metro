@@ -1,7 +1,7 @@
 #!/usr/bin/env python3
 """Convert a convention GeoJSON (metro-vision drawing format) into KML for Google My Maps / Google Earth.
 
-Usage: python geojson_to_kml.py <in.geojson> <out.kml> [--folder-by group|status|year|none]
+Usage: python geojson_to_kml.py <in.geojson> <out.kml> [--folder-by <property>|none]   (default group; e.g. label = one layer per phase)
 
 - One Folder per value of --folder-by (default: group), so the map opens with toggleable layers.
 - Line colours become KML LineStyles (KML colour order is aabbggrr); width 5.
@@ -52,7 +52,9 @@ def placemark(f, style_id):
 
 
 def main():
-    if len(sys.argv) < 3:
+    if hasattr(sys.stdout, "reconfigure"):
+        sys.stdout.reconfigure(encoding="utf-8")  # Windows consoles default to cp1252
+    if any(a in ("-h", "--help") for a in sys.argv) or len(sys.argv) < 3:
         print(__doc__)
         sys.exit(2)
     src, dst = sys.argv[1], sys.argv[2]

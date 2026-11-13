@@ -23,6 +23,11 @@ of gravity (CBD, old town, universities, hospitals, stadiums, airports, intercit
 new urban areas); main radial roads, ring roads and rivers/bridges; where people live densely. Note 10–20
 "must serve" anchors with coordinates.
 
+Get coordinates with `python scripts/geocode.py --city "<City>, <Country>" "Han Market" "Nguyen Van Linh & Dien Bien Phu" ...`
+(places, or `A & B` for a street intersection; accent-insensitive; cached; polite to OpenStreetMap). It
+prints `[lng, lat]` and a note; "may not cross" means pick another cross street. Batch queries in one call
+(`--file list.txt`). Use native paths (on Windows `D:\...`). Positions you still estimate get `approx: true`. If lookups fail (no network in the sandbox), estimate from what you know and mark them `approx`.
+
 ## 3. Design principles (explain your choices against these)
 - **Radials + rings + crosstown:** radials into the core from every major direction; a ring that hits
   every radial (the ring is what makes a network, not a star); a couple of crosstown lines that avoid the
@@ -41,11 +46,17 @@ new urban areas); main radial roads, ring roads and rivers/bridges; where people
 Write a convention GeoJSON (`<city>-fantasy.geojson`):
 - One LineString per segment, drawn along real streets with enough vertices to follow curves
   (look up coordinates of intersections; don't draw straight across a river or a lake).
-- Props: `line`, `name`, `code`, `color` + `stroke`, `group` (e.g. "Fan vision" or one group per phase), `mode`,
-  `status: "proposed"` (always: it's fantasy), `year`, `label` (phase name), `description` (the pitch).
+- Props: `line`, `id` (kebab-case, e.g. `fan-1`, so every tool names the line the same way), `name`, `code`,
+  `color` + `stroke`, `group` (a *family* that's the same for the whole line: "Fan metro", "Fan LRT", "Fan tram";
+  never a phase, which would split a line across toggles), `mode`, `status: "proposed"` (always: it's
+  fantasy), `year`, `label` (phase name, e.g. "Phase 1 (2035)"), `description` (the pitch), `sources: "fan-concept"`.
+- Cite the concept as a source so importers don't warn: in a metro-vision config add
+  `{"id": "fan-concept", "title": "Fan concept: <title> (<date>)", "url": "<the user's map link, or https://geojson.io/>"}`
+  to `sources`; standalone, include that snippet in your reply.
 - Station Points with real place names; where you meet a real station, use its exact official name so
   it becomes a shared interchange with the real network. Mark guessed positions `approx: true`.
-- Then convert for Google My Maps: `python scripts/geojson_to_kml.py <in.geojson> <out.kml> --folder-by group`.
+- Then convert for Google My Maps: `python scripts/geojson_to_kml.py <in.geojson> <out.kml> --folder-by label`
+  (any property works; `label` gives one layer per phase, `group` one per family).
 
 **Inside a metro-vision repo:** put both files in `cities/<city>-fan-vision/` with a config that uses
 `"base": "public/data/<city>.json"` (keeps the real network underneath) and a `geojson` import with
@@ -53,8 +64,10 @@ Write a convention GeoJSON (`<city>-fantasy.geojson`):
 just drag the GeoJSON onto the running app to preview it over the real city.
 
 ## 5. Check
-Run `python scripts/network_stats.py <file>`: total km, stations, interchanges, and problems (lines
-without interchanges, stations that didn't attach, odd spacing). Fix, then report.
+Run `python scripts/network_stats.py <file>`: total km, stations, interchanges, and problems: lines
+without interchanges, stations that didn't attach, odd spacing, **lines that cross without a shared station**
+and **long parallel runs within 600 m**. Fix them (add the interchange, move a line) or explain why
+they're intentional, then report.
 
 ## 6. Present
 A short "fan map" write-up: the network at a glance (lines, km, stations, phases), a table of lines with
