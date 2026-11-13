@@ -1,9 +1,10 @@
 # Metro Vision
 
-Interactive, data-driven map of current and future urban rail networks: **Hanoi, Ho Chi Minh City, Tokyo and Singapore**.
+Interactive, data-driven map of current and future urban rail networks in **11 cities**: Hanoi, Ho Chi Minh City, Tokyo, Osaka · Kyoto,
+Nagoya · Gifu, Singapore, Taipei, Taichung, Tainan, Kaohsiung and London.
 See what runs today, what is being built, and what is planned, and watch the network grow year by year.
 
-**Live: https://duongdh03.github.io/metro/** (deployed from `main` by GitHub Actions; e.g. [/#hanoi](https://duongdh03.github.io/metro/#hanoi), [/#tokyo](https://duongdh03.github.io/metro/#tokyo)).
+**Live: https://duongdh03.github.io/metro/** (deployed from `main` by GitHub Actions; e.g. [/#hanoi](https://duongdh03.github.io/metro/#hanoi), [/#tokyo](https://duongdh03.github.io/metro/#tokyo), [/#london](https://duongdh03.github.io/metro/#london), [/#taipei](https://duongdh03.github.io/metro/#taipei)).
 
 React + TypeScript + Vite + MapLibre GL, on a keyless CARTO/OpenStreetMap basemap.
 
@@ -22,7 +23,23 @@ Lines that do not exist yet in the selected year fade out of the sidebar.
 |---|---|
 | ![Hanoi network in 2030: 8 lines, 159 stations, 356 km](docs/images/hanoi-2030.webp) | ![Hanoi network in 2045+: 18 lines, 194 stations, 919 km](docs/images/hanoi-2045.webp) |
 
-## Four cities
+## Cities
+
+| City | Lines | Stations | Covers | Timeline |
+|---|---:|---:|---|---|
+| Hanoi | 18 | 194 | Urban metro and satellite-town lines from the 2045 master plan | 2021–2045+ |
+| Ho Chi Minh City | 28 | 240 | Metro, LRT and monorail incl. merged Bình Dương / Bà Rịa–Vũng Tàu | 2024–2050 |
+| Tokyo | 122 | 1,421 | JR, Shinkansen, Tokyo Metro, Toei, Yokohama subway, private railways, monorails | 1927–2045 |
+| Osaka · Kyoto | 96 | 1,023 | Osaka, Kyoto, Kobe, Nara, Ōtsu: subways, JR West, Hankyu, Hanshin, Keihan, Kintetsu, Nankai, trams; Naniwasuji Line, Hokuriku / Chūō Shinkansen | 1874–2040 |
+| Nagoya · Gifu | 45 | 534 | Nagoya subway, JR Central, Meitetsu, Kintetsu, Aonami, Linimo, Gifu-area railways; Chūō Shinkansen | 1884–2040 |
+| Singapore | 13 | 231 | MRT and LRT incl. Cross Island, Jurong Region and the Johor Bahru RTS Link | 1987–2040 |
+| Taipei | 23 | 315 | Taipei / New Taipei / Taoyuan / Keelung: Metro, Circular, Sanying, Airport MRT, LRTs, TRA, THSR | 1996–2037 |
+| Taichung | 7 | 96 | Green Line, Blue Line (construction), Orange Line (planned), TRA, THSR | 2007–2042 |
+| Tainan | 5 | 25 | Blue Line (approved), TRA incl. Shalun Line and the city-centre underground project, THSR | 2007–2036 |
+| Kaohsiung | 7 | 121 | Red / Orange lines, Circular LRT, Yellow Line, Gangshan–Lujhu, TRA, THSR | 2008–2040 |
+| London | 60 | 677 | Underground, Elizabeth line, DLR, Overground (2024 names), trams, cable car, National Rail suburban layer; Bakerloo extension, Crossrail 2, HS2 | 1863–2043 |
+
+Pan from one city into another (Osaka → Nagoya, Taipei → Taichung) and the app offers to switch maps.
 
 | Tokyo (dark) | Ho Chi Minh City (light) |
 |---|---|
@@ -54,7 +71,8 @@ length, target year, sections with their own status, interchanges, and sources.
 
 ```bash
 npm install
-npm run dev        # http://localhost:5173/#hanoi  (#hcmc, #tokyo, #singapore)
+npm run dev        # http://localhost:5173/#hanoi  (#hcmc, #tokyo, #kansai, #nagoya, #singapore,
+                   #  #taipei, #taichung, #tainan, #kaohsiung, #london)
 npm run validate   # check every city file against the data contract
 npm run build
 ```
@@ -81,7 +99,11 @@ Nothing city-specific is in the React code. Everything comes from `public/data/*
 | Hanoi | `npm run data:hanoi` | [research/hanoi.md](research/hanoi.md) |
 | HCMC | `npm run data:hcmc` | [research/hcmc.md](research/hcmc.md) |
 | Tokyo | `npm run data:tokyo` (curated JR / subway core in [scripts/tokyo/](scripts/tokyo/), then the importer adds private railways from [cities/tokyo/](cities/tokyo/)) | [research/tokyo.md](research/tokyo.md) |
+| Osaka · Kyoto | `npm run data:kansai` (curated, [scripts/kansai/](scripts/kansai/)) | [research/kansai.md](research/kansai.md) |
+| Nagoya · Gifu | `npm run data:nagoya` (curated, [scripts/nagoya/](scripts/nagoya/)) | [research/nagoya.md](research/nagoya.md) |
 | Singapore | `npm run import -- singapore` (importer, [cities/singapore/](cities/singapore/)) | [research/singapore.md](research/singapore.md) |
+| Taipei, Taichung, Tainan, Kaohsiung | `npm run data:taiwan` (or `data:taipei` etc.; one shared pipeline in [scripts/taiwan/](scripts/taiwan/)) | [taipei](research/taipei.md), [taichung](research/taichung.md), [tainan](research/tainan.md), [kaohsiung](research/kaohsiung.md) |
+| London | `npm run data:london` (curated TfL lines, future projects and a National Rail layer in [scripts/london/](scripts/london/)) | [research/london.md](research/london.md) |
 
 Curated line tables live in each `scripts/<city>/` folder; operating track geometry comes from OpenStreetMap (Overpass).
 Planned stations without official coordinates are marked `approx` and drawn faded.

@@ -6,7 +6,7 @@ and what to watch as the project grows. The data contract itself (fields, status
 
 - [1. How the pieces fit](#1-how-the-pieces-fit)
 - [2. Pick your path](#2-pick-your-path)
-- [3. Updating Hanoi, HCMC and Tokyo](#3-updating-hanoi-hcmc-and-tokyo)
+- [3. Updating the curated cities](#3-updating-the-curated-cities)
 - [4. Adding a new city with the importer](#4-adding-a-new-city-with-the-importer)
 - [5. Drawing lines (GeoJSON / KML / Google My Maps)](#5-drawing-lines-geojson--kml--google-my-maps)
 - [6. Importing real networks from OpenStreetMap](#6-importing-real-networks-from-openstreetmap)
@@ -36,7 +36,10 @@ and what to watch as the project grows. The data contract itself (fields, status
   app exactly as the CLI would build it.
 
 Hanoi, HCMC and Tokyo predate the importer and keep their own hand-tuned pipelines in `scripts/<city>/`
-(see section 3). Tokyo is a hybrid: its curated core (JR, Shinkansen, Tokyo Metro, Toei) is built by
+(see section 3). Osaka · Kyoto (`kansai`), Nagoya · Gifu, the four Taiwan cities and London use the same
+curated approach, because their OSM data does not fit the generic importer: Kansai has one route relation per
+stopping pattern and almost no `route_master`, some Nagoya-area lines exist only as track relations, and London's
+National Rail termini ("London Waterloo") need name aliases to merge with Tube stations ("Waterloo"). Tokyo is a hybrid: its curated core (JR, Shinkansen, Tokyo Metro, Toei) is built by
 `scripts/tokyo/`, and the importer layers the private railways on top of it (`cities/tokyo/`, `base`).
 Everything new should go through the importer.
 
@@ -44,7 +47,7 @@ Everything new should go through the importer.
 
 | I want to… | Do this | Section |
 |---|---|---|
-| Change a status, year, station or colour in Hanoi / HCMC / Tokyo | Edit that city's line table, `npm run data:<city>` | [3](#3-updating-hanoi-hcmc-and-tokyo) |
+| Change a status, year, station or colour in a curated city (Hanoi, HCMC, Tokyo, Kansai, Nagoya, Taiwan, London) | Edit that city's line table, `npm run data:<city>` | [3](#3-updating-the-curated-cities) |
 | Add a real city whose metro is mapped in OpenStreetMap | `npm run import -- --new <id>`, add an `osm` import | [4](#4-adding-a-new-city-with-the-importer), [6](#6-importing-real-networks-from-openstreetmap) |
 | Add future / planned lines that aren't in OSM | Draw them, add a `geojson` or `kml` import to the same config | [5](#5-drawing-lines-geojson--kml--google-my-maps) |
 | Make a fan / "what if" version of an existing city | New config with `"base": "public/data/<city>.json"` + a drawn file | [4](#extending-an-existing-city-base) |
@@ -53,9 +56,9 @@ Everything new should go through the importer.
 
 ---
 
-## 3. Updating Hanoi, HCMC and Tokyo
+## 3. Updating the curated cities
 
-These three are curated by hand from research (official plans, operator sites, press). Each has one
+These are curated by hand from research (official plans, operator sites, press). Each has one
 **line table**: the only place you edit. Geometry for operating lines is re-derived from OpenStreetMap
 (cached, so rebuilds are offline and reproducible).
 
@@ -64,6 +67,10 @@ These three are curated by hand from research (official plans, operator sites, p
 | Hanoi | [scripts/hanoi/lines.mjs](../scripts/hanoi/lines.mjs) (`STATIONS`, `LINES`, `SOURCES`) | `npm run data:hanoi` | [research/hanoi.md](../research/hanoi.md) |
 | HCMC | [scripts/hcmc/build-hcmc.mjs](../scripts/hcmc/build-hcmc.mjs) (`S(...)` station calls, `LINES`, `SOURCES`) | `npm run data:hcmc` | [research/hcmc.md](../research/hcmc.md) |
 | Tokyo (curated core + importer layer) | JR / Shinkansen / Tokyo Metro / Toei: [scripts/tokyo/lines.mjs](../scripts/tokyo/lines.mjs) (`LINES`, `GROUPS`, `SOURCES`). Private railways, third-sector lines, monorails/AGT/trams, Yokohama subway and their future projects: [cities/tokyo/city.config.json](../cities/tokyo/city.config.json) + [cities/tokyo/future-private.geojson](../cities/tokyo/future-private.geojson) | `npm run data:tokyo` | [research/tokyo.md](../research/tokyo.md) |
+| Osaka · Kyoto | [scripts/kansai/lines.mjs](../scripts/kansai/lines.mjs) (one OSM relation per line cut into dated sections, projects, `NAME_ALIASES`, `HUBS`) | `npm run data:kansai` | [research/kansai.md](../research/kansai.md) |
+| Nagoya · Gifu | [scripts/nagoya/lines.mjs](../scripts/nagoya/lines.mjs) (all operators, incl. track-only relations and future segments) | `npm run data:nagoya` | [research/nagoya.md](../research/nagoya.md) |
+| Taipei, Taichung, Tainan, Kaohsiung | [scripts/taiwan/](../scripts/taiwan/)`<city>.mjs` (metro/LRT relations, TRA/THSR routed on OSM track, future projects); shared `build.mjs` | `npm run data:taiwan` or `data:<city>` | [research/taipei.md](../research/taipei.md) etc. |
+| London | [scripts/london/lines.mjs](../scripts/london/lines.mjs), [future.mjs](../scripts/london/future.mjs), [national-rail.mjs](../scripts/london/national-rail.mjs) | `npm run data:london` | [research/london.md](../research/london.md) |
 
 Each `data:*` command rebuilds the JSON and runs the validator. Rebuilding with no edits produces a
 byte-identical file, so any diff you see is your change (for Tokyo, only the `updated` date changes when
@@ -104,7 +111,9 @@ wherever status, year or branch differs; adjacent segments share their boundary 
 description saying it was dropped from the official plan. Don't leave stale `planned` lines.
 
 **Re-fetch OSM geometry** (an operating line changed shape): delete the city's cache folder
-(`scripts/hanoi/cache`, `scripts/hcmc/cache`, `scripts/tokyo/.cache`) and rerun `data:<city>`.
+(`scripts/hanoi/cache`, `scripts/hcmc/cache`, `scripts/<city>/.cache`) and rerun `data:<city>`. The `.cache`
+folders of Tokyo, Kansai, Nagoya, Taiwan and London are git-ignored, so a fresh clone needs network access
+(Overpass) to rebuild those cities; the committed `public/data/*.json` is what the app uses.
 
 ### Checklist for every update
 1. Status matches [DATA.md](../DATA.md) definitions: groundbreaking counts as `construction` only when works started.

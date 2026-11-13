@@ -2,12 +2,12 @@
   { "id": "hanoi", "name": "Hanoi", "nameLocal": "Hà Nội", "country": "Vietnam", "file": "data/hanoi.json", "center": [105.84, 21.02], "zoom": 10.5, "bbox": [105.393, 20.628, 106.249, 21.287] },
   { "id": "hcmc", "name": "Ho Chi Minh City", "nameLocal": "TP. Hồ Chí Minh", "country": "Vietnam", "file": "data/hcmc.json", "center": [106.7, 10.8], "zoom": 10, "bbox": [106.376, 10.305, 107.567, 11.358] },
   { "id": "tokyo", "name": "Tokyo", "nameLocal": "東京", "country": "Japan", "file": "data/tokyo.json", "center": [139.74, 35.68], "zoom": 10.5, "bbox": [138.97, 35.176, 140.425, 36.222] },
-  { "id": "singapore", "name": "Singapore", "country": "Singapore", "file": "data/singapore.json", "center": [103.835, 1.355], "zoom": 11, "bbox": [103.608, 1.224, 104.03, 1.494] },
+  { "id": "kansai", "name": "Osaka · Kyoto", "nameLocal": "大阪・京都", "country": "Japan", "file": "data/kansai.json", "center": [135.5, 34.7], "zoom": 10, "bbox": [134.869, 34.28, 136.128, 35.166] },
   { "id": "nagoya", "name": "Nagoya · Gifu", "nameLocal": "名古屋・岐阜", "country": "Japan", "file": "data/nagoya.json", "center": [136.9, 35.2], "zoom": 10, "bbox": [136.417, 34.718, 137.49, 35.673] },
-  { "id": "london", "name": "London", "country": "United Kingdom", "file": "data/london.json", "center": [-0.118, 51.509], "zoom": 10.5, "bbox": [-1.018, 51.253, 0.373, 51.736] },
-  { "id": "kaohsiung", "name": "Kaohsiung", "nameLocal": "高雄", "country": "Taiwan", "file": "data/kaohsiung.json", "center": [120.31, 22.66], "zoom": 10.6, "bbox": [120.223, 22.47, 120.569, 22.952] },
+  { "id": "singapore", "name": "Singapore", "country": "Singapore", "file": "data/singapore.json", "center": [103.835, 1.355], "zoom": 11, "bbox": [103.608, 1.224, 104.03, 1.494] },
   { "id": "taipei", "name": "Taipei", "nameLocal": "臺北", "country": "Taiwan", "file": "data/taipei.json", "center": [121.48, 25.04], "zoom": 10.4, "bbox": [121.01, 24.7, 121.862, 25.228] },
   { "id": "taichung", "name": "Taichung", "nameLocal": "臺中", "country": "Taiwan", "file": "data/taichung.json", "center": [120.65, 24.16], "zoom": 10.6, "bbox": [120.494, 23.847, 120.855, 24.633] },
   { "id": "tainan", "name": "Tainan", "nameLocal": "臺南", "country": "Taiwan", "file": "data/tainan.json", "center": [120.24, 23], "zoom": 11, "bbox": [120.183, 22.873, 120.376, 23.486] },
-  { "id": "kansai", "name": "Osaka · Kyoto", "nameLocal": "大阪・京都", "country": "Japan", "file": "data/kansai.json", "center": [135.5, 34.7], "zoom": 10, "bbox": [134.869, 34.28, 136.128, 35.166] }
+  { "id": "kaohsiung", "name": "Kaohsiung", "nameLocal": "高雄", "country": "Taiwan", "file": "data/kaohsiung.json", "center": [120.31, 22.66], "zoom": 10.6, "bbox": [120.223, 22.47, 120.569, 22.952] },
+  { "id": "london", "name": "London", "country": "United Kingdom", "file": "data/london.json", "center": [-0.118, 51.509], "zoom": 10.5, "bbox": [-1.018, 51.253, 0.373, 51.736] }
 ]
