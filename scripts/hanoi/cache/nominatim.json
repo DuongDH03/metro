@@ -1,0 +1,376 @@
+{
+ "Trầm Lộng, Hà Nội": [
+  {
+   "lat": 21.0310247,
+   "lon": 105.8460228,
+   "name": "Hội thánh Tin lành Hà Nội, 2, Ngõ Trạm, Tổ dân phố Cửa Đông 1, Phường Hoàn Kiếm, Thành phố Hà Nội, 11024, Việt Nam",
+   "type": "place_of_worship"
+  }
+ ],
+ "Kim Đường, Hà Nội": [
+  {
+   "lat": 20.8521969,
+   "lon": 105.7657134,
+   "name": "Đường Kim Bài, Xã Thanh Oai, Thành phố Hà Nội, 13527, Việt Nam",
+   "type": "tertiary"
+  },
+  {
+   "lat": 20.8506758,
+   "lon": 105.7656071,
+   "name": "Ngách 3 ngõ 9 đường Kim Bài, Xã Thanh Oai, Thành phố Hà Nội, 13527, Việt Nam",
+   "type": "residential"
+  },
+  {
+   "lat": 20.8506935,
+   "lon": 105.7645084,
+   "name": "Ngõ 12 đường Kim Bài, Xã Thanh Oai, Thành phố Hà Nội, 13527, Việt Nam",
+   "type": "residential"
+  }
+ ],
+ "Đại Nghĩa, Hà Nội": [
+  {
+   "lat": 21.0338814,
+   "lon": 105.8369155,
+   "name": "Đại sứ quán Ukraina, 6, Phố Lê Hồng Phong, Phường Ba Đình, Thành phố Hà Nội, 10333, Việt Nam",
+   "type": "diplomatic"
+  },
+  {
+   "lat": 20.9934419,
+   "lon": 105.7663336,
+   "name": "Nghĩa trang Đại Mỗ, Phường Đại Mỗ, Thành phố Hà Nội, 12010, Việt Nam",
+   "type": "cemetery"
+  },
+  {
+   "lat": 20.9741192,
+   "lon": 105.8083556,
+   "name": "Nghĩa trang Tam Kim - phường Đại Kim, Định Công, Phường Định Công, Thành phố Hà Nội, 11717, Việt Nam",
+   "type": "cemetery"
+  }
+ ],
+ "Phúc Lộc, Hà Nội": [
+  {
+   "lat": 21.1493417,
+   "lon": 105.5720271,
+   "name": "Xã Phúc Lộc, Thành phố Hà Nội, 12829, Việt Nam",
+   "type": "administrative"
+  }
+ ],
+ "Tây Đằng, Hà Nội": [
+  {
+   "lat": 21.2055605,
+   "lon": 105.4264312,
+   "name": "Thị trấn Tây Đằng, Thành phố Hà Nội, Việt Nam",
+   "type": "historic"
+  },
+  {
+   "lat": 21.1987165,
+   "lon": 105.4218231,
+   "name": "Tây Đằng, Thành phố Hà Nội, 12637, Việt Nam",
+   "type": "town"
+  }
+ ],
+ "Phúc Thọ, Hà Nội": [
+  {
+   "lat": 21.1096017,
+   "lon": 105.5395353,
+   "name": "Phúc Thọ, Thành phố Hà Nội, 12800, Việt Nam",
+   "type": "town"
+  }
+ ],
+ "Sơn Tây, Hà Nội": [
+  {
+   "lat": 21.1391687,
+   "lon": 105.5045108,
+   "name": "Sơn Tây, Thành phố Hà Nội, 12721, Việt Nam",
+   "type": "city"
+  }
+ ],
+ "Trạm Trôi, Hà Nội": [
+  {
+   "lat": 21.0681821,
+   "lon": 105.7099045,
+   "name": "Thị trấn Trạm Trôi, Xã Hoài Đức, Thành phố Hà Nội, Việt Nam",
+   "type": "historic"
+  }
+ ],
+ "Phùng, Đan Phượng": [
+  {
+   "lat": 21.0911256,
+   "lon": 105.676439,
+   "name": "Cụm công nghiệp Phùng, Xã Đan Phượng, Thành phố Hà Nội, 13007, Việt Nam",
+   "type": "industrial"
+  },
+  {
+   "lat": 21.086755,
+   "lon": 105.6574693,
+   "name": "Phố Phùng Hưng, Xã Đan Phượng, Thành phố Hà Nội, Việt Nam",
+   "type": "residential"
+  },
+  {
+   "lat": 21.0907671,
+   "lon": 105.6628329,
+   "name": "Đường Đại Phùng I, Xã Đan Phượng, Thành phố Hà Nội, Việt Nam",
+   "type": "residential"
+  }
+ ],
+ "Xuân Mai, Hà Nội": [
+  {
+   "lat": 20.8839996,
+   "lon": 105.5574804,
+   "name": "Xuân Mai (Nhà máy thức ăn chăn nuôi CP), Quốc lộ 6 mở rộng (Xuân Mai - Hoà Bình), Xã Xuân Mai, Thành phố Hà Nội, Xã Lương Sơn, Tỉnh Phú Thọ, Việt Nam",
+   "type": "bus_stop"
+  }
+ ],
+ "Chúc Sơn, Hà Nội": [
+  {
+   "lat": 20.9194146,
+   "lon": 105.7128103,
+   "name": "Thị trấn Chúc Sơn, Thành phố Hà Nội, 13400, Việt Nam",
+   "type": "historic"
+  },
+  {
+   "lat": 20.9241554,
+   "lon": 105.7025271,
+   "name": "Đường Chúc Sơn, Bắc Sơn, Phường Chương Mỹ, Thành phố Hà Nội, 13400, Việt Nam",
+   "type": "tertiary"
+  },
+  {
+   "lat": 20.9241896,
+   "lon": 105.7007421,
+   "name": "Đường Chúc Sơn, Bắc Sơn, Phường Chương Mỹ, Thành phố Hà Nội, 13400, Việt Nam",
+   "type": "trunk"
+  }
+ ],
+ "Phú Xuyên, Hà Nội": [
+  {
+   "lat": 20.7369029,
+   "lon": 105.9129335,
+   "name": "Phú Xuyên, Quốc lộ 1, Xã Phú Xuyên, Thành phố Hà Nội, 13906, Việt Nam",
+   "type": "station"
+  },
+  {
+   "lat": 21.2323913,
+   "lon": 105.4285077,
+   "name": "Phú Xuyên, Thành phố Hà Nội, 12608, Việt Nam",
+   "type": "village"
+  }
+ ],
+ "Thượng Cát, Hà Nội": [
+  {
+   "lat": 21.0862255,
+   "lon": 105.7489147,
+   "name": "Phường Thượng Cát, Thành phố Hà Nội, 11912, Việt Nam",
+   "type": "administrative"
+  }
+ ],
+ "Mê Linh, Hà Nội": [
+  {
+   "lat": 21.1568599,
+   "lon": 105.7333502,
+   "name": "Mê Linh, Thành phố Hà Nội, 12923, Việt Nam",
+   "type": "village"
+  },
+  {
+   "lat": 21.1899093,
+   "lon": 105.7135098,
+   "name": "Mê Linh, Đường cao tốc vành đai 4 vùng thủ đô Hà Nội, Xã Tiến Thắng, Thành phố Hà Nội, 12910, Việt Nam",
+   "type": "motorway_junction"
+  },
+  {
+   "lat": 21.1851244,
+   "lon": 105.7094441,
+   "name": "Mê Linh, Đường cao tốc vành đai 4 vùng thủ đô Hà Nội, HUD Mê Linh Central, Xã Mê Linh, Thành phố Hà Nội, 12910, Việt Nam",
+   "type": "motorway_junction"
+  }
+ ],
+ "Quang Minh, Hà Nội": [
+  {
+   "lat": 21.0267787,
+   "lon": 105.8501521,
+   "name": "quang minh, 2c, Phố Quang Trung, Tổ dân phố Hàng Trống 2, Phường Hoàn Kiếm, Thành phố Hà Nội, 11024, Việt Nam",
+   "type": "restaurant"
+  }
+ ],
+ "Yên Thường, Hà Nội": [
+  {
+   "lat": 21.1035439,
+   "lon": 105.9155631,
+   "name": "Yên Thường, Xã Phù Đổng, Thành phố Hà Nội, 12413, Việt Nam",
+   "type": "neighbourhood"
+  }
+ ],
+ "Sóc Sơn, Hà Nội": [
+  {
+   "lat": 21.2597163,
+   "lon": 105.8508041,
+   "name": "Sóc Sơn, Thành phố Hà Nội, 12206, Việt Nam",
+   "type": "town"
+  }
+ ],
+ "Kim Bài, Hà Nội": [
+  {
+   "lat": 20.8333995,
+   "lon": 105.7627376,
+   "name": "Kim Bài, Thành phố Hà Nội, 13527, Việt Nam",
+   "type": "town"
+  }
+ ],
+ "Dương Nội, Hà Nội": [
+  {
+   "lat": 20.9752796,
+   "lon": 105.7510178,
+   "name": "Phường Dương Nội, Thành phố Hà Nội, 12114, Việt Nam",
+   "type": "administrative"
+  }
+ ],
+ "Cổ Bi, Hà Nội": [
+  {
+   "lat": 21.031936,
+   "lon": 105.9409287,
+   "name": "Cổ Bi, Xã Gia Lâm, Thành phố Hà Nội, 12428, Việt Nam",
+   "type": "quarter"
+  },
+  {
+   "lat": 21.0296643,
+   "lon": 105.9417347,
+   "name": "Cổ Bi, Xã Gia Lâm, Thành phố Hà Nội, 12428, Việt Nam",
+   "type": "neighbourhood"
+  }
+ ],
+ "Ngọc Hòa, Hà Nội": [
+  {
+   "lat": 20.9208834,
+   "lon": 105.6932531,
+   "name": "Ngọc Hòa, Phường Chương Mỹ, Thành phố Hà Nội, 13438, Việt Nam",
+   "type": "neighbourhood"
+  }
+ ],
+ "Linh Đàm, Hà Nội": [
+  {
+   "lat": 20.9674993,
+   "lon": 105.8365778,
+   "name": "Linh Đàm, Hoàng Liệt, Phường Hoàng Liệt, Thành phố Hà Nội, 11719, Việt Nam",
+   "type": "neighbourhood"
+  },
+  {
+   "lat": 20.967177,
+   "lon": 105.8325097,
+   "name": "Linh Đàm, Đường cao tốc Vành đai 3 TP. Hà Nội, Khu đô thị Linh Đàm, Hoàng Liệt, Phường Hoàng Liệt, Thành phố Hà Nội, 11719, Việt Nam",
+   "type": "motorway_junction"
+  }
+ ],
+ "Khu công nghiệp Thăng Long": [
+  {
+   "lat": 21.1166129,
+   "lon": 105.7729886,
+   "name": "Khu công nghiệp Bắc Thăng Long, Xã Thiên Lộc, Thành phố Hà Nội, 12332, Việt Nam",
+   "type": "industrial"
+  },
+  {
+   "lat": 21.0809966,
+   "lon": 105.7615604,
+   "name": "Khu công nghiệp Nam Thăng Long, Phường Thượng Cát, Thành phố Hà Nội, 11912, Việt Nam",
+   "type": "industrial"
+  },
+  {
+   "lat": 20.9298323,
+   "lon": 105.6685658,
+   "name": "Khu công nghiệp Phú Nghĩa, Xã Phú Nghĩa, Thành phố Hà Nội, 13411, Việt Nam",
+   "type": "industrial"
+  }
+ ],
+ "Khu công nghiệp Quang Minh": [
+  {
+   "lat": 21.1925737,
+   "lon": 105.7655408,
+   "name": "Khu công nghiệp Quang Minh, Xã Quang Minh, Thành phố Hà Nội, 12907, Việt Nam",
+   "type": "industrial"
+  }
+ ],
+ "Sài Sơn, Hà Nội": [
+  {
+   "lat": 21.003185,
+   "lon": 105.6531233,
+   "name": "Sài Sơn, Đại lộ Thăng Long (Láng - Hoà Lạc), Xã Quốc Oai, Thành phố Hà Nội, 01234, Việt Nam",
+   "type": "motorway_junction"
+  }
+ ],
+ "Đồng Mai, Hà Nội": [
+  {
+   "lat": 20.9920775,
+   "lon": 105.85902,
+   "name": "Giếng đình Mai Động, Kẻ Mơ, Phường Tương Mai, Thành phố Hà Nội, 11715, Việt Nam",
+   "type": "reservoir"
+  },
+  {
+   "lat": 20.927089,
+   "lon": 105.739803,
+   "name": "Phường Đồng Mai, Thạch Bích, Thành phố Hà Nội, 12116, Việt Nam",
+   "type": "historic"
+  },
+  {
+   "lat": 20.9804172,
+   "lon": 105.8743471,
+   "name": "Nghĩa trang Hợp Thiện Mai Động, Phường Hoàng Mai, Thành phố Hà Nội, 11720, Việt Nam",
+   "type": "cemetery"
+  }
+ ],
+ "Làng Văn hóa - Du lịch các dân tộc Việt Nam": [
+  {
+   "lat": 21.0415965,
+   "lon": 105.4626817,
+   "name": "Làng Văn hóa - Du lịch các Dân tộc Việt Nam, Đường A1, Xã Đoài Phương, Thành phố Hà Nội, Việt Nam",
+   "type": "theme_park"
+  }
+ ],
+ "Sân vận động Quốc gia Mỹ Đình": [
+  {
+   "lat": 21.0205027,
+   "lon": 105.7639271,
+   "name": "Sân vận động Quốc gia Mỹ Đình, 1, Đường Lê Đức Thọ, Xuân Phong, Phường Từ Liêm, Thành phố Hà Nội, 12016, Việt Nam",
+   "type": "stadium"
+  },
+  {
+   "lat": 21.0197682,
+   "lon": 105.7658668,
+   "name": "Sân vận động quốc gia Mỹ Đình, Đường Lê Đức Thọ, Xuân Phong, Phường Từ Liêm, Thành phố Hà Nội, 12016, Việt Nam",
+   "type": "bus_stop"
+  }
+ ],
+ "Tam Hưng, Hà Nội": [
+  {
+   "lat": 20.8464354,
+   "lon": 105.8243134,
+   "name": "Tam Hưng, Đường Ngọc Nữ, Xã Thường Tín, Thành phố Hà Nội, 13606, Việt Nam",
+   "type": "station"
+  }
+ ],
+ "Dân Hòa, Hà Nội": [
+  {
+   "lat": 21.022374,
+   "lon": 105.8442867,
+   "name": "Cung Văn hóa Lao động Hữu nghị Việt Xô, 91, Phố Trần Hưng Đạo, Tổ dân phố Yết Kiêu, Phường Cửa Nam, Thành phố Hà Nội, 11018, Việt Nam",
+   "type": "community_centre"
+  },
+  {
+   "lat": 20.8105226,
+   "lon": 105.7945126,
+   "name": "Xã Dân Hòa, Thành phố Hà Nội, 13521, Việt Nam",
+   "type": "administrative"
+  }
+ ],
+ "Thường Tín, Hà Nội": [
+  {
+   "lat": 20.8713287,
+   "lon": 105.8644324,
+   "name": "Thường Tín, Đường Hùng Nguyên, Xã Thường Tín, Thành phố Hà Nội, 13606, Việt Nam",
+   "type": "station"
+  },
+  {
+   "lat": 20.8725948,
+   "lon": 105.8674129,
+   "name": "Thường Tín, Thành phố Hà Nội, 13606, Việt Nam",
+   "type": "town"
+  }
+ ]
+}

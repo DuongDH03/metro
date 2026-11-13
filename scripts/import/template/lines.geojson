@@ -1,0 +1,31 @@
+{
+  "type": "FeatureCollection",
+  "features": [
+    {
+      "type": "Feature",
+      "properties": {
+        "line": "line-1",
+        "name": "Line 1",
+        "code": "1",
+        "color": "#e6194b",
+        "status": "planned",
+        "year": 2035,
+        "description": "Example line: redraw it at https://geojson.io. Points named below become stations."
+      },
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [[-0.03, -0.01], [-0.01, -0.004], [0.01, 0.002], [0.03, 0.01]]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": { "name": "West Terminal", "nameLocal": "" },
+      "geometry": { "type": "Point", "coordinates": [-0.03, -0.01] }
+    },
+    {
+      "type": "Feature",
+      "properties": { "name": "East Terminal", "nameLocal": "" },
+      "geometry": { "type": "Point", "coordinates": [0.03, 0.01] }
+    }
+  ]
+}

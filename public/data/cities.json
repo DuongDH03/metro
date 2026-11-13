@@ -1,0 +1,6 @@
+[
+  { "id": "hanoi", "name": "Hanoi", "nameLocal": "Hà Nội", "country": "Vietnam", "file": "data/hanoi.json", "center": [105.84, 21.02], "zoom": 10.5 },
+  { "id": "hcmc", "name": "Ho Chi Minh City", "nameLocal": "TP. Hồ Chí Minh", "country": "Vietnam", "file": "data/hcmc.json", "center": [106.70, 10.80], "zoom": 10 },
+  { "id": "tokyo", "name": "Tokyo", "nameLocal": "東京", "country": "Japan", "file": "data/tokyo.json", "center": [139.74, 35.68], "zoom": 10.5 },
+  { "id": "singapore", "name": "Singapore", "country": "Singapore", "file": "data/singapore.json", "center": [103.835, 1.355], "zoom": 11 }
+]

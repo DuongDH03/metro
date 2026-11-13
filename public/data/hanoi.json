@@ -1,0 +1,4610 @@
+{
+ "id": "hanoi",
+ "name": "Hanoi",
+ "nameLocal": "Hà Nội",
+ "center": [
+  105.84,
+  21.02
+ ],
+ "zoom": 10.5,
+ "updated": "2026-11-14",
+ "timeline": {
+  "min": 2021,
+  "max": 2045
+ },
+ "groups": [
+  {
+   "id": "urban-metro",
+   "name": "Urban metro (lines 1–10, 2A, 14)",
+   "nameLocal": "Đường sắt đô thị",
+   "color": "#0D04D6",
+   "description": "Hanoi urban railway network: operating lines 2A and 3, lines under construction (1, 2, 3, 5, 8, 10, 14) and planned lines of the Capital master plan with a 100-year vision."
+  },
+  {
+   "id": "suburban",
+   "name": "Satellite-town lines (11–17)",
+   "nameLocal": "Tuyến kết nối đô thị vệ tinh",
+   "color": "#78909C",
+   "description": "Lines added by the 2026 master plan, mostly linking satellite towns and new development areas; 2036–2045 phase."
+  }
+ ],
+ "lines": [
+  {
+   "id": "line-2a",
+   "code": "2A",
+   "name": "Line 2A: Cat Linh – Ha Dong",
+   "nameLocal": "Tuyến 2A: Cát Linh – Hà Đông",
+   "group": "urban-metro",
+   "color": "#00C000",
+   "mode": "metro",
+   "status": "operating",
+   "opened": 2021,
+   "lengthKm": 54,
+   "description": "Hanoi's first metro line (elevated, 13 km, 12 stations), opened 6 Nov 2021. The 100-year master plan extends it south-west along Highway 6 to Xuân Mai (~20 km, construction targeted 2026–Dec 2030) and north-east from Cát Linh via Hanoi Station, Gia Lâm and Cổ Loa to Yên Thường (~21 km, 2031–2035). Extension alignments are indicative. Color as used by OpenStreetMap/Wikipedia (green).",
+   "sources": [
+    "osm",
+    "vnx-18-lines",
+    "vi-wiki-network",
+    "en-wiki"
+   ],
+   "segments": [
+    {
+     "stations": [
+      "cat-linh",
+      "la-thanh",
+      "thai-ha",
+      "lang",
+      "thuong-dinh",
+      "vanh-dai-3",
+      "phung-khoang",
+      "van-quan",
+      "ha-dong",
+      "la-khe",
+      "van-khe",
+      "yen-nghia"
+     ],
+     "status": "operating",
+     "year": 2021,
+     "label": "Cát Linh – Yên Nghĩa (elevated)",
+     "path": [
+      [
+       105.82721,
+       21.02829
+      ],
+      [
+       105.82745,
+       21.02604
+      ],
+      [
+       105.82666,
+       21.023
+      ],
+      [
+       105.82435,
+       21.01832
+      ],
+      [
+       105.82333,
+       21.0173
+      ],
+      [
+       105.82086,
+       21.01604
+      ],
+      [
+       105.81766,
+       21.01259
+      ],
+      [
+       105.81544,
+       21.00964
+      ],
+      [
+       105.81524,
+       21.00889
+      ],
+      [
+       105.81532,
+       21.00777
+      ],
+      [
+       105.81685,
+       21.00509
+      ],
+      [
+       105.81756,
+       21.00309
+      ],
+      [
+       105.81744,
+       21.0018
+      ],
+      [
+       105.81681,
+       21.00082
+      ],
+      [
+       105.7938,
+       20.98488
+      ],
+      [
+       105.78411,
+       20.97722
+      ],
+      [
+       105.77774,
+       20.97254
+      ],
+      [
+       105.76148,
+       20.95969
+      ],
+      [
+       105.74841,
+       20.9498
+      ]
+     ]
+    },
+    {
+     "stations": [
+      "yen-nghia",
+      "chuc-son",
+      "phu-nghia",
+      "xuan-mai"
+     ],
+     "status": "planned",
+     "year": 2030,
+     "label": "Extension Hà Đông – Xuân Mai (~20 km, target Dec 2030)"
+    },
+    {
+     "stations": [
+      "cat-linh",
+      "ga-ha-noi",
+      "gia-lam",
+      "co-loa",
+      "yen-thuong"
+     ],
+     "status": "planned",
+     "year": 2035,
+     "label": "Extension Cát Linh – Gia Lâm – Cổ Loa – Yên Thường (~21 km)"
+    }
+   ]
+  },
+  {
+   "id": "line-3",
+   "code": "3",
+   "name": "Line 3: Nhon – Hanoi Station",
+   "nameLocal": "Tuyến 3: Nhổn – Ga Hà Nội",
+   "group": "urban-metro",
+   "color": "#A5B635",
+   "mode": "metro",
+   "status": "operating",
+   "opened": 2024,
+   "lengthKm": 58,
+   "description": "Elevated section Nhổn – Cầu Giấy (8.5 km, 8 stations) opened 8 Aug 2024. The 4 km underground section Cầu Giấy – Hanoi Station (4 stations) finished tunnel boring in Apr 2026 and is scheduled for commercial operation at the end of 2027. Planned extensions: Hanoi Station – Hoàng Mai/Yên Sở (8.8 km underground, 7 stations, in project preparation with EU/AFD support; listed for 2026–2030), Nhổn – Trôi – Sơn Tây (30.7 km, 2026–2030 list) and Yên Sở – Ngọc Hồi (6 km, 2031–2035). Line color (olive green) is the one used on station signage per Wikipedia/OSM.",
+   "sources": [
+    "osm",
+    "tienphong-line3-2027",
+    "vneconomy-line3-ext",
+    "vietnamnews-line3-eu",
+    "vnx-18-lines",
+    "vi-wiki-network"
+   ],
+   "segments": [
+    {
+     "stations": [
+      "nhon",
+      "minh-khai",
+      "phu-dien",
+      "cau-dien",
+      "le-duc-tho",
+      "dai-hoc-quoc-gia",
+      "chua-ha",
+      "cau-giay"
+     ],
+     "status": "operating",
+     "year": 2024,
+     "label": "Nhổn – Cầu Giấy (elevated)",
+     "path": [
+      [
+       105.73522,
+       21.05257
+      ],
+      [
+       105.73811,
+       21.05065
+      ],
+      [
+       105.74537,
+       21.04772
+      ],
+      [
+       105.7612,
+       21.04172
+      ],
+      [
+       105.771,
+       21.03855
+      ],
+      [
+       105.77814,
+       21.03663
+      ],
+      [
+       105.78983,
+       21.03633
+      ],
+      [
+       105.7969,
+       21.0341
+      ],
+      [
+       105.79752,
+       21.03376
+      ],
+      [
+       105.80095,
+       21.03047
+      ],
+      [
+       105.80335,
+       21.0292
+      ]
+     ]
+    },
+    {
+     "stations": [
+      "cau-giay",
+      "kim-ma",
+      "cat-linh",
+      "van-mieu",
+      "ga-ha-noi"
+     ],
+     "status": "construction",
+     "year": 2027,
+     "label": "Cầu Giấy – Ga Hà Nội (underground, target end-2027)",
+     "path": [
+      [
+       105.80336,
+       21.02922
+      ],
+      [
+       105.81419,
+       21.03053
+      ],
+      [
+       105.82274,
+       21.03117
+      ],
+      [
+       105.82709,
+       21.02958
+      ],
+      [
+       105.8318,
+       21.02867
+      ],
+      [
+       105.83412,
+       21.02784
+      ],
+      [
+       105.838,
+       21.02606
+      ],
+      [
+       105.84033,
+       21.02462
+      ]
+     ]
+    },
+    {
+     "stations": [
+      "ga-ha-noi",
+      "tran-hung-dao",
+      "tran-thanh-tong",
+      "kim-nguu",
+      "mai-dong",
+      "tan-mai",
+      "tam-trinh",
+      "yen-so"
+     ],
+     "status": "planned",
+     "year": 2030,
+     "label": "Extension Ga Hà Nội – Hoàng Mai (Yên Sở), 8.8 km underground"
+    },
+    {
+     "stations": [
+      "yen-so",
+      "ngoc-hoi"
+     ],
+     "status": "planned",
+     "year": 2035,
+     "label": "Extension Yên Sở – Ngọc Hồi complex (~6 km)"
+    },
+    {
+     "stations": [
+      "nhon",
+      "troi",
+      "phung",
+      "phuc-tho",
+      "son-tay"
+     ],
+     "status": "planned",
+     "year": 2030,
+     "label": "Extension Nhổn – Trôi – Sơn Tây (~30.7 km)"
+    }
+   ]
+  },
+  {
+   "id": "line-1",
+   "code": "1",
+   "name": "Line 1: Noi Bai – Hanoi Station – Ngoc Hoi",
+   "nameLocal": "Tuyến 1: Nội Bài – Yên Viên – Ga Hà Nội – Ngọc Hồi",
+   "group": "urban-metro",
+   "color": "#0D04D6",
+   "mode": "metro",
+   "status": "construction",
+   "opened": 2030,
+   "lengthKm": 149,
+   "description": "North–south trunk line from Nội Bài airport via Yên Viên, Gia Lâm and Hanoi Station to Ngọc Hồi and the Hùng Vương (Trống Đồng) stadium area. Groundbreaking 22 Jun 2026 (Vinhomes–SGC EPC/turnkey contract signed Oct 2026), target 2030; ~60 km in the 2026–2030 list (81 km in other reports). Further branches to the second airport, Đại Nghĩa, Sóc Sơn and Phúc Yên are in the 2036–2045 phase. Stations and alignment are provisional (OpenStreetMap tracing of published plan maps). Color from the vi.wikipedia planning-map palette.",
+   "sources": [
+    "vnx-18-lines",
+    "baoxaydung-5-lines",
+    "vtc-5-lines",
+    "vnn-contracts",
+    "osm",
+    "nhandan-second-airport"
+   ],
+   "segments": [
+    {
+     "stations": [
+      "hung-vuong-stadium",
+      "yen-phu",
+      "thuong-phuc",
+      "thuong-tin",
+      "quoc-lo-1a",
+      "ngoc-hoi",
+      "thanh-tri",
+      "hoang-liet",
+      "giai-phong",
+      "giap-bat",
+      "phuong-liet",
+      "bach-khoa",
+      "ga-ha-noi",
+      "hang-dau",
+      "gia-lam",
+      "truong-lam",
+      "ngo-gia-tu",
+      "to-ga",
+      "ha-huy-tap",
+      "yen-vien",
+      "phu-dong",
+      "global-gate",
+      "viet-hung",
+      "lien-ha",
+      "ha-lam",
+      "thu-lam",
+      "nguyen-khe",
+      "phu-cuong",
+      "mai-dinh",
+      "noi-bai-airport"
+     ],
+     "status": "construction",
+     "year": 2030,
+     "label": "Hùng Vương Stadium – Ngọc Hồi – Ga Hà Nội – Yên Viên – Thư Lâm – Nội Bài (groundbreaking 22 Jun 2026)",
+     "path": [
+      [
+       105.82284,
+       20.84551
+      ],
+      [
+       105.8305,
+       20.85007
+      ],
+      [
+       105.86246,
+       20.8569
+      ],
+      [
+       105.86208,
+       20.87665
+      ],
+      [
+       105.85846,
+       20.88285
+      ],
+      [
+       105.85715,
+       20.88978
+      ],
+      [
+       105.85451,
+       20.89769
+      ],
+      [
+       105.85293,
+       20.89958
+      ],
+      [
+       105.84853,
+       20.90301
+      ],
+      [
+       105.84794,
+       20.90369
+      ],
+      [
+       105.84732,
+       20.90499
+      ],
+      [
+       105.84183,
+       20.91777
+      ],
+      [
+       105.83973,
+       20.92765
+      ],
+      [
+       105.84011,
+       20.9305
+      ],
+      [
+       105.84171,
+       20.93386
+      ],
+      [
+       105.84286,
+       20.93696
+      ],
+      [
+       105.84395,
+       20.94484
+      ],
+      [
+       105.84372,
+       20.95219
+      ],
+      [
+       105.84185,
+       20.9613
+      ],
+      [
+       105.84172,
+       20.96534
+      ],
+      [
+       105.84053,
+       20.97156
+      ],
+      [
+       105.84035,
+       20.9743
+      ],
+      [
+       105.84084,
+       20.98545
+      ],
+      [
+       105.84113,
+       21.00007
+      ],
+      [
+       105.84136,
+       21.01621
+      ],
+      [
+       105.84084,
+       21.01807
+      ],
+      [
+       105.84072,
+       21.02291
+      ],
+      [
+       105.84078,
+       21.02628
+      ],
+      [
+       105.84113,
+       21.02761
+      ],
+      [
+       105.84166,
+       21.02836
+      ],
+      [
+       105.8441,
+       21.03016
+      ],
+      [
+       105.84477,
+       21.03094
+      ],
+      [
+       105.8462,
+       21.03753
+      ],
+      [
+       105.84703,
+       21.03939
+      ],
+      [
+       105.84765,
+       21.03991
+      ],
+      [
+       105.85049,
+       21.04081
+      ],
+      [
+       105.86867,
+       21.0482
+      ],
+      [
+       105.88216,
+       21.05124
+      ],
+      [
+       105.88393,
+       21.05192
+      ],
+      [
+       105.88529,
+       21.05277
+      ],
+      [
+       105.893,
+       21.06036
+      ],
+      [
+       105.90198,
+       21.06966
+      ],
+      [
+       105.91278,
+       21.0801
+      ],
+      [
+       105.91631,
+       21.08432
+      ],
+      [
+       105.92118,
+       21.08925
+      ],
+      [
+       105.92366,
+       21.1009
+      ],
+      [
+       105.90351,
+       21.12019
+      ],
+      [
+       105.88762,
+       21.13672
+      ],
+      [
+       105.8734,
+       21.15214
+      ],
+      [
+       105.87096,
+       21.15923
+      ],
+      [
+       105.87086,
+       21.18129
+      ],
+      [
+       105.85272,
+       21.18777
+      ],
+      [
+       105.82043,
+       21.20786
+      ],
+      [
+       105.79225,
+       21.21596
+      ]
+     ]
+    },
+    {
+     "stations": [
+      "thuong-phuc",
+      "second-airport"
+     ],
+     "status": "planned",
+     "year": 2045,
+     "label": "Branch Ngọc Hồi – second airport (~26 km)"
+    },
+    {
+     "stations": [
+      "hung-vuong-stadium",
+      "kim-bai",
+      "dai-nghia"
+     ],
+     "status": "planned",
+     "year": 2045,
+     "label": "Extension Hùng Vương Stadium – Đại Nghĩa (~25 km)"
+    },
+    {
+     "stations": [
+      "noi-bai-airport",
+      "soc-son"
+     ],
+     "status": "planned",
+     "year": 2045,
+     "label": "Branch Nội Bài – Sóc Sơn (~19 km)"
+    },
+    {
+     "stations": [
+      "thu-lam",
+      "soc-son"
+     ],
+     "status": "planned",
+     "year": 2045,
+     "label": "Branch north Thư Lâm – Sóc Sơn (~14 km)"
+    },
+    {
+     "stations": [
+      "noi-bai-airport",
+      "phuc-yen"
+     ],
+     "status": "planned",
+     "year": 2045,
+     "label": "Extension Nội Bài – Phúc Yên (~5 km)"
+    }
+   ]
+  },
+  {
+   "id": "line-2",
+   "code": "2",
+   "name": "Line 2: Noi Bai – Tran Hung Dao – Thuong Dinh",
+   "nameLocal": "Tuyến 2: Nội Bài – Trần Hưng Đạo – Thượng Đình",
+   "group": "urban-metro",
+   "color": "#00838F",
+   "mode": "metro",
+   "status": "construction",
+   "opened": 2030,
+   "lengthKm": 67,
+   "description": "Section 2.1 Nam Thăng Long – Trần Hưng Đạo (11.5 km, 10 stations C1–C10, mostly underground) broke ground 9 Oct 2025 (ODA project, target 2030; some reports say 2029 or 2031). The Nội Bài – Nam Thăng Long, Trần Hưng Đạo – Thượng Đình and Thượng Đình – Hùng Vương Stadium sections broke ground 22 Jun 2026 under the Vinhomes–SGC turnkey contract (target 2030); an extension to Phú Xuyên is in the 2036–2045 phase. Outer-section stations are placeholders; Trần Hưng Đạo – Thượng Đình uses station names from the earlier approved design. Color chosen (planning maps reuse 2A green).",
+   "sources": [
+    "vnx-18-lines",
+    "vi-wiki-line2",
+    "en-wiki",
+    "baoxaydung-5-lines",
+    "vtc-5-lines",
+    "osm"
+   ],
+   "segments": [
+    {
+     "stations": [
+      "noi-bai-south",
+      "vinh-ngoc",
+      "xuan-dinh"
+     ],
+     "status": "construction",
+     "year": 2030,
+     "label": "Nội Bài – Nam Thăng Long (groundbreaking 22 Jun 2026)"
+    },
+    {
+     "stations": [
+      "xuan-dinh",
+      "ngoai-giao-doan",
+      "tay-ho-tay",
+      "buoi",
+      "quan-ngua",
+      "bach-thao",
+      "ho-tay",
+      "hang-dau",
+      "ho-hoan-kiem",
+      "tran-hung-dao"
+     ],
+     "status": "construction",
+     "year": 2030,
+     "label": "Section 2.1 Nam Thăng Long – Trần Hưng Đạo (groundbreaking 9 Oct 2025)",
+     "path": [
+      [
+       105.78899,
+       21.07701
+      ],
+      [
+       105.79805,
+       21.07358
+      ],
+      [
+       105.7988,
+       21.07302
+      ],
+      [
+       105.7988,
+       21.07171
+      ],
+      [
+       105.79784,
+       21.0697
+      ],
+      [
+       105.79767,
+       21.06868
+      ],
+      [
+       105.79766,
+       21.04936
+      ],
+      [
+       105.79795,
+       21.04781
+      ],
+      [
+       105.79883,
+       21.04667
+      ],
+      [
+       105.79989,
+       21.04624
+      ],
+      [
+       105.80831,
+       21.04622
+      ],
+      [
+       105.81066,
+       21.04605
+      ],
+      [
+       105.81174,
+       21.04553
+      ],
+      [
+       105.81392,
+       21.04338
+      ],
+      [
+       105.81538,
+       21.0425
+      ],
+      [
+       105.81753,
+       21.04201
+      ],
+      [
+       105.81975,
+       21.04208
+      ],
+      [
+       105.82193,
+       21.04176
+      ],
+      [
+       105.82594,
+       21.04043
+      ],
+      [
+       105.82723,
+       21.04039
+      ],
+      [
+       105.82787,
+       21.0406
+      ],
+      [
+       105.82974,
+       21.04186
+      ],
+      [
+       105.83255,
+       21.04246
+      ],
+      [
+       105.84672,
+       21.03985
+      ],
+      [
+       105.84737,
+       21.03958
+      ],
+      [
+       105.84792,
+       21.03924
+      ],
+      [
+       105.84906,
+       21.03775
+      ],
+      [
+       105.85085,
+       21.03394
+      ],
+      [
+       105.85222,
+       21.03281
+      ],
+      [
+       105.85372,
+       21.03063
+      ],
+      [
+       105.85382,
+       21.0289
+      ],
+      [
+       105.85354,
+       21.02705
+      ],
+      [
+       105.85223,
+       21.02103
+      ]
+     ]
+    },
+    {
+     "stations": [
+      "tran-hung-dao",
+      "cau-den",
+      "bach-khoa",
+      "kim-lien",
+      "chua-boc",
+      "nga-tu-so",
+      "thuong-dinh"
+     ],
+     "status": "construction",
+     "year": 2030,
+     "label": "Trần Hưng Đạo – Thượng Đình (groundbreaking 22 Jun 2026)"
+    },
+    {
+     "stations": [
+      "thuong-dinh",
+      "tam-hung",
+      "hung-vuong-stadium"
+     ],
+     "status": "construction",
+     "year": 2030,
+     "label": "Thượng Đình – Hùng Vương Stadium (groundbreaking 22 Jun 2026)"
+    },
+    {
+     "stations": [
+      "hung-vuong-stadium",
+      "phu-xuyen"
+     ],
+     "status": "planned",
+     "year": 2045,
+     "label": "Extension Hùng Vương Stadium – Phú Xuyên (~9 km)"
+    }
+   ]
+  },
+  {
+   "id": "line-4",
+   "code": "4",
+   "name": "Line 4: Thuong Cat – My Dinh – Linh Dam – Long Bien – Me Linh",
+   "nameLocal": "Tuyến 4: Thượng Cát – SVĐ Mỹ Đình – Linh Đàm – Long Biên – Cổ Loa – Mê Linh",
+   "group": "urban-metro",
+   "color": "#FF8C00",
+   "mode": "metro",
+   "status": "planned",
+   "lengthKm": 60,
+   "description": "Semi-circular line in the 2031–2035 phase of the 100-year master plan (~60 km). Only waypoints are published; stations shown are indicative interchange points. Color chosen.",
+   "sources": [
+    "vnx-18-lines",
+    "vietnamnet-15-lines"
+   ],
+   "segments": [
+    {
+     "stations": [
+      "thuong-cat",
+      "cau-dien",
+      "le-quang-dao",
+      "vanh-dai-3",
+      "linh-dam",
+      "linh-nam",
+      "long-bien",
+      "co-loa",
+      "dong-anh",
+      "quang-minh",
+      "me-linh"
+     ],
+     "status": "planned",
+     "year": 2035,
+     "label": "Thượng Cát – Mê Linh (indicative alignment)"
+    }
+   ]
+  },
+  {
+   "id": "line-5",
+   "code": "5",
+   "name": "Line 5: Van Cao – Hoa Lac",
+   "nameLocal": "Tuyến 5: Văn Cao – Hòa Lạc",
+   "group": "urban-metro",
+   "color": "#C71310",
+   "mode": "metro",
+   "status": "construction",
+   "opened": 2030,
+   "lengthKm": 67,
+   "description": "39.6 km, 20 stations (6 underground under Văn Cao – Liễu Giai – Nguyễn Chí Thanh – Trần Duy Hưng, then elevated/at-grade along Thăng Long Avenue to Thạch Bình). Alignment approved by Decision 4602/QĐ-UBND (4 Sep 2025); construction started 19 Dec 2025, target 2030. Extension Văn Cao – Cổ Loa – Dương Xá – Cổ Bi (~27 km) is in the 2031–2035 phase; a further extension to Hòa Lạc airport / the Ethnic Culture Village is only mentioned as possible. Station positions are estimated along the OSM-traced alignment. Color from the vi.wikipedia planning-map palette.",
+   "sources": [
+    "vi-wiki-line5",
+    "vnx-18-lines",
+    "osm"
+   ],
+   "segments": [
+    {
+     "stations": [
+      "quan-ngua",
+      "kim-ma",
+      "vanh-dai-1",
+      "vanh-dai-2",
+      "hoang-dao-thuy",
+      "vanh-dai-3-pham-hung",
+      "le-duc-tho-thang-long",
+      "me-tri",
+      "tay-mo",
+      "an-khanh-1",
+      "an-khanh-2",
+      "song-phuong",
+      "sai-son",
+      "quoc-oai",
+      "dong-but",
+      "dong-truc",
+      "dong-bai",
+      "tien-xuan",
+      "trai-moi",
+      "thach-binh"
+     ],
+     "status": "construction",
+     "year": 2030,
+     "label": "Văn Cao (Quần Ngựa) – Hòa Lạc (Thạch Bình), construction since 19 Dec 2025",
+     "path": [
+      [
+       105.81642,
+       21.04204
+      ],
+      [
+       105.8123,
+       21.02741
+      ],
+      [
+       105.81095,
+       21.0245
+      ],
+      [
+       105.80626,
+       21.01688
+      ],
+      [
+       105.7986,
+       21.00976
+      ],
+      [
+       105.79637,
+       21.00818
+      ],
+      [
+       105.79274,
+       21.00607
+      ],
+      [
+       105.78933,
+       21.00371
+      ],
+      [
+       105.78706,
+       21.00281
+      ],
+      [
+       105.78397,
+       21.00234
+      ],
+      [
+       105.78239,
+       21.00233
+      ],
+      [
+       105.74794,
+       21.00942
+      ],
+      [
+       105.72614,
+       21.01083
+      ],
+      [
+       105.71853,
+       21.01107
+      ],
+      [
+       105.71465,
+       21.01076
+      ],
+      [
+       105.71139,
+       21.0102
+      ],
+      [
+       105.69304,
+       21.006
+      ],
+      [
+       105.68563,
+       21.00493
+      ],
+      [
+       105.66,
+       21.00284
+      ],
+      [
+       105.65605,
+       21.00284
+      ],
+      [
+       105.64106,
+       21.00354
+      ],
+      [
+       105.62115,
+       21.00161
+      ],
+      [
+       105.61035,
+       21.00131
+      ],
+      [
+       105.60185,
+       21.00083
+      ],
+      [
+       105.59866,
+       20.99971
+      ],
+      [
+       105.58016,
+       20.99043
+      ],
+      [
+       105.57718,
+       20.98945
+      ],
+      [
+       105.5742,
+       20.98896
+      ],
+      [
+       105.57117,
+       20.98889
+      ],
+      [
+       105.54823,
+       20.9904
+      ],
+      [
+       105.51839,
+       20.99024
+      ],
+      [
+       105.50503,
+       20.98997
+      ],
+      [
+       105.49877,
+       20.99098
+      ],
+      [
+       105.49482,
+       20.99219
+      ],
+      [
+       105.4872,
+       20.99601
+      ],
+      [
+       105.48017,
+       21.00095
+      ],
+      [
+       105.47611,
+       21.00464
+      ],
+      [
+       105.47564,
+       21.00595
+      ],
+      [
+       105.47608,
+       21.00802
+      ],
+      [
+       105.47871,
+       21.01116
+      ]
+     ]
+    },
+    {
+     "stations": [
+      "quan-ngua",
+      "nghi-tam",
+      "co-loa",
+      "yen-vien",
+      "duong-xa",
+      "co-bi"
+     ],
+     "status": "planned",
+     "year": 2035,
+     "label": "Extension Văn Cao – Cổ Loa – Dương Xá – Cổ Bi (~27 km)"
+    },
+    {
+     "stations": [
+      "thach-binh",
+      "lang-van-hoa"
+     ],
+     "status": "proposed",
+     "label": "Possible extension to Hòa Lạc airport / Ethnic Culture Village (mentioned, not adopted)"
+    }
+   ]
+  },
+  {
+   "id": "line-6",
+   "code": "6",
+   "name": "Line 6: Noi Bai South – Ngoc Hoi",
+   "nameLocal": "Tuyến 6: Phía Nam sân bay Nội Bài – Tổ hợp ga Ngọc Hồi",
+   "group": "urban-metro",
+   "color": "#510882",
+   "mode": "metro",
+   "status": "planned",
+   "lengthKm": 42,
+   "description": "Western semi-ring from south of Nội Bài airport to the Ngọc Hồi rail complex (~42 km), priority for 2031–2035. Drawn along the corridor of earlier plans (Kim Nỗ – Thượng Cát – Phú Diễn – Hà Đông); stations are indicative. Color from the vi.wikipedia planning-map palette.",
+   "sources": [
+    "vnx-18-lines",
+    "daidoanket-18-lines",
+    "en-wiki"
+   ],
+   "segments": [
+    {
+     "stations": [
+      "noi-bai-south",
+      "kim-no",
+      "thuong-cat",
+      "phu-dien-bac",
+      "tay-mo",
+      "ha-dong-railway",
+      "ngoc-hoi"
+     ],
+     "status": "planned",
+     "year": 2035,
+     "label": "Nội Bài (south) – Ngọc Hồi (indicative alignment)"
+    }
+   ]
+  },
+  {
+   "id": "line-7",
+   "code": "7",
+   "name": "Line 7: Me Linh – Ring Road 3.5 – Hung Vuong Stadium",
+   "nameLocal": "Tuyến 7: Mê Linh – Vành đai 3,5 – SVĐ Hùng Vương",
+   "group": "urban-metro",
+   "color": "#88773D",
+   "mode": "metro",
+   "status": "planned",
+   "lengthKm": 51,
+   "description": "North–south line along the Ring Road 3.5 corridor (~51 km), 2036–2045 phase. Stations are indicative. Color from the vi.wikipedia planning-map palette.",
+   "sources": [
+    "vnx-18-lines"
+   ],
+   "segments": [
+    {
+     "stations": [
+      "me-linh",
+      "troi",
+      "an-khanh-1",
+      "duong-noi",
+      "yen-nghia",
+      "tam-hung",
+      "hung-vuong-stadium"
+     ],
+     "status": "planned",
+     "year": 2045,
+     "label": "Mê Linh – Hùng Vương Stadium (indicative alignment)"
+    }
+   ]
+  },
+  {
+   "id": "line-8",
+   "code": "8",
+   "name": "Line 8: Hoa Lac – Mai Dich – Linh Nam – Duong Xa",
+   "nameLocal": "Tuyến 8: Hòa Lạc – Sơn Đồng – Mai Dịch – Lĩnh Nam – Dương Xá – Gia Bình",
+   "group": "urban-metro",
+   "color": "#B111AC",
+   "mode": "metro",
+   "status": "construction",
+   "opened": 2030,
+   "lengthKm": 103,
+   "description": "East–west line. The Hanoi section (~66 km) broke ground 22 Jun 2026 under the Vinhomes–SGC turnkey contract, target 2030 (91 km including the Bắc Ninh section to Gia Bình airport). Branches 8A (to Gia Bình) and 8B (to Ecopark / Hưng Yên) and the Phúc Thọ – Phúc Lộc / Phúc Thọ – Tây Đằng sections (2036–2045) are also shown. Official descriptions say \"via Ring Road 3\"; the provisional station list (vi.wikipedia, OSM) runs through Cầu Giấy, Thái Hà and Kim Liên instead, so the inner alignment is uncertain. Color from the vi.wikipedia planning-map palette.",
+   "sources": [
+    "vnx-18-lines",
+    "baoxaydung-5-lines",
+    "vtc-5-lines",
+    "vnn-contracts",
+    "vi-wiki-line8",
+    "osm"
+   ],
+   "segments": [
+    {
+     "stations": [
+      "thach-hoa",
+      "ha-bang",
+      "huong-ngai",
+      "tay-phuong",
+      "son-dong",
+      "di-trach",
+      "tu-hoang",
+      "minh-khai",
+      "phu-dien-bac",
+      "mai-dich",
+      "hoang-quoc-viet",
+      "buoi",
+      "cau-giay",
+      "vanh-dai-1",
+      "thai-ha",
+      "kim-lien",
+      "phuong-liet",
+      "hoang-mai",
+      "mai-dong",
+      "times-city",
+      "vinh-hung",
+      "linh-nam",
+      "thuan-ton",
+      "an-dao",
+      "kien-thanh",
+      "duong-xa",
+      "linh-quy",
+      "toan-thang"
+     ],
+     "status": "construction",
+     "year": 2030,
+     "label": "Hòa Lạc – Mai Dịch – Lĩnh Nam – Dương Xá – Toàn Thắng (Hanoi section, groundbreaking 22 Jun 2026)",
+     "path": [
+      [
+       105.50475,
+       21.00451
+      ],
+      [
+       105.545,
+       21.02
+      ],
+      [
+       105.60044,
+       21.04521
+      ],
+      [
+       105.635,
+       21.046
+      ],
+      [
+       105.7,
+       21.045
+      ],
+      [
+       105.722,
+       21.046
+      ],
+      [
+       105.73432,
+       21.04601
+      ],
+      [
+       105.74481,
+       21.04798
+      ],
+      [
+       105.76098,
+       21.05042
+      ],
+      [
+       105.76303,
+       21.05179
+      ],
+      [
+       105.76442,
+       21.05206
+      ],
+      [
+       105.76823,
+       21.05042
+      ],
+      [
+       105.77385,
+       21.04664
+      ],
+      [
+       105.77494,
+       21.04618
+      ],
+      [
+       105.80259,
+       21.04623
+      ],
+      [
+       105.80336,
+       21.02922
+      ],
+      [
+       105.81031,
+       21.02351
+      ],
+      [
+       105.81947,
+       21.01456
+      ],
+      [
+       105.83326,
+       21.00469
+      ],
+      [
+       105.83695,
+       20.99597
+      ],
+      [
+       105.83745,
+       20.9952
+      ],
+      [
+       105.83817,
+       20.99462
+      ],
+      [
+       105.83909,
+       20.99439
+      ],
+      [
+       105.8402,
+       20.99443
+      ],
+      [
+       105.8454,
+       20.99638
+      ],
+      [
+       105.85264,
+       20.99539
+      ],
+      [
+       105.8631,
+       20.99431
+      ],
+      [
+       105.86574,
+       20.99311
+      ],
+      [
+       105.87305,
+       20.99296
+      ],
+      [
+       105.87625,
+       20.99244
+      ],
+      [
+       105.88696,
+       20.9886
+      ],
+      [
+       105.89529,
+       20.98038
+      ],
+      [
+       105.89683,
+       20.97937
+      ],
+      [
+       105.89841,
+       20.9791
+      ],
+      [
+       105.90001,
+       20.97934
+      ],
+      [
+       105.90112,
+       20.97975
+      ],
+      [
+       105.92699,
+       20.99358
+      ],
+      [
+       105.93219,
+       20.9968
+      ],
+      [
+       105.95071,
+       21.00668
+      ],
+      [
+       105.95303,
+       21.00862
+      ],
+      [
+       105.95577,
+       21.01218
+      ],
+      [
+       105.96666,
+       21.02029
+      ],
+      [
+       105.96925,
+       21.02049
+      ],
+      [
+       105.98477,
+       21.02067
+      ],
+      [
+       105.98721,
+       21.02145
+      ],
+      [
+       105.9919,
+       21.025
+      ],
+      [
+       105.99277,
+       21.02538
+      ],
+      [
+       105.99502,
+       21.02551
+      ],
+      [
+       106.00041,
+       21.0247
+      ]
+     ]
+    },
+    {
+     "stations": [
+      "toan-thang",
+      "xuan-le",
+      "cuu-yen",
+      "tam-a",
+      "thien-du",
+      "dao-xa",
+      "nghia-dao",
+      "lam-thao",
+      "binh-dinh",
+      "quang-bo",
+      "phu-du",
+      "ngoc-cuc",
+      "gia-binh",
+      "phu-duoi"
+     ],
+     "status": "planned",
+     "label": "Branch 8A to Gia Bình airport (Bắc Ninh)",
+     "path": [
+      [
+       106.00041,
+       21.0247
+      ],
+      [
+       106.00478,
+       21.02416
+      ],
+      [
+       106.02866,
+       21.02542
+      ],
+      [
+       106.04126,
+       21.0237
+      ],
+      [
+       106.05055,
+       21.02549
+      ],
+      [
+       106.05146,
+       21.02547
+      ],
+      [
+       106.0948,
+       21.01086
+      ],
+      [
+       106.10154,
+       21.00882
+      ],
+      [
+       106.11471,
+       21.00043
+      ],
+      [
+       106.11754,
+       20.99961
+      ],
+      [
+       106.1199,
+       20.99959
+      ],
+      [
+       106.13021,
+       21.00214
+      ],
+      [
+       106.1354,
+       21.00369
+      ],
+      [
+       106.14448,
+       21.00909
+      ],
+      [
+       106.146,
+       21.00921
+      ],
+      [
+       106.15237,
+       21.00803
+      ],
+      [
+       106.15561,
+       21.0078
+      ],
+      [
+       106.15648,
+       21.0084
+      ],
+      [
+       106.15718,
+       21.00939
+      ],
+      [
+       106.16078,
+       21.02103
+      ],
+      [
+       106.16136,
+       21.02202
+      ],
+      [
+       106.16212,
+       21.02298
+      ],
+      [
+       106.16998,
+       21.03059
+      ],
+      [
+       106.17243,
+       21.03256
+      ],
+      [
+       106.17327,
+       21.03307
+      ],
+      [
+       106.17642,
+       21.03425
+      ],
+      [
+       106.1893,
+       21.03833
+      ],
+      [
+       106.19497,
+       21.03856
+      ],
+      [
+       106.19904,
+       21.03969
+      ],
+      [
+       106.20732,
+       21.04257
+      ],
+      [
+       106.21162,
+       21.04549
+      ],
+      [
+       106.22041,
+       21.0483
+      ]
+     ]
+    },
+    {
+     "stations": [
+      "thuan-ton",
+      "da-ton",
+      "ecopark",
+      "le-cao"
+     ],
+     "status": "planned",
+     "label": "Branch 8B to Ecopark / Hưng Yên"
+    },
+    {
+     "stations": [
+      "phuc-loc",
+      "phuc-tho",
+      "son-tay",
+      "tay-dang"
+     ],
+     "status": "planned",
+     "year": 2045,
+     "label": "Phúc Lộc – Phúc Thọ – Tây Đằng (13 + 24 km; link to main line not specified)"
+    }
+   ]
+  },
+  {
+   "id": "line-9",
+   "code": "9",
+   "name": "Line 9: Me Linh – Co Loa – Duong Xa",
+   "nameLocal": "Tuyến 9: Mê Linh – Cổ Loa – Dương Xá",
+   "group": "urban-metro",
+   "color": "#8B4513",
+   "mode": "metro",
+   "status": "planned",
+   "lengthKm": 46,
+   "description": "Northern/eastern line (~46 km), 2036–2045 phase. Stations are indicative. Color chosen.",
+   "sources": [
+    "vnx-18-lines",
+    "vietnamnet-15-lines"
+   ],
+   "segments": [
+    {
+     "stations": [
+      "me-linh",
+      "quang-minh",
+      "dong-anh",
+      "co-loa",
+      "yen-thuong",
+      "duong-xa"
+     ],
+     "status": "planned",
+     "year": 2045,
+     "label": "Mê Linh – Cổ Loa – Dương Xá (indicative alignment)"
+    }
+   ]
+  },
+  {
+   "id": "line-10",
+   "code": "10",
+   "name": "Line 10: Co Loa – Vo Chi Cong – Times City ring",
+   "nameLocal": "Tuyến 10: Cổ Loa – Võ Chí Công – Vành đai 3 – Vành đai 2,5 – Times City – Cổ Loa",
+   "group": "urban-metro",
+   "color": "#E6C700",
+   "textColor": "#000000",
+   "mode": "metro",
+   "status": "construction",
+   "opened": 2030,
+   "lengthKm": 43,
+   "description": "Loop line (~43 km) linking Cổ Loa/Đông Anh, Võ Chí Công, Ring Road 3, Ring Road 2.5, Times City and back across the Red River. Groundbreaking 22 Jun 2026 (Vinhomes–SGC turnkey contract), target 2030. Replaces the former Line 10 (Cát Linh – Láng Hạ – Lê Văn Lương – Yên Nghĩa) of the 2024 general plan. Stations are provisional (OSM); the Cổ Loa – Nhật Tân closing arc is drawn straight. Color from the vi.wikipedia planning-map palette (darkened yellow).",
+   "sources": [
+    "vnx-18-lines",
+    "baoxaydung-5-lines",
+    "vtc-5-lines",
+    "vnn-contracts",
+    "osm"
+   ],
+   "segments": [
+    {
+     "stations": [
+      "nhat-tan",
+      "vo-chi-cong",
+      "xuan-la",
+      "mai-dich",
+      "le-duc-tho",
+      "xuan-phuong",
+      "le-quang-dao",
+      "duong-dinh-nghe",
+      "trung-kinh",
+      "hoang-dao-thuy",
+      "chinh-kinh",
+      "thuong-dinh",
+      "kim-giang",
+      "dinh-cong",
+      "giap-bat",
+      "tan-mai-west",
+      "tan-mai",
+      "times-city",
+      "vinh-tuy",
+      "tu-dinh",
+      "long-bien",
+      "lam-ha",
+      "gia-thuy",
+      "gia-quat",
+      "thuong-thanh",
+      "nam-duong",
+      "mai-lam",
+      "co-loa",
+      "nhat-tan"
+     ],
+     "status": "construction",
+     "year": 2030,
+     "label": "Ring Cổ Loa – Võ Chí Công – Times City – Cổ Loa (groundbreaking 22 Jun 2026)",
+     "path": [
+      [
+       105.81536,
+       21.084
+      ],
+      [
+       105.81326,
+       21.07924
+      ],
+      [
+       105.81136,
+       21.07607
+      ],
+      [
+       105.80911,
+       21.07055
+      ],
+      [
+       105.80611,
+       21.06517
+      ],
+      [
+       105.80435,
+       21.06416
+      ],
+      [
+       105.79991,
+       21.06405
+      ],
+      [
+       105.79861,
+       21.06337
+      ],
+      [
+       105.7978,
+       21.06259
+      ],
+      [
+       105.79763,
+       21.05663
+      ],
+      [
+       105.7974,
+       21.05586
+      ],
+      [
+       105.79674,
+       21.05508
+      ],
+      [
+       105.79584,
+       21.05449
+      ],
+      [
+       105.79499,
+       21.05428
+      ],
+      [
+       105.7874,
+       21.05424
+      ],
+      [
+       105.77845,
+       21.05349
+      ],
+      [
+       105.7775,
+       21.05315
+      ],
+      [
+       105.77676,
+       21.05226
+      ],
+      [
+       105.77636,
+       21.05154
+      ],
+      [
+       105.77582,
+       21.04907
+      ],
+      [
+       105.77201,
+       21.03815
+      ],
+      [
+       105.77021,
+       21.03482
+      ],
+      [
+       105.76901,
+       21.02983
+      ],
+      [
+       105.7668,
+       21.02379
+      ],
+      [
+       105.76647,
+       21.02145
+      ],
+      [
+       105.76651,
+       21.01977
+      ],
+      [
+       105.76697,
+       21.01756
+      ],
+      [
+       105.78319,
+       21.01837
+      ],
+      [
+       105.79354,
+       21.01751
+      ],
+      [
+       105.7955,
+       21.01432
+      ],
+      [
+       105.80488,
+       21.00514
+      ],
+      [
+       105.80935,
+       21.00252
+      ],
+      [
+       105.81053,
+       21.00157
+      ],
+      [
+       105.81214,
+       20.99979
+      ],
+      [
+       105.81491,
+       20.99569
+      ],
+      [
+       105.81637,
+       20.99408
+      ],
+      [
+       105.81773,
+       20.99309
+      ],
+      [
+       105.82028,
+       20.99301
+      ],
+      [
+       105.82197,
+       20.9922
+      ],
+      [
+       105.82581,
+       20.98757
+      ],
+      [
+       105.8281,
+       20.98533
+      ],
+      [
+       105.82925,
+       20.98444
+      ],
+      [
+       105.8307,
+       20.98384
+      ],
+      [
+       105.83248,
+       20.98364
+      ],
+      [
+       105.85258,
+       20.98357
+      ],
+      [
+       105.86649,
+       20.98372
+      ],
+      [
+       105.86815,
+       20.98466
+      ],
+      [
+       105.87108,
+       20.98854
+      ],
+      [
+       105.8717,
+       20.99161
+      ],
+      [
+       105.87162,
+       20.99821
+      ],
+      [
+       105.86852,
+       21.00614
+      ],
+      [
+       105.86845,
+       21.00688
+      ],
+      [
+       105.86871,
+       21.00801
+      ],
+      [
+       105.86913,
+       21.00855
+      ],
+      [
+       105.88496,
+       21.01737
+      ],
+      [
+       105.88541,
+       21.01787
+      ],
+      [
+       105.88619,
+       21.01997
+      ],
+      [
+       105.88083,
+       21.02905
+      ],
+      [
+       105.87945,
+       21.03054
+      ],
+      [
+       105.87939,
+       21.03198
+      ],
+      [
+       105.87981,
+       21.03305
+      ],
+      [
+       105.88375,
+       21.03938
+      ],
+      [
+       105.8886,
+       21.04812
+      ],
+      [
+       105.88435,
+       21.05804
+      ],
+      [
+       105.88587,
+       21.06547
+      ],
+      [
+       105.89049,
+       21.06877
+      ],
+      [
+       105.89099,
+       21.06934
+      ],
+      [
+       105.8913,
+       21.07068
+      ],
+      [
+       105.89102,
+       21.07202
+      ],
+      [
+       105.88395,
+       21.08541
+      ],
+      [
+       105.87553,
+       21.09459
+      ],
+      [
+       105.81529,
+       21.08387
+      ]
+     ]
+    }
+   ]
+  },
+  {
+   "id": "line-14",
+   "code": "14",
+   "name": "Line 14: Thang Long Bridge – Hong Ha – Ocean Park",
+   "nameLocal": "Tuyến 14: Cầu Thăng Long – Hồng Hà – Ocean Park",
+   "group": "urban-metro",
+   "color": "#F5617B",
+   "mode": "metro",
+   "status": "construction",
+   "opened": 2030,
+   "lengthKm": 48,
+   "description": "Riverside line from the Thăng Long Bridge along the Hồng Hà corridor through the old quarter edge, across the Red River to Long Biên and Vinhomes Ocean Park (~27 km in Hanoi, ~32 km total). Groundbreaking 22 Jun 2026, target 2030. Extension Mê Linh (Quang Minh IZ) – Thăng Long Bridge (~21 km) is in the 2031–2035 phase. Stations are provisional (OSM). Color from the vi.wikipedia planning-map palette.",
+   "sources": [
+    "vnx-18-lines",
+    "baoxaydung-5-lines",
+    "vtc-5-lines",
+    "vnn-contracts",
+    "osm"
+   ],
+   "segments": [
+    {
+     "stations": [
+      "tan-xuan",
+      "thuong-thuy",
+      "ke-ga",
+      "nhat-tan",
+      "au-co",
+      "tu-lien",
+      "nghi-tam",
+      "nghia-dung",
+      "hang-dau",
+      "tran-quang-khai",
+      "le-thanh-tong",
+      "tran-thanh-tong",
+      "tran-khat-chan",
+      "tu-dinh",
+      "long-bien-dong",
+      "co-linh",
+      "xuan-do",
+      "dong-du",
+      "giap-hai",
+      "thuan-ton",
+      "da-ton",
+      "vinhomes-ocean-park",
+      "ocean-park-dong",
+      "duong-5",
+      "duong-xa"
+     ],
+     "status": "construction",
+     "year": 2030,
+     "label": "Thăng Long Bridge – Hồng Hà – Ocean Park (groundbreaking 22 Jun 2026)",
+     "path": [
+      [
+       105.78445,
+       21.08684
+      ],
+      [
+       105.81302,
+       21.08419
+      ],
+      [
+       105.81752,
+       21.08198
+      ],
+      [
+       105.8209,
+       21.07707
+      ],
+      [
+       105.82555,
+       21.07292
+      ],
+      [
+       105.83186,
+       21.06357
+      ],
+      [
+       105.8328,
+       21.06103
+      ],
+      [
+       105.83513,
+       21.05798
+      ],
+      [
+       105.83817,
+       21.05267
+      ],
+      [
+       105.84395,
+       21.04658
+      ],
+      [
+       105.84703,
+       21.04414
+      ],
+      [
+       105.84836,
+       21.04247
+      ],
+      [
+       105.85135,
+       21.03957
+      ],
+      [
+       105.85441,
+       21.03579
+      ],
+      [
+       105.85664,
+       21.03145
+      ],
+      [
+       105.85672,
+       21.02957
+      ],
+      [
+       105.85605,
+       21.02755
+      ],
+      [
+       105.85611,
+       21.02698
+      ],
+      [
+       105.85865,
+       21.01938
+      ],
+      [
+       105.8598,
+       21.01444
+      ],
+      [
+       105.8628,
+       21.01066
+      ],
+      [
+       105.86348,
+       21.00818
+      ],
+      [
+       105.86525,
+       21.00707
+      ],
+      [
+       105.87042,
+       21.00524
+      ],
+      [
+       105.87131,
+       21.00525
+      ],
+      [
+       105.87227,
+       21.00564
+      ],
+      [
+       105.88353,
+       21.01328
+      ],
+      [
+       105.88871,
+       21.02556
+      ],
+      [
+       105.88984,
+       21.02725
+      ],
+      [
+       105.89117,
+       21.02807
+      ],
+      [
+       105.89249,
+       21.02828
+      ],
+      [
+       105.89619,
+       21.02745
+      ],
+      [
+       105.89912,
+       21.02609
+      ],
+      [
+       105.90422,
+       21.02325
+      ],
+      [
+       105.90914,
+       21.01575
+      ],
+      [
+       105.91417,
+       21.00412
+      ],
+      [
+       105.91678,
+       21.00142
+      ],
+      [
+       105.91823,
+       20.99937
+      ],
+      [
+       105.9249,
+       20.98425
+      ],
+      [
+       105.92559,
+       20.9831
+      ],
+      [
+       105.94448,
+       20.99168
+      ],
+      [
+       105.94664,
+       20.99479
+      ],
+      [
+       105.95987,
+       21.00396
+      ],
+      [
+       105.96329,
+       21.01386
+      ]
+     ]
+    },
+    {
+     "stations": [
+      "me-linh",
+      "quang-minh",
+      "kcn-thang-long",
+      "tan-xuan"
+     ],
+     "status": "planned",
+     "year": 2035,
+     "label": "Extension Mê Linh (Quang Minh IZ) – Thăng Long Bridge (~21 km)"
+    }
+   ]
+  },
+  {
+   "id": "line-11",
+   "code": "11",
+   "name": "Line 11: Lien Ha – West Lake – Chuc Son",
+   "nameLocal": "Tuyến 11: Liên Hà – Hồ Tây – Đô thị Chúc Sơn",
+   "group": "suburban",
+   "color": "#4FC3F7",
+   "textColor": "#000000",
+   "mode": "metro",
+   "status": "planned",
+   "lengthKm": 43,
+   "description": "New line in the 100-year master plan (~43 km), 2036–2045 phase. Only endpoints and West Lake are published; intermediate stations are indicative. Color chosen.",
+   "sources": [
+    "vnx-18-lines"
+   ],
+   "segments": [
+    {
+     "stations": [
+      "lien-ha",
+      "nhat-tan",
+      "ho-tay",
+      "cau-giay",
+      "trung-kinh",
+      "duong-noi",
+      "chuc-son"
+     ],
+     "status": "planned",
+     "year": 2045,
+     "label": "Liên Hà – Hồ Tây – Chúc Sơn (indicative alignment)"
+    }
+   ]
+  },
+  {
+   "id": "line-12",
+   "code": "12",
+   "name": "Line 12: Ngoc Hoi – Thuong Tin – Phu Xuyen",
+   "nameLocal": "Tuyến 12: Ga Ngọc Hồi – Thường Tín – Đô thị Phú Xuyên",
+   "group": "suburban",
+   "color": "#78909C",
+   "mode": "metro",
+   "status": "planned",
+   "lengthKm": 29,
+   "description": "New line (~29 km) to the Phú Xuyên satellite town, 2036–2045 phase. Stations are indicative. Color chosen.",
+   "sources": [
+    "vnx-18-lines"
+   ],
+   "segments": [
+    {
+     "stations": [
+      "ngoc-hoi",
+      "thuong-tin",
+      "thuong-phuc",
+      "phu-xuyen"
+     ],
+     "status": "planned",
+     "year": 2045,
+     "label": "Ngọc Hồi – Thường Tín – Phú Xuyên (indicative alignment)"
+    }
+   ]
+  },
+  {
+   "id": "line-13",
+   "code": "13",
+   "name": "Line 13: Phuc Tho – Chuc Son – Ngoc Hoi",
+   "nameLocal": "Tuyến 13: Đô thị Phúc Thọ – Đô thị Chúc Sơn – Tổ hợp Ngọc Hồi",
+   "group": "suburban",
+   "color": "#9575CD",
+   "mode": "metro",
+   "status": "planned",
+   "lengthKm": 44,
+   "description": "New outer line (~44 km), 2036–2045 phase. Stations are indicative. Color chosen.",
+   "sources": [
+    "vnx-18-lines"
+   ],
+   "segments": [
+    {
+     "stations": [
+      "phuc-tho",
+      "huong-ngai",
+      "quoc-oai",
+      "chuc-son",
+      "tam-hung",
+      "ngoc-hoi"
+     ],
+     "status": "planned",
+     "year": 2045,
+     "label": "Phúc Thọ – Chúc Sơn – Ngọc Hồi (indicative alignment)"
+    }
+   ]
+  },
+  {
+   "id": "line-15",
+   "code": "15",
+   "name": "Line 15: Lien Ha – Ring Road 2.5 – Yen Vien",
+   "nameLocal": "Tuyến 15: Liên Hà – Vành đai 2,5 – Yên Viên",
+   "group": "suburban",
+   "color": "#00BFA5",
+   "textColor": "#000000",
+   "mode": "metro",
+   "status": "planned",
+   "lengthKm": 49,
+   "description": "New line (~49 km), 2036–2045 phase. Only \"Liên Hà – Ring Road 2.5 – Yên Viên\" is published; the drawn route is a rough indication. Color chosen.",
+   "sources": [
+    "vnx-18-lines"
+   ],
+   "segments": [
+    {
+     "stations": [
+      "lien-ha",
+      "nhat-tan",
+      "hoang-quoc-viet",
+      "chinh-kinh",
+      "dinh-cong",
+      "linh-nam",
+      "gia-lam",
+      "yen-vien"
+     ],
+     "status": "planned",
+     "year": 2045,
+     "label": "Liên Hà – Vành đai 2,5 – Yên Viên (indicative alignment)"
+    }
+   ]
+  },
+  {
+   "id": "line-16",
+   "code": "16",
+   "name": "Line 16: Me Linh – Thang Long IP – Yen Thuong",
+   "nameLocal": "Tuyến 16: Mê Linh – KCN Thăng Long – Yên Thường",
+   "group": "suburban",
+   "color": "#455A64",
+   "mode": "metro",
+   "status": "planned",
+   "lengthKm": 23,
+   "description": "New line (~23 km) north of the Red River, 2036–2045 phase. Stations are indicative. Color chosen.",
+   "sources": [
+    "vnx-18-lines"
+   ],
+   "segments": [
+    {
+     "stations": [
+      "me-linh",
+      "kcn-thang-long",
+      "dong-anh",
+      "yen-thuong"
+     ],
+     "status": "planned",
+     "year": 2045,
+     "label": "Mê Linh – KCN Thăng Long – Yên Thường (indicative alignment)"
+    }
+   ]
+  },
+  {
+   "id": "line-17",
+   "code": "17",
+   "name": "Line 17: Hoa Lac urban area link",
+   "nameLocal": "Tuyến 17: Tuyến kết nối vùng đô thị Hòa Lạc",
+   "group": "suburban",
+   "color": "#80DEEA",
+   "textColor": "#000000",
+   "mode": "metro",
+   "status": "planned",
+   "lengthKm": 20,
+   "description": "Connector within the Hòa Lạc – Xuân Mai urban area (~20 km), 2036–2045 phase. No alignment published; drawn as an indicative Hòa Lạc – Xuân Mai link. Color chosen.",
+   "sources": [
+    "vnx-18-lines"
+   ],
+   "segments": [
+    {
+     "stations": [
+      "thach-hoa",
+      "dong-truc",
+      "xuan-mai"
+     ],
+     "status": "planned",
+     "year": 2045,
+     "label": "Hòa Lạc – Xuân Mai (indicative only)"
+    }
+   ]
+  }
+ ],
+ "stations": [
+  {
+   "id": "cat-linh",
+   "name": "Cat Linh",
+   "nameLocal": "Cát Linh",
+   "coord": [
+    105.82728,
+    21.02838
+   ],
+   "codes": [
+    "2A-01",
+    "3-S10"
+   ]
+  },
+  {
+   "id": "la-thanh",
+   "name": "La Thanh",
+   "nameLocal": "La Thành",
+   "coord": [
+    105.82535,
+    21.02015
+   ]
+  },
+  {
+   "id": "thai-ha",
+   "name": "Thai Ha",
+   "nameLocal": "Thái Hà",
+   "coord": [
+    105.81947,
+    21.01456
+   ]
+  },
+  {
+   "id": "lang",
+   "name": "Lang",
+   "nameLocal": "Láng",
+   "coord": [
+    105.81609,
+    21.0064
+   ]
+  },
+  {
+   "id": "thuong-dinh",
+   "name": "Thuong Dinh",
+   "nameLocal": "Thượng Đình",
+   "coord": [
+    105.81225,
+    20.99768
+   ]
+  },
+  {
+   "id": "vanh-dai-3",
+   "name": "Vanh Dai 3",
+   "nameLocal": "Vành Đai 3",
+   "coord": [
+    105.80442,
+    20.9923
+   ]
+  },
+  {
+   "id": "phung-khoang",
+   "name": "Phung Khoang",
+   "nameLocal": "Phùng Khoang",
+   "coord": [
+    105.79306,
+    20.98428
+   ]
+  },
+  {
+   "id": "van-quan",
+   "name": "Van Quan",
+   "nameLocal": "Văn Quán",
+   "coord": [
+    105.7848,
+    20.97773
+   ]
+  },
+  {
+   "id": "ha-dong",
+   "name": "Ha Dong",
+   "nameLocal": "Hà Đông",
+   "coord": [
+    105.77496,
+    20.97022
+   ]
+  },
+  {
+   "id": "la-khe",
+   "name": "La Khe",
+   "nameLocal": "La Khê",
+   "coord": [
+    105.76681,
+    20.96383
+   ]
+  },
+  {
+   "id": "van-khe",
+   "name": "Van Khe",
+   "nameLocal": "Văn Khê",
+   "coord": [
+    105.7562,
+    20.95564
+   ]
+  },
+  {
+   "id": "yen-nghia",
+   "name": "Yen Nghia",
+   "nameLocal": "Yên Nghĩa",
+   "coord": [
+    105.74843,
+    20.94978
+   ]
+  },
+  {
+   "id": "nhon",
+   "name": "Nhon",
+   "nameLocal": "Nhổn",
+   "coord": [
+    105.73523,
+    21.05259
+   ],
+   "codes": [
+    "3-S01"
+   ]
+  },
+  {
+   "id": "minh-khai",
+   "name": "Minh Khai",
+   "nameLocal": "Minh Khai",
+   "coord": [
+    105.74481,
+    21.04798
+   ],
+   "codes": [
+    "3-S02"
+   ]
+  },
+  {
+   "id": "phu-dien",
+   "name": "Phu Dien",
+   "nameLocal": "Phú Diễn",
+   "coord": [
+    105.75527,
+    21.04392
+   ],
+   "codes": [
+    "3-S03"
+   ]
+  },
+  {
+   "id": "cau-dien",
+   "name": "Cau Dien",
+   "nameLocal": "Cầu Diễn",
+   "coord": [
+    105.76269,
+    21.04122
+   ],
+   "codes": [
+    "3-S04"
+   ]
+  },
+  {
+   "id": "le-duc-tho",
+   "name": "Le Duc Tho",
+   "nameLocal": "Lê Đức Thọ",
+   "coord": [
+    105.77299,
+    21.03805
+   ],
+   "codes": [
+    "3-S05"
+   ]
+  },
+  {
+   "id": "dai-hoc-quoc-gia",
+   "name": "National University",
+   "nameLocal": "Đại học Quốc gia",
+   "coord": [
+    105.78269,
+    21.03666
+   ],
+   "codes": [
+    "3-S06"
+   ]
+  },
+  {
+   "id": "chua-ha",
+   "name": "Chua Ha",
+   "nameLocal": "Chùa Hà",
+   "coord": [
+    105.79437,
+    21.03492
+   ],
+   "codes": [
+    "3-S07"
+   ]
+  },
+  {
+   "id": "cau-giay",
+   "name": "Cau Giay",
+   "nameLocal": "Cầu Giấy",
+   "coord": [
+    105.80336,
+    21.02922
+   ],
+   "codes": [
+    "3-S08"
+   ]
+  },
+  {
+   "id": "kim-ma",
+   "name": "Kim Ma",
+   "nameLocal": "Kim Mã",
+   "coord": [
+    105.8138,
+    21.03049
+   ],
+   "approx": true,
+   "codes": [
+    "3-S09",
+    "5-S2"
+   ]
+  },
+  {
+   "id": "van-mieu",
+   "name": "Van Mieu",
+   "nameLocal": "Văn Miếu",
+   "coord": [
+    105.8355,
+    21.0273
+   ],
+   "approx": true,
+   "codes": [
+    "3-S11"
+   ]
+  },
+  {
+   "id": "ga-ha-noi",
+   "name": "Hanoi Station",
+   "nameLocal": "Ga Hà Nội",
+   "coord": [
+    105.84075,
+    21.02526
+   ],
+   "codes": [
+    "3-S12"
+   ]
+  },
+  {
+   "id": "tran-thanh-tong",
+   "name": "Tran Thanh Tong",
+   "nameLocal": "Trần Thánh Tông",
+   "coord": [
+    105.8577,
+    21.0182
+   ],
+   "approx": true
+  },
+  {
+   "id": "kim-nguu",
+   "name": "Kim Nguu",
+   "nameLocal": "Kim Ngưu",
+   "coord": [
+    105.862,
+    21.0032
+   ],
+   "approx": true
+  },
+  {
+   "id": "mai-dong",
+   "name": "Mai Dong",
+   "nameLocal": "Mai Động",
+   "coord": [
+    105.8625,
+    20.9952
+   ],
+   "approx": true
+  },
+  {
+   "id": "tan-mai",
+   "name": "Tan Mai",
+   "nameLocal": "Tân Mai",
+   "coord": [
+    105.86433,
+    20.98371
+   ],
+   "approx": true
+  },
+  {
+   "id": "tam-trinh",
+   "name": "Tam Trinh",
+   "nameLocal": "Tam Trinh",
+   "coord": [
+    105.8652,
+    20.9775
+   ],
+   "approx": true
+  },
+  {
+   "id": "yen-so",
+   "name": "Yen So",
+   "nameLocal": "Yên Sở",
+   "coord": [
+    105.8665,
+    20.969
+   ],
+   "approx": true
+  },
+  {
+   "id": "troi",
+   "name": "Troi",
+   "nameLocal": "Trôi",
+   "coord": [
+    105.7099,
+    21.0682
+   ],
+   "approx": true
+  },
+  {
+   "id": "phung",
+   "name": "Phung",
+   "nameLocal": "Phùng",
+   "coord": [
+    105.665,
+    21.088
+   ],
+   "approx": true
+  },
+  {
+   "id": "phuc-tho",
+   "name": "Phuc Tho",
+   "nameLocal": "Phúc Thọ",
+   "coord": [
+    105.5395,
+    21.1096
+   ],
+   "approx": true
+  },
+  {
+   "id": "son-tay",
+   "name": "Son Tay",
+   "nameLocal": "Sơn Tây",
+   "coord": [
+    105.5045,
+    21.1392
+   ],
+   "approx": true
+  },
+  {
+   "id": "xuan-dinh",
+   "name": "Xuan Dinh",
+   "nameLocal": "Xuân Đỉnh",
+   "coord": [
+    105.7889,
+    21.07704
+   ],
+   "approx": true,
+   "codes": [
+    "2-C1"
+   ]
+  },
+  {
+   "id": "ngoai-giao-doan",
+   "name": "Ngoai Giao Doan",
+   "nameLocal": "Ngoại Giao Đoàn",
+   "coord": [
+    105.79764,
+    21.06576
+   ],
+   "codes": [
+    "2-C2"
+   ]
+  },
+  {
+   "id": "tay-ho-tay",
+   "name": "Tay Ho Tay",
+   "nameLocal": "Tây Hồ Tây",
+   "coord": [
+    105.79764,
+    21.05928
+   ],
+   "codes": [
+    "2-C3"
+   ]
+  },
+  {
+   "id": "buoi",
+   "name": "Buoi",
+   "nameLocal": "Bưởi",
+   "coord": [
+    105.80259,
+    21.04623
+   ],
+   "codes": [
+    "2-C4"
+   ]
+  },
+  {
+   "id": "quan-ngua",
+   "name": "Quan Ngua",
+   "nameLocal": "Quần Ngựa",
+   "coord": [
+    105.81624,
+    21.04227
+   ],
+   "codes": [
+    "2-C5",
+    "5-S1"
+   ]
+  },
+  {
+   "id": "bach-thao",
+   "name": "Bach Thao",
+   "nameLocal": "Bách Thảo",
+   "coord": [
+    105.82946,
+    21.04165
+   ],
+   "codes": [
+    "2-C6"
+   ]
+  },
+  {
+   "id": "ho-tay",
+   "name": "Ho Tay",
+   "nameLocal": "Hồ Tây",
+   "coord": [
+    105.83511,
+    21.04203
+   ],
+   "codes": [
+    "2-C7"
+   ]
+  },
+  {
+   "id": "hang-dau",
+   "name": "Hang Dau",
+   "nameLocal": "Hàng Đậu",
+   "coord": [
+    105.84559,
+    21.04002
+   ],
+   "codes": [
+    "2-C8"
+   ]
+  },
+  {
+   "id": "ho-hoan-kiem",
+   "name": "Hoan Kiem Lake",
+   "nameLocal": "Hồ Hoàn Kiếm",
+   "coord": [
+    105.85383,
+    21.02882
+   ],
+   "codes": [
+    "2-C9"
+   ]
+  },
+  {
+   "id": "tran-hung-dao",
+   "name": "Tran Hung Dao",
+   "nameLocal": "Trần Hưng Đạo",
+   "coord": [
+    105.85224,
+    21.02099
+   ],
+   "codes": [
+    "2-C10"
+   ]
+  },
+  {
+   "id": "cau-den",
+   "name": "Cau Den",
+   "nameLocal": "Cầu Dền",
+   "coord": [
+    105.851,
+    21.008
+   ],
+   "approx": true
+  },
+  {
+   "id": "bach-khoa",
+   "name": "Bach Khoa",
+   "nameLocal": "Bách Khoa",
+   "coord": [
+    105.84114,
+    21.00492
+   ],
+   "approx": true
+  },
+  {
+   "id": "kim-lien",
+   "name": "Kim Lien",
+   "nameLocal": "Kim Liên",
+   "coord": [
+    105.83326,
+    21.00469
+   ],
+   "approx": true
+  },
+  {
+   "id": "chua-boc",
+   "name": "Chua Boc",
+   "nameLocal": "Chùa Bộc",
+   "coord": [
+    105.8265,
+    21.007
+   ],
+   "approx": true
+  },
+  {
+   "id": "nga-tu-so",
+   "name": "Nga Tu So",
+   "nameLocal": "Ngã Tư Sở",
+   "coord": [
+    105.8206,
+    21.003
+   ],
+   "approx": true
+  },
+  {
+   "id": "noi-bai-south",
+   "name": "Noi Bai South (Phu Minh)",
+   "nameLocal": "Phía Nam sân bay Nội Bài (Phú Minh)",
+   "coord": [
+    105.83327,
+    21.1917
+   ],
+   "approx": true
+  },
+  {
+   "id": "vinh-ngoc",
+   "name": "Vinh Ngoc",
+   "nameLocal": "Vĩnh Ngọc",
+   "coord": [
+    105.8189,
+    21.11308
+   ],
+   "approx": true
+  },
+  {
+   "id": "tam-hung",
+   "name": "Tam Hung",
+   "nameLocal": "Tam Hưng",
+   "coord": [
+    105.78774,
+    20.90622
+   ],
+   "approx": true
+  },
+  {
+   "id": "hung-vuong-stadium",
+   "name": "Hung Vuong Stadium",
+   "nameLocal": "Sân vận động Hùng Vương",
+   "coord": [
+    105.826,
+    20.841
+   ],
+   "approx": true
+  },
+  {
+   "id": "phu-xuyen",
+   "name": "Phu Xuyen",
+   "nameLocal": "Phú Xuyên",
+   "coord": [
+    105.895,
+    20.765
+   ],
+   "approx": true
+  },
+  {
+   "id": "vanh-dai-1",
+   "name": "Vanh Dai 1 (Thanh Cong)",
+   "nameLocal": "Vành đai 1 (Thành Công)",
+   "coord": [
+    105.81031,
+    21.02351
+   ],
+   "approx": true,
+   "codes": [
+    "5-S3"
+   ]
+  },
+  {
+   "id": "vanh-dai-2",
+   "name": "Vanh Dai 2",
+   "nameLocal": "Vành đai 2",
+   "coord": [
+    105.80414,
+    21.01487
+   ],
+   "approx": true,
+   "codes": [
+    "5-S4"
+   ]
+  },
+  {
+   "id": "hoang-dao-thuy",
+   "name": "Hoang Dao Thuy",
+   "nameLocal": "Hoàng Đạo Thúy",
+   "coord": [
+    105.79809,
+    21.01182
+   ],
+   "approx": true,
+   "codes": [
+    "5-S5"
+   ]
+  },
+  {
+   "id": "vanh-dai-3-pham-hung",
+   "name": "Vanh Dai 3 (Pham Hung)",
+   "nameLocal": "Vành đai 3 (Phạm Hùng)",
+   "coord": [
+    105.78922,
+    21.00366
+   ],
+   "approx": true,
+   "codes": [
+    "5-S6"
+   ]
+  },
+  {
+   "id": "le-duc-tho-thang-long",
+   "name": "Le Duc Tho (Thang Long Ave)",
+   "nameLocal": "Lê Đức Thọ (Đại lộ Thăng Long)",
+   "coord": [
+    105.77397,
+    21.00408
+   ],
+   "approx": true,
+   "codes": [
+    "5-S7"
+   ]
+  },
+  {
+   "id": "me-tri",
+   "name": "Me Tri",
+   "nameLocal": "Mễ Trì",
+   "coord": [
+    105.75999,
+    21.00697
+   ],
+   "approx": true,
+   "codes": [
+    "5-S8"
+   ]
+  },
+  {
+   "id": "tay-mo",
+   "name": "Tay Mo",
+   "nameLocal": "Tây Mỗ",
+   "coord": [
+    105.743,
+    21.00979
+   ],
+   "approx": true,
+   "codes": [
+    "5-S9"
+   ]
+  },
+  {
+   "id": "an-khanh-1",
+   "name": "An Khanh 1",
+   "nameLocal": "An Khánh 1",
+   "coord": [
+    105.73004,
+    21.01055
+   ],
+   "approx": true,
+   "codes": [
+    "5-S10"
+   ]
+  },
+  {
+   "id": "an-khanh-2",
+   "name": "An Khanh 2",
+   "nameLocal": "An Khánh 2",
+   "coord": [
+    105.71478,
+    21.0107
+   ],
+   "approx": true,
+   "codes": [
+    "5-S11"
+   ]
+  },
+  {
+   "id": "song-phuong",
+   "name": "Song Phuong",
+   "nameLocal": "Song Phương",
+   "coord": [
+    105.701,
+    21.00779
+   ],
+   "approx": true,
+   "codes": [
+    "5-S12"
+   ]
+  },
+  {
+   "id": "sai-son",
+   "name": "Sai Son",
+   "nameLocal": "Sài Sơn",
+   "coord": [
+    105.65309,
+    21.00302
+   ],
+   "approx": true,
+   "codes": [
+    "5-S13"
+   ]
+  },
+  {
+   "id": "quoc-oai",
+   "name": "Quoc Oai",
+   "nameLocal": "Quốc Oai",
+   "coord": [
+    105.6117,
+    21.00131
+   ],
+   "approx": true,
+   "codes": [
+    "5-S14"
+   ]
+  },
+  {
+   "id": "dong-but",
+   "name": "Dong But",
+   "nameLocal": "Đồng Bụt",
+   "coord": [
+    105.59062,
+    20.99567
+   ],
+   "approx": true,
+   "codes": [
+    "5-S15"
+   ]
+  },
+  {
+   "id": "dong-truc",
+   "name": "Dong Truc",
+   "nameLocal": "Đồng Trúc",
+   "coord": [
+    105.5618,
+    20.98958
+   ],
+   "approx": true,
+   "codes": [
+    "5-S16"
+   ]
+  },
+  {
+   "id": "dong-bai",
+   "name": "Dong Bai",
+   "nameLocal": "Đồng Bãi",
+   "coord": [
+    105.534,
+    20.99028
+   ],
+   "approx": true,
+   "codes": [
+    "5-S17"
+   ]
+  },
+  {
+   "id": "tien-xuan",
+   "name": "Tien Xuan",
+   "nameLocal": "Tiến Xuân",
+   "coord": [
+    105.5214,
+    20.99022
+   ],
+   "approx": true,
+   "codes": [
+    "5-S18"
+   ]
+  },
+  {
+   "id": "trai-moi",
+   "name": "Trai Moi",
+   "nameLocal": "Trại Mới",
+   "coord": [
+    105.49739,
+    20.99134
+   ],
+   "approx": true,
+   "codes": [
+    "5-S19"
+   ]
+  },
+  {
+   "id": "thach-binh",
+   "name": "Thach Binh",
+   "nameLocal": "Thạch Bình",
+   "coord": [
+    105.47871,
+    21.01116
+   ],
+   "approx": true,
+   "codes": [
+    "5-S20"
+   ]
+  },
+  {
+   "id": "lang-van-hoa",
+   "name": "Ethnic Culture Village",
+   "nameLocal": "Làng Văn hóa các dân tộc Việt Nam",
+   "coord": [
+    105.4627,
+    21.0416
+   ],
+   "approx": true
+  },
+  {
+   "id": "nghi-tam",
+   "name": "Nghi Tam",
+   "nameLocal": "Nghi Tàm",
+   "coord": [
+    105.83686,
+    21.0549
+   ],
+   "approx": true
+  },
+  {
+   "id": "co-bi",
+   "name": "Co Bi",
+   "nameLocal": "Cổ Bi",
+   "coord": [
+    105.9409,
+    21.0319
+   ],
+   "approx": true
+  },
+  {
+   "id": "yen-phu",
+   "name": "Yen Phu",
+   "nameLocal": "Yên Phú",
+   "coord": [
+    105.8305,
+    20.85007
+   ],
+   "approx": true
+  },
+  {
+   "id": "thuong-phuc",
+   "name": "Thuong Phuc",
+   "nameLocal": "Thượng Phúc",
+   "coord": [
+    105.86246,
+    20.8569
+   ],
+   "approx": true
+  },
+  {
+   "id": "thuong-tin",
+   "name": "Thuong Tin",
+   "nameLocal": "Thường Tín",
+   "coord": [
+    105.86203,
+    20.87663
+   ],
+   "approx": true
+  },
+  {
+   "id": "quoc-lo-1a",
+   "name": "National Highway 1A",
+   "nameLocal": "Quốc lộ 1A",
+   "coord": [
+    105.85761,
+    20.88736
+   ],
+   "approx": true
+  },
+  {
+   "id": "ngoc-hoi",
+   "name": "Ngoc Hoi",
+   "nameLocal": "Ngọc Hồi",
+   "coord": [
+    105.84256,
+    20.91612
+   ],
+   "approx": true
+  },
+  {
+   "id": "thanh-tri",
+   "name": "Thanh Tri",
+   "nameLocal": "Thanh Trì",
+   "coord": [
+    105.84208,
+    20.93487
+   ],
+   "approx": true
+  },
+  {
+   "id": "hoang-liet",
+   "name": "Hoang Liet",
+   "nameLocal": "Hoàng Liệt",
+   "coord": [
+    105.84363,
+    20.95235
+   ],
+   "approx": true
+  },
+  {
+   "id": "giai-phong",
+   "name": "Giai Phong",
+   "nameLocal": "Giải Phóng",
+   "coord": [
+    105.84091,
+    20.96987
+   ],
+   "approx": true
+  },
+  {
+   "id": "giap-bat",
+   "name": "Giap Bat",
+   "nameLocal": "Giáp Bát",
+   "coord": [
+    105.84068,
+    20.9822
+   ],
+   "approx": true
+  },
+  {
+   "id": "phuong-liet",
+   "name": "Phuong Liet",
+   "nameLocal": "Phương Liệt",
+   "coord": [
+    105.84102,
+    20.99561
+   ],
+   "approx": true
+  },
+  {
+   "id": "gia-lam",
+   "name": "Gia Lam",
+   "nameLocal": "Gia Lâm",
+   "coord": [
+    105.87706,
+    21.0501
+   ],
+   "approx": true
+  },
+  {
+   "id": "truong-lam",
+   "name": "Truong Lam",
+   "nameLocal": "Trường Lâm",
+   "coord": [
+    105.88867,
+    21.05604
+   ],
+   "approx": true
+  },
+  {
+   "id": "ngo-gia-tu",
+   "name": "Ngo Gia Tu",
+   "nameLocal": "Ngô Gia Tự",
+   "coord": [
+    105.89784,
+    21.06537
+   ],
+   "approx": true
+  },
+  {
+   "id": "to-ga",
+   "name": "To Ga",
+   "nameLocal": "Tổ Ga",
+   "coord": [
+    105.91273,
+    21.08007
+   ],
+   "approx": true
+  },
+  {
+   "id": "ha-huy-tap",
+   "name": "Ha Huy Tap",
+   "nameLocal": "Hà Huy Tập",
+   "coord": [
+    105.92118,
+    21.08927
+   ],
+   "approx": true
+  },
+  {
+   "id": "yen-vien",
+   "name": "Yen Vien",
+   "nameLocal": "Yên Viên",
+   "coord": [
+    105.92366,
+    21.1009
+   ],
+   "approx": true
+  },
+  {
+   "id": "phu-dong",
+   "name": "Phu Dong",
+   "nameLocal": "Phù Đổng",
+   "coord": [
+    105.9097,
+    21.11438
+   ],
+   "approx": true
+  },
+  {
+   "id": "global-gate",
+   "name": "Global Gate",
+   "nameLocal": "Global Gate",
+   "coord": [
+    105.90062,
+    21.12337
+   ],
+   "approx": true
+  },
+  {
+   "id": "viet-hung",
+   "name": "Viet Hung",
+   "nameLocal": "Việt Hùng",
+   "coord": [
+    105.88762,
+    21.13672
+   ],
+   "approx": true
+  },
+  {
+   "id": "lien-ha",
+   "name": "Lien Ha",
+   "nameLocal": "Liên Hà",
+   "coord": [
+    105.8734,
+    21.15214
+   ],
+   "approx": true
+  },
+  {
+   "id": "ha-lam",
+   "name": "Ha Lam",
+   "nameLocal": "Hà Lâm",
+   "coord": [
+    105.87096,
+    21.15923
+   ],
+   "approx": true
+  },
+  {
+   "id": "thu-lam",
+   "name": "Thu Lam",
+   "nameLocal": "Thư Lâm",
+   "coord": [
+    105.87086,
+    21.18129
+   ],
+   "approx": true
+  },
+  {
+   "id": "nguyen-khe",
+   "name": "Nguyen Khe",
+   "nameLocal": "Nguyên Khê",
+   "coord": [
+    105.85272,
+    21.18777
+   ],
+   "approx": true
+  },
+  {
+   "id": "phu-cuong",
+   "name": "Phu Cuong",
+   "nameLocal": "Phú Cường",
+   "coord": [
+    105.82043,
+    21.20786
+   ],
+   "approx": true
+  },
+  {
+   "id": "mai-dinh",
+   "name": "Mai Dinh",
+   "nameLocal": "Mai Đình",
+   "coord": [
+    105.80461,
+    21.21238
+   ],
+   "approx": true
+  },
+  {
+   "id": "noi-bai-airport",
+   "name": "Noi Bai Airport",
+   "nameLocal": "Sân bay Nội Bài",
+   "coord": [
+    105.79225,
+    21.21596
+   ],
+   "approx": true
+  },
+  {
+   "id": "soc-son",
+   "name": "Soc Son",
+   "nameLocal": "Sóc Sơn",
+   "coord": [
+    105.8508,
+    21.2597
+   ],
+   "approx": true
+  },
+  {
+   "id": "phuc-yen",
+   "name": "Phuc Yen",
+   "nameLocal": "Phúc Yên",
+   "coord": [
+    105.7123,
+    21.24
+   ],
+   "approx": true
+  },
+  {
+   "id": "second-airport",
+   "name": "Second Airport (Ung Hoa)",
+   "nameLocal": "Sân bay thứ hai (Ứng Hòa)",
+   "coord": [
+    105.8,
+    20.655
+   ],
+   "approx": true
+  },
+  {
+   "id": "kim-bai",
+   "name": "Kim Bai",
+   "nameLocal": "Kim Bài",
+   "coord": [
+    105.7627,
+    20.8334
+   ],
+   "approx": true
+  },
+  {
+   "id": "dai-nghia",
+   "name": "Dai Nghia",
+   "nameLocal": "Đại Nghĩa",
+   "coord": [
+    105.745,
+    20.687
+   ],
+   "approx": true
+  },
+  {
+   "id": "thach-hoa",
+   "name": "Thach Hoa (Hoa Lac)",
+   "nameLocal": "Thạch Hòa (Hòa Lạc)",
+   "coord": [
+    105.50475,
+    21.00451
+   ],
+   "approx": true
+  },
+  {
+   "id": "ha-bang",
+   "name": "Ha Bang",
+   "nameLocal": "Hạ Bằng",
+   "coord": [
+    105.545,
+    21.02
+   ],
+   "approx": true
+  },
+  {
+   "id": "huong-ngai",
+   "name": "Huong Ngai",
+   "nameLocal": "Hương Ngải",
+   "coord": [
+    105.60044,
+    21.04521
+   ],
+   "approx": true
+  },
+  {
+   "id": "tay-phuong",
+   "name": "Tay Phuong",
+   "nameLocal": "Tây Phương",
+   "coord": [
+    105.635,
+    21.046
+   ],
+   "approx": true
+  },
+  {
+   "id": "son-dong",
+   "name": "Son Dong",
+   "nameLocal": "Sơn Đồng",
+   "coord": [
+    105.7,
+    21.045
+   ],
+   "approx": true
+  },
+  {
+   "id": "di-trach",
+   "name": "Di Trach",
+   "nameLocal": "Di Trạch",
+   "coord": [
+    105.722,
+    21.046
+   ],
+   "approx": true
+  },
+  {
+   "id": "tu-hoang",
+   "name": "Tu Hoang",
+   "nameLocal": "Tu Hoàng",
+   "coord": [
+    105.73432,
+    21.04601
+   ],
+   "approx": true
+  },
+  {
+   "id": "phu-dien-bac",
+   "name": "Phu Dien North",
+   "nameLocal": "Phú Diễn (tuyến 8)",
+   "coord": [
+    105.76091,
+    21.05043
+   ],
+   "approx": true
+  },
+  {
+   "id": "mai-dich",
+   "name": "Mai Dich",
+   "nameLocal": "Mai Dịch",
+   "coord": [
+    105.77654,
+    21.04615
+   ],
+   "approx": true
+  },
+  {
+   "id": "hoang-quoc-viet",
+   "name": "Hoang Quoc Viet",
+   "nameLocal": "Hoàng Quốc Việt",
+   "coord": [
+    105.7903,
+    21.04621
+   ],
+   "approx": true
+  },
+  {
+   "id": "hoang-mai",
+   "name": "Hoang Mai",
+   "nameLocal": "Hoàng Mai",
+   "coord": [
+    105.85096,
+    20.9956
+   ],
+   "approx": true
+  },
+  {
+   "id": "times-city",
+   "name": "Times City",
+   "nameLocal": "Times City",
+   "coord": [
+    105.87223,
+    20.99301
+   ],
+   "approx": true
+  },
+  {
+   "id": "vinh-hung",
+   "name": "Vinh Hung",
+   "nameLocal": "Vĩnh Hưng",
+   "coord": [
+    105.88299,
+    20.99005
+   ],
+   "approx": true
+  },
+  {
+   "id": "linh-nam",
+   "name": "Linh Nam",
+   "nameLocal": "Lĩnh Nam",
+   "coord": [
+    105.89127,
+    20.98441
+   ],
+   "approx": true
+  },
+  {
+   "id": "thuan-ton",
+   "name": "Thuan Ton",
+   "nameLocal": "Thuận Tốn",
+   "coord": [
+    105.92233,
+    20.99016
+   ],
+   "approx": true
+  },
+  {
+   "id": "an-dao",
+   "name": "An Dao",
+   "nameLocal": "An Đào",
+   "coord": [
+    105.93922,
+    21.00051
+   ],
+   "approx": true
+  },
+  {
+   "id": "kien-thanh",
+   "name": "Kien Thanh",
+   "nameLocal": "Kiên Thành",
+   "coord": [
+    105.94961,
+    21.00606
+   ],
+   "approx": true
+  },
+  {
+   "id": "duong-xa",
+   "name": "Duong Xa",
+   "nameLocal": "Dương Xá",
+   "coord": [
+    105.96329,
+    21.01386
+   ],
+   "approx": true
+  },
+  {
+   "id": "linh-quy",
+   "name": "Linh Quy",
+   "nameLocal": "Linh Quy",
+   "coord": [
+    105.9789,
+    21.02056
+   ],
+   "approx": true
+  },
+  {
+   "id": "toan-thang",
+   "name": "Toan Thang",
+   "nameLocal": "Toàn Thắng",
+   "coord": [
+    106.00043,
+    21.02472
+   ],
+   "approx": true
+  },
+  {
+   "id": "xuan-le",
+   "name": "Xuan Le",
+   "nameLocal": "Xuân Lê",
+   "coord": [
+    106.0236,
+    21.02516
+   ],
+   "approx": true
+  },
+  {
+   "id": "cuu-yen",
+   "name": "Cuu Yen",
+   "nameLocal": "Cửu Yên",
+   "coord": [
+    106.04526,
+    21.02436
+   ],
+   "approx": true
+  },
+  {
+   "id": "tam-a",
+   "name": "Tam A",
+   "nameLocal": "Tam Á",
+   "coord": [
+    106.06098,
+    21.02226
+   ],
+   "approx": true
+  },
+  {
+   "id": "thien-du",
+   "name": "Thien Du",
+   "nameLocal": "Thiện Dũ",
+   "coord": [
+    106.09616,
+    21.01049
+   ],
+   "approx": true
+  },
+  {
+   "id": "dao-xa",
+   "name": "Dao Xa",
+   "nameLocal": "Đạo Xá",
+   "coord": [
+    106.11126,
+    21.00265
+   ],
+   "approx": true
+  },
+  {
+   "id": "nghia-dao",
+   "name": "Nghia Dao",
+   "nameLocal": "Nghĩa Đạo",
+   "coord": [
+    106.12738,
+    21.00143
+   ],
+   "approx": true
+  },
+  {
+   "id": "lam-thao",
+   "name": "Lam Thao",
+   "nameLocal": "Lâm Thao",
+   "coord": [
+    106.14916,
+    21.00862
+   ],
+   "approx": true
+  },
+  {
+   "id": "binh-dinh",
+   "name": "Binh Dinh",
+   "nameLocal": "Bình Định",
+   "coord": [
+    106.15953,
+    21.01685
+   ],
+   "approx": true
+  },
+  {
+   "id": "quang-bo",
+   "name": "Quang Bo",
+   "nameLocal": "Quảng Bố",
+   "coord": [
+    106.16542,
+    21.02618
+   ],
+   "approx": true
+  },
+  {
+   "id": "phu-du",
+   "name": "Phu Du",
+   "nameLocal": "Phú Dư",
+   "coord": [
+    106.17733,
+    21.0345
+   ],
+   "approx": true
+  },
+  {
+   "id": "ngoc-cuc",
+   "name": "Ngoc Cuc",
+   "nameLocal": "Ngọc Cục",
+   "coord": [
+    106.18747,
+    21.03775
+   ],
+   "approx": true
+  },
+  {
+   "id": "gia-binh",
+   "name": "Gia Binh Airport",
+   "nameLocal": "Gia Bình",
+   "coord": [
+    106.20008,
+    21.04007
+   ],
+   "approx": true
+  },
+  {
+   "id": "phu-duoi",
+   "name": "Phu Duoi",
+   "nameLocal": "Phú Dưới",
+   "coord": [
+    106.22043,
+    21.04838
+   ],
+   "approx": true
+  },
+  {
+   "id": "da-ton",
+   "name": "Da Ton",
+   "nameLocal": "Đa Tốn",
+   "coord": [
+    105.92559,
+    20.9831
+   ],
+   "approx": true
+  },
+  {
+   "id": "ecopark",
+   "name": "Ecopark",
+   "nameLocal": "Ecopark",
+   "coord": [
+    105.93164,
+    20.96235
+   ],
+   "approx": true
+  },
+  {
+   "id": "le-cao",
+   "name": "Le Cao",
+   "nameLocal": "Lê Cao",
+   "coord": [
+    105.98534,
+    20.95821
+   ],
+   "approx": true
+  },
+  {
+   "id": "phuc-loc",
+   "name": "Phuc Loc",
+   "nameLocal": "Phúc Lộc",
+   "coord": [
+    105.572,
+    21.1493
+   ],
+   "approx": true
+  },
+  {
+   "id": "tay-dang",
+   "name": "Tay Dang",
+   "nameLocal": "Tây Đằng",
+   "coord": [
+    105.4218,
+    21.1987
+   ],
+   "approx": true
+  },
+  {
+   "id": "nhat-tan",
+   "name": "Nhat Tan",
+   "nameLocal": "Nhật Tân",
+   "coord": [
+    105.81529,
+    21.08387
+   ],
+   "approx": true
+  },
+  {
+   "id": "vo-chi-cong",
+   "name": "Vo Chi Cong",
+   "nameLocal": "Võ Chí Công",
+   "coord": [
+    105.80951,
+    21.07161
+   ],
+   "approx": true
+  },
+  {
+   "id": "xuan-la",
+   "name": "Xuan La",
+   "nameLocal": "Xuân La",
+   "coord": [
+    105.80294,
+    21.06412
+   ],
+   "approx": true
+  },
+  {
+   "id": "xuan-phuong",
+   "name": "Xuan Phuong",
+   "nameLocal": "Xuân Phương",
+   "coord": [
+    105.76716,
+    21.02468
+   ],
+   "approx": true
+  },
+  {
+   "id": "le-quang-dao",
+   "name": "Le Quang Dao (My Dinh Stadium)",
+   "nameLocal": "Lê Quang Đạo (SVĐ Mỹ Đình)",
+   "coord": [
+    105.76697,
+    21.01756
+   ],
+   "approx": true
+  },
+  {
+   "id": "duong-dinh-nghe",
+   "name": "Duong Dinh Nghe",
+   "nameLocal": "Dương Đình Nghệ",
+   "coord": [
+    105.78319,
+    21.01837
+   ],
+   "approx": true
+  },
+  {
+   "id": "trung-kinh",
+   "name": "Trung Kinh",
+   "nameLocal": "Trung Kính",
+   "coord": [
+    105.79354,
+    21.01751
+   ],
+   "approx": true
+  },
+  {
+   "id": "chinh-kinh",
+   "name": "Chinh Kinh",
+   "nameLocal": "Chính Kinh",
+   "coord": [
+    105.80719,
+    21.00373
+   ],
+   "approx": true
+  },
+  {
+   "id": "kim-giang",
+   "name": "Kim Giang",
+   "nameLocal": "Kim Giang",
+   "coord": [
+    105.8243,
+    20.98945
+   ],
+   "approx": true
+  },
+  {
+   "id": "dinh-cong",
+   "name": "Dinh Cong",
+   "nameLocal": "Định Công",
+   "coord": [
+    105.8329,
+    20.98364
+   ],
+   "approx": true
+  },
+  {
+   "id": "tan-mai-west",
+   "name": "Tan Mai West",
+   "nameLocal": "Tân Mai (phía Tây)",
+   "coord": [
+    105.85555,
+    20.98358
+   ],
+   "approx": true
+  },
+  {
+   "id": "vinh-tuy",
+   "name": "Vinh Tuy",
+   "nameLocal": "Vĩnh Tuy",
+   "coord": [
+    105.87029,
+    21.00166
+   ],
+   "approx": true
+  },
+  {
+   "id": "tu-dinh",
+   "name": "Tu Dinh",
+   "nameLocal": "Tư Đình",
+   "coord": [
+    105.88619,
+    21.01997
+   ],
+   "approx": true
+  },
+  {
+   "id": "long-bien",
+   "name": "Long Bien",
+   "nameLocal": "Long Biên",
+   "coord": [
+    105.88083,
+    21.02905
+   ],
+   "approx": true
+  },
+  {
+   "id": "lam-ha",
+   "name": "Lam Ha",
+   "nameLocal": "Lâm Hạ",
+   "coord": [
+    105.8832,
+    21.03849
+   ],
+   "approx": true
+  },
+  {
+   "id": "gia-thuy",
+   "name": "Gia Thuy",
+   "nameLocal": "Gia Thụy",
+   "coord": [
+    105.8886,
+    21.04812
+   ],
+   "approx": true
+  },
+  {
+   "id": "gia-quat",
+   "name": "Gia Quat",
+   "nameLocal": "Gia Quất",
+   "coord": [
+    105.88435,
+    21.05804
+   ],
+   "approx": true
+  },
+  {
+   "id": "thuong-thanh",
+   "name": "Thuong Thanh",
+   "nameLocal": "Thượng Thanh",
+   "coord": [
+    105.88598,
+    21.06557
+   ],
+   "approx": true
+  },
+  {
+   "id": "nam-duong",
+   "name": "Nam Duong",
+   "nameLocal": "Nam Đuống",
+   "coord": [
+    105.8903,
+    21.07348
+   ],
+   "approx": true
+  },
+  {
+   "id": "mai-lam",
+   "name": "Mai Lam",
+   "nameLocal": "Mai Lâm",
+   "coord": [
+    105.88476,
+    21.08395
+   ],
+   "approx": true
+  },
+  {
+   "id": "co-loa",
+   "name": "Co Loa (Global Gate)",
+   "nameLocal": "Cổ Loa (Global Gate)",
+   "coord": [
+    105.87553,
+    21.09459
+   ],
+   "approx": true
+  },
+  {
+   "id": "tan-xuan",
+   "name": "Tan Xuan",
+   "nameLocal": "Tân Xuân",
+   "coord": [
+    105.78432,
+    21.0869
+   ],
+   "approx": true
+  },
+  {
+   "id": "thuong-thuy",
+   "name": "Thuong Thuy",
+   "nameLocal": "Thượng Thụy",
+   "coord": [
+    105.79417,
+    21.08591
+   ],
+   "approx": true
+  },
+  {
+   "id": "ke-ga",
+   "name": "Ke Ga",
+   "nameLocal": "Kẻ Gạ",
+   "coord": [
+    105.80437,
+    21.08503
+   ],
+   "approx": true
+  },
+  {
+   "id": "au-co",
+   "name": "Au Co",
+   "nameLocal": "Âu Cơ",
+   "coord": [
+    105.81964,
+    21.07883
+   ],
+   "approx": true
+  },
+  {
+   "id": "tu-lien",
+   "name": "Tu Lien",
+   "nameLocal": "Tứ Liên",
+   "coord": [
+    105.83079,
+    21.0652
+   ],
+   "approx": true
+  },
+  {
+   "id": "nghia-dung",
+   "name": "Nghia Dung",
+   "nameLocal": "Nghĩa Dũng",
+   "coord": [
+    105.84136,
+    21.04929
+   ],
+   "approx": true
+  },
+  {
+   "id": "tran-quang-khai",
+   "name": "Tran Quang Khai",
+   "nameLocal": "Trần Quang Khải",
+   "coord": [
+    105.85557,
+    21.03361
+   ],
+   "approx": true
+  },
+  {
+   "id": "le-thanh-tong",
+   "name": "Le Thanh Tong",
+   "nameLocal": "Lê Thánh Tông",
+   "coord": [
+    105.85709,
+    21.024
+   ],
+   "approx": true
+  },
+  {
+   "id": "tran-khat-chan",
+   "name": "Tran Khat Chan",
+   "nameLocal": "Trần Khát Chân",
+   "coord": [
+    105.86674,
+    21.00654
+   ],
+   "approx": true
+  },
+  {
+   "id": "long-bien-dong",
+   "name": "Long Bien East",
+   "nameLocal": "Long Biên (phía Đông)",
+   "coord": [
+    105.89805,
+    21.02661
+   ],
+   "approx": true
+  },
+  {
+   "id": "co-linh",
+   "name": "Co Linh",
+   "nameLocal": "Cổ Linh",
+   "coord": [
+    105.90422,
+    21.02325
+   ],
+   "approx": true
+  },
+  {
+   "id": "xuan-do",
+   "name": "Xuan Do",
+   "nameLocal": "Xuân Đỗ",
+   "coord": [
+    105.90914,
+    21.01575
+   ],
+   "approx": true
+  },
+  {
+   "id": "dong-du",
+   "name": "Dong Du",
+   "nameLocal": "Đông Dư",
+   "coord": [
+    105.9143,
+    21.00402
+   ],
+   "approx": true
+  },
+  {
+   "id": "giap-hai",
+   "name": "Giap Hai",
+   "nameLocal": "Giáp Hải",
+   "coord": [
+    105.91866,
+    20.99851
+   ],
+   "approx": true
+  },
+  {
+   "id": "vinhomes-ocean-park",
+   "name": "Vinhomes Ocean Park",
+   "nameLocal": "Vinhomes Ocean Park",
+   "coord": [
+    105.94457,
+    20.99179
+   ],
+   "approx": true
+  },
+  {
+   "id": "ocean-park-dong",
+   "name": "Ocean Park East",
+   "nameLocal": "Ocean Park Đông",
+   "coord": [
+    105.9516,
+    20.99826
+   ],
+   "approx": true
+  },
+  {
+   "id": "duong-5",
+   "name": "Route 5",
+   "nameLocal": "Đường 5",
+   "coord": [
+    105.95987,
+    21.00396
+   ],
+   "approx": true
+  },
+  {
+   "id": "kcn-thang-long",
+   "name": "Thang Long Industrial Park",
+   "nameLocal": "KCN Thăng Long",
+   "coord": [
+    105.773,
+    21.1166
+   ],
+   "approx": true
+  },
+  {
+   "id": "quang-minh",
+   "name": "Quang Minh",
+   "nameLocal": "Quang Minh",
+   "coord": [
+    105.7655,
+    21.1926
+   ],
+   "approx": true
+  },
+  {
+   "id": "me-linh",
+   "name": "Me Linh",
+   "nameLocal": "Mê Linh",
+   "coord": [
+    105.725,
+    21.178
+   ],
+   "approx": true
+  },
+  {
+   "id": "chuc-son",
+   "name": "Chuc Son",
+   "nameLocal": "Chúc Sơn",
+   "coord": [
+    105.7128,
+    20.9194
+   ],
+   "approx": true
+  },
+  {
+   "id": "phu-nghia",
+   "name": "Phu Nghia",
+   "nameLocal": "Phú Nghĩa",
+   "coord": [
+    105.64,
+    20.912
+   ],
+   "approx": true
+  },
+  {
+   "id": "xuan-mai",
+   "name": "Xuan Mai",
+   "nameLocal": "Xuân Mai",
+   "coord": [
+    105.575,
+    20.898
+   ],
+   "approx": true
+  },
+  {
+   "id": "yen-thuong",
+   "name": "Yen Thuong",
+   "nameLocal": "Yên Thường",
+   "coord": [
+    105.9156,
+    21.1035
+   ],
+   "approx": true
+  },
+  {
+   "id": "thuong-cat",
+   "name": "Thuong Cat",
+   "nameLocal": "Thượng Cát",
+   "coord": [
+    105.7489,
+    21.0862
+   ],
+   "approx": true
+  },
+  {
+   "id": "linh-dam",
+   "name": "Linh Dam",
+   "nameLocal": "Linh Đàm",
+   "coord": [
+    105.8325,
+    20.9672
+   ],
+   "approx": true
+  },
+  {
+   "id": "dong-anh",
+   "name": "Dong Anh",
+   "nameLocal": "Đông Anh",
+   "coord": [
+    105.8517,
+    21.1538
+   ],
+   "approx": true
+  },
+  {
+   "id": "kim-no",
+   "name": "Kim No",
+   "nameLocal": "Kim Nỗ",
+   "coord": [
+    105.7902,
+    21.1427
+   ],
+   "approx": true
+  },
+  {
+   "id": "ha-dong-railway",
+   "name": "Ha Dong (railway)",
+   "nameLocal": "Ga Hà Đông",
+   "coord": [
+    105.7605,
+    20.9531
+   ],
+   "approx": true
+  },
+  {
+   "id": "duong-noi",
+   "name": "Duong Noi",
+   "nameLocal": "Dương Nội",
+   "coord": [
+    105.751,
+    20.9753
+   ],
+   "approx": true
+  }
+ ],
+ "sources": [
+  {
+   "id": "vnx-18-lines",
+   "title": "VnExpress (21 Jul 2026): Tiến độ 18 tuyến đường sắt đô thị ở Hà Nội (phasing tables 2026–2030 / 2031–2035 / 2036–2045)",
+   "url": "https://vnexpress.net/tien-do-18-tuyen-duong-sat-do-thi-o-ha-noi-5099807.html",
+   "accessed": "2026-11-14"
+  },
+  {
+   "id": "vnx-979km",
+   "title": "VnExpress (4 Jul 2026): Hà Nội quy hoạch 18 tuyến metro dài gần 1.000 km",
+   "url": "https://vnexpress.net/ha-noi-quy-hoach-18-tuyen-metro-dai-gan-1-000-km-5093207.html",
+   "accessed": "2026-11-14"
+  },
+  {
+   "id": "plan-2512",
+   "title": "Báo Pháp luật: Phê duyệt Quy hoạch tổng thể Thủ đô Hà Nội tầm nhìn 100 năm (Decision 2512/QĐ-UBND, 13 May 2026)",
+   "url": "https://doanhnhan.baophapluat.vn/phe-duyet-quy-hoach-tong-the-thu-do-ha-noi-tam-nhin-100-nam-a2911bf1.md",
+   "accessed": "2026-11-14"
+  },
+  {
+   "id": "daidoanket-18-lines",
+   "title": "Đại Đoàn Kết (22 Apr 2026): Hà Nội định hướng 18 tuyến metro gần 1.000 km",
+   "url": "https://daidoanket.vn/ha-noi-dinh-huong-18-tuyen-metro-gan-1-000-km-dat-nen-mong-giao-thong-cho-tam-nhin-100-nam.html",
+   "accessed": "2026-11-14"
+  },
+  {
+   "id": "nguoiquansat-plan",
+   "title": "Người Quan Sát (22 Jul 2026): Quy hoạch Thủ đô tầm nhìn 100 năm – mạng lưới metro gần 1.200 km",
+   "url": "https://nguoiquansat.vn/quy-hoach-thu-do-tam-nhin-100-nam-ha-noi-huong-toi-mang-luoi-metro-gan-1-200km-305615.html",
+   "accessed": "2026-11-14"
+  },
+  {
+   "id": "vov-18-lines",
+   "title": "VOV (30 Jun 2026): Hà Nội phát triển 18 tuyến đường sắt đô thị dài gần 1.000 km như thế nào?",
+   "url": "https://vov.vn/xa-hoi/ha-noi-phat-trien-18-tuyen-duong-sat-do-thi-dai-gan-1000-km-nhu-the-nao-post1310879.vov",
+   "accessed": "2026-11-14"
+  },
+  {
+   "id": "vietnamnet-15-lines",
+   "title": "VietNamNet (31 Dec 2024): Hà Nội sẽ làm 15 tuyến đường sắt đô thị (Decision 1668/QĐ-TTg general plan, 616.9 km)",
+   "url": "https://vietnamnet.vn/ha-noi-se-lam-15-tuyen-duong-sat-do-thi-2358561.html",
+   "accessed": "2026-11-14"
+  },
+  {
+   "id": "baoxaydung-5-lines",
+   "title": "Báo Xây dựng (22 Jun 2026): Chi tiết 5 tuyến đường sắt đô thị hơn 1,3 triệu tỷ đồng vừa khởi công tại Hà Nội",
+   "url": "https://baoxaydung.vn/chi-tiet-5-tuyen-duong-sat-do-thi-hon-13-trieu-ty-dong-vua-khoi-cong-tai-ha-noi-192260622163314712.htm",
+   "accessed": "2026-11-14"
+  },
+  {
+   "id": "baoxaydung-alignments",
+   "title": "Báo Xây dựng (7 Nov 2026): Hé lộ hướng tuyến 5 metro mới",
+   "url": "https://baoxaydung.vn/he-lo-huong-tuyen-5-metro-moi-ket-noi-cac-cuc-phat-trien-cua-ha-noi-192261107093153639.htm",
+   "accessed": "2026-11-14"
+  },
+  {
+   "id": "vtc-5-lines",
+   "title": "VTC News (22 Jun 2026): Sơ đồ 5 tuyến metro mới ở Hà Nội do Vinhomes–VinSpeed làm tổng thầu EPC",
+   "url": "https://vtcnews.vn/so-do-5-tuyen-metro-moi-o-ha-noi-do-vinhomes-vinspeed-lam-tong-thau-epc-ar1024955.html",
+   "accessed": "2026-11-14"
+  },
+  {
+   "id": "vnn-contracts",
+   "title": "VietNamNet (16 Oct 2026): Hanoi plans 253.5 km of driverless metro lines under five new contracts",
+   "url": "https://vietnamnet.vn/en/hanoi-plans-253-5km-of-driverless-metro-lines-under-five-new-contracts-2565293.html",
+   "accessed": "2026-11-14"
+  },
+  {
+   "id": "cafebiz-5-lines",
+   "title": "CafeBiz (15 Jul 2026): 5 tuyến metro do Vinhomes – VinSpeed làm tổng thầu EPC có diễn biến mới",
+   "url": "https://cafebiz.vn/5-tuyen-metro-do-vinhomes-vinspeed-lam-tong-thau-epc-co-dien-bien-moi-176260715142054739.chn",
+   "accessed": "2026-11-14"
+  },
+  {
+   "id": "tienphong-line3-2027",
+   "title": "Tiền Phong (9 May 2026): Bí thư Hà Nội yêu cầu tuyến metro ngầm đầu tiên hoàn thành cuối năm 2027",
+   "url": "https://tienphong.vn/bi-thu-ha-noi-yeu-cau-tuyen-metro-ngam-dau-tien-cua-thu-do-hoan-thanh-cuoi-nam-2027-post1842009.tpo",
+   "accessed": "2026-11-14"
+  },
+  {
+   "id": "vneconomy-line3-ext",
+   "title": "VnEconomy (16 May 2024): Chuẩn bị đầu tư metro tuyến số 3 đoạn ga Hà Nội – Hoàng Mai (7 underground stations)",
+   "url": "https://vneconomy.vn/chuan-bi-dau-tu-metro-di-ngam-gan-nhu-hoan-toan-tuyen-so-3-doan-ga-ha-noi-hoang-mai.htm",
+   "accessed": "2026-11-14"
+  },
+  {
+   "id": "vietnamnews-line3-eu",
+   "title": "Việt Nam News (20 Oct 2026): EU provides 10 million EUR to prepare Hà Nội's Metro Line 3 extension",
+   "url": "https://vietnamnews.vn/society/1802424/eu-provides-10-million-eur-to-prepare-ha-noi-s-metro-line-3-extension.html",
+   "accessed": "2026-11-14"
+  },
+  {
+   "id": "nhandan-second-airport",
+   "title": "Nhân Dân (14 Mar 2026): Vị trí dự tính để Hà Nội xây dựng sân bay thứ hai",
+   "url": "https://nhandan.vn/vi-tri-du-tinh-de-ha-noi-xay-dung-san-bay-thu-hai-nam-o-dau-post948307.html",
+   "accessed": "2026-11-14"
+  },
+  {
+   "id": "vi-wiki-network",
+   "title": "Wikipedia (vi): Đường sắt đô thị Hà Nội",
+   "url": "https://vi.wikipedia.org/wiki/%C4%90%C6%B0%E1%BB%9Dng_s%E1%BA%AFt_%C4%91%C3%B4_th%E1%BB%8B_H%C3%A0_N%E1%BB%99i",
+   "accessed": "2026-11-14"
+  },
+  {
+   "id": "vi-wiki-line2",
+   "title": "Wikipedia (vi): Tuyến 2 (Đường sắt đô thị Hà Nội)",
+   "url": "https://vi.wikipedia.org/wiki/Tuy%E1%BA%BFn_2_(%C4%90%C6%B0%E1%BB%9Dng_s%E1%BA%AFt_%C4%91%C3%B4_th%E1%BB%8B_H%C3%A0_N%E1%BB%99i)",
+   "accessed": "2026-11-14"
+  },
+  {
+   "id": "vi-wiki-line5",
+   "title": "Wikipedia (vi): Tuyến 5 (Đường sắt đô thị Hà Nội)",
+   "url": "https://vi.wikipedia.org/wiki/Tuy%E1%BA%BFn_5_(%C4%90%C6%B0%E1%BB%9Dng_s%E1%BA%AFt_%C4%91%C3%B4_th%E1%BB%8B_H%C3%A0_N%E1%BB%99i)",
+   "accessed": "2026-11-14"
+  },
+  {
+   "id": "vi-wiki-line8",
+   "title": "Wikipedia (vi): Tuyến 8 (Đường sắt đô thị Hà Nội) – provisional station list",
+   "url": "https://vi.wikipedia.org/wiki/Tuy%E1%BA%BFn_8_(%C4%90%C6%B0%E1%BB%9Dng_s%E1%BA%AFt_%C4%91%C3%B4_th%E1%BB%8B_H%C3%A0_N%E1%BB%99i)",
+   "accessed": "2026-11-14"
+  },
+  {
+   "id": "en-wiki",
+   "title": "Wikipedia (en): Hanoi Metro",
+   "url": "https://en.wikipedia.org/wiki/Hanoi_Metro",
+   "accessed": "2026-11-14"
+  },
+  {
+   "id": "osm",
+   "title": "OpenStreetMap (route relations 9684066, 12989508; construction ways and stations of lines 1, 2, 3, 5, 8, 10, 14) via Overpass API",
+   "url": "https://www.openstreetmap.org/relation/9684066",
+   "accessed": "2026-11-14"
+  }
+ ],
+ "notes": "Network per the Capital Master Plan with a 100-year vision (Decision 2512/QĐ-UBND, 13 May 2026): 18 urban rail lines, about 979 km, building on Resolution 188/2025/QH15 and the 2024 general plan (Decision 1668/QĐ-TTg, 14-15 lines, about 617 km). Years are official phase targets: 2030 for the 2026–2030 list, 2035 for 2031–2035 and 2045 for 2036–2045; branches without a stated phase appear only at the end of the timeline. Lines 1, 2 (outer sections), 8, 10 and 14 broke ground on 22 Jun 2026 under a Vinhomes–SGC turnkey contract; their station names and positions are provisional (traced in OpenStreetMap from published plan maps) and may change. Planned-line stations are indicative waypoints placed at the named places, not designed stations; all estimated locations are flagged approx. Paths are drawn only where OpenStreetMap has an alignment; elsewhere stations are joined by straight lines. Only lines 2A and 3 have official line colors on signage; other colors follow the vi.wikipedia planning-map palette or were chosen for contrast. No monorail, LRT or tram lines appear in the 2026 plan (the 2016 plan had three monorail lines)."
+}

@@ -1,0 +1,116 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<kml xmlns="http://www.opengis.net/kml/2.2">
+  <Document>
+    <name>Hanoi fan vision</name>
+    <description/>
+    <Style id="icon-1899-0288D1-nodesc-normal">
+      <IconStyle>
+        <color>ffd18802</color>
+        <scale>1</scale>
+        <Icon><href>https://www.gstatic.com/mapspro/images/stock/503-wht-blank_maps.png</href></Icon>
+        <hotSpot x="32" xunits="pixels" y="64" yunits="insetPixels"/>
+      </IconStyle>
+      <LabelStyle><scale>0</scale></LabelStyle>
+    </Style>
+    <Style id="icon-1899-0288D1-nodesc-highlight">
+      <IconStyle>
+        <color>ffd18802</color>
+        <scale>1</scale>
+        <Icon><href>https://www.gstatic.com/mapspro/images/stock/503-wht-blank_maps.png</href></Icon>
+        <hotSpot x="32" xunits="pixels" y="64" yunits="insetPixels"/>
+      </IconStyle>
+      <LabelStyle><scale>1</scale></LabelStyle>
+    </Style>
+    <StyleMap id="icon-1899-0288D1-nodesc">
+      <Pair><key>normal</key><styleUrl>#icon-1899-0288D1-nodesc-normal</styleUrl></Pair>
+      <Pair><key>highlight</key><styleUrl>#icon-1899-0288D1-nodesc-highlight</styleUrl></Pair>
+    </StyleMap>
+    <Style id="line-E65100-5000-normal">
+      <LineStyle><color>ff0051e6</color><width>5</width></LineStyle>
+    </Style>
+    <Style id="line-E65100-5000-highlight">
+      <LineStyle><color>ff0051e6</color><width>7.5</width></LineStyle>
+    </Style>
+    <StyleMap id="line-E65100-5000">
+      <Pair><key>normal</key><styleUrl>#line-E65100-5000-normal</styleUrl></Pair>
+      <Pair><key>highlight</key><styleUrl>#line-E65100-5000-highlight</styleUrl></Pair>
+    </StyleMap>
+    <Style id="line-8E24AA-5000-normal">
+      <LineStyle><color>ffaa248e</color><width>5</width></LineStyle>
+    </Style>
+    <Style id="line-8E24AA-5000-highlight">
+      <LineStyle><color>ffaa248e</color><width>7.5</width></LineStyle>
+    </Style>
+    <StyleMap id="line-8E24AA-5000">
+      <Pair><key>normal</key><styleUrl>#line-8E24AA-5000-normal</styleUrl></Pair>
+      <Pair><key>highlight</key><styleUrl>#line-8E24AA-5000-highlight</styleUrl></Pair>
+    </StyleMap>
+    <Folder>
+      <name>Fan lines</name>
+      <Placemark>
+        <name>Fan Line A</name>
+        <description>status: proposed
+year: 2060
+An obviously made-up line from Cầu Giấy to Hanoi Station.</description>
+        <styleUrl>#line-E65100-5000</styleUrl>
+        <ExtendedData>
+          <Data name="code">
+            <value>FA</value>
+          </Data>
+        </ExtendedData>
+        <LineString>
+          <tessellate>1</tessellate>
+          <coordinates>
+            105.8036,21.0291,0
+            105.8125,21.0279,0
+            105.822,21.027,0
+            105.8318,21.0262,0
+            105.8409,21.0251,0
+          </coordinates>
+        </LineString>
+      </Placemark>
+      <Placemark>
+        <name>Fan Line B</name>
+        <description><![CDATA[status: đề xuất<br>year: ~2065<br>code: FB<br>name local: Tuyến fan B<br>Another made-up line, Thái Hà to the lake.]]></description>
+        <styleUrl>#line-8E24AA-5000</styleUrl>
+        <LineString>
+          <tessellate>1</tessellate>
+          <coordinates>
+            105.8196,21.0147,0
+            105.8209,21.0209,0
+            105.822,21.027,0
+            105.8262,21.0388,0
+            105.83,21.05,0
+          </coordinates>
+        </LineString>
+      </Placemark>
+      <Placemark>
+        <name>Cầu Giấy</name>
+        <styleUrl>#icon-1899-0288D1-nodesc</styleUrl>
+        <Point><coordinates>105.8036,21.0291,0</coordinates></Point>
+      </Placemark>
+      <Placemark>
+        <name>Fan Plaza</name>
+        <description>approx: yes</description>
+        <styleUrl>#icon-1899-0288D1-nodesc</styleUrl>
+        <Point><coordinates>105.822,21.027,0</coordinates></Point>
+      </Placemark>
+      <Placemark>
+        <name>Ga Hà Nội</name>
+        <styleUrl>#icon-1899-0288D1-nodesc</styleUrl>
+        <Point><coordinates>105.8409,21.0251,0</coordinates></Point>
+      </Placemark>
+      <Placemark>
+        <name>Thái Hà</name>
+        <styleUrl>#icon-1899-0288D1-nodesc</styleUrl>
+        <Point><coordinates>105.8196,21.0147,0</coordinates></Point>
+      </Placemark>
+      <Placemark>
+        <name>Fan Lakeside</name>
+        <description>approx: yes</description>
+        <styleUrl>#icon-1899-0288D1-nodesc</styleUrl>
+        <Point><coordinates>105.83,21.05,0</coordinates></Point>
+      </Placemark>
+    </Folder>
+  </Document>
+</kml>

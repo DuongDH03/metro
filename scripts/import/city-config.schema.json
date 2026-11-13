@@ -1,0 +1,223 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "$id": "city-config.schema.json",
+  "title": "Metro map city import config",
+  "description": "city.config.json: tells `npm run import` how to build public/data/<id>.json for one city. Imports run in order; their lines are merged into one CityData (stations shared by name + distance).",
+  "type": "object",
+  "additionalProperties": false,
+  "required": ["id", "name", "country", "center", "zoom", "imports"],
+  "properties": {
+    "$schema": {
+      "type": "string",
+      "description": "Path to this schema, for editor autocompletion. Usually \"../../scripts/import/city-config.schema.json\"."
+    },
+    "id": {
+      "type": "string",
+      "pattern": "^[a-z0-9]+(-[a-z0-9]+)*$",
+      "description": "City id, lowercase kebab-case ASCII (e.g. \"hanoi\", \"ho-chi-minh-city\"). Output goes to public/data/<id>.json."
+    },
+    "name": { "type": "string", "minLength": 1, "description": "City name in Latin script, e.g. \"Hanoi\"." },
+    "nameLocal": { "type": "string", "description": "City name in the local language / script, e.g. \"Hà Nội\", \"東京\"." },
+    "country": { "type": "string", "minLength": 1, "description": "Country name shown in the city picker, e.g. \"Vietnam\"." },
+    "center": { "$ref": "#/definitions/lngLat", "description": "Initial map center [longitude, latitude] (GeoJSON order)." },
+    "zoom": { "type": "number", "minimum": 0, "maximum": 22, "description": "Initial map zoom (MapLibre), typically 10-11 for a whole city." },
+    "timeline": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["min", "max"],
+      "description": "Year range of the timeline slider. Default: min..max of all segment years.",
+      "properties": {
+        "min": { "type": "integer", "description": "First year on the slider." },
+        "max": { "type": "integer", "description": "Last year on the slider." }
+      }
+    },
+    "bbox": {
+      "type": "array",
+      "items": { "type": "number" },
+      "minItems": 4,
+      "maxItems": 4,
+      "description": "Area of interest [minLng, minLat, maxLng, maxLat]. Adapters (OSM) clip / filter to it."
+    },
+    "base": {
+      "type": "string",
+      "description": "Existing CityData to extend, relative to the project root, e.g. \"public/data/hanoi.json\". Its lines and stations are kept; imported lines with the same id replace base lines; imported stations merge into base stations by name + distance."
+    },
+    "groups": {
+      "type": "array",
+      "description": "Line groups (operator / network / mode). Lines reference them by id; unknown group ids are created automatically.",
+      "items": { "$ref": "#/definitions/group" }
+    },
+    "sources": {
+      "type": "array",
+      "description": "Sources that lines cite by id (`sources` on lines, import defaults or overrides).",
+      "items": { "$ref": "#/definitions/source" }
+    },
+    "notes": { "type": "string", "description": "Plain-text caveats shown in the info panel." },
+    "imports": {
+      "type": "array",
+      "minItems": 1,
+      "description": "Data sources, run in order: \"osm\" (OpenStreetMap route relations), \"geojson\" or \"kml\" (hand-drawn maps, e.g. geojson.io or Google My Maps exports).",
+      "items": { "$ref": "#/definitions/import" }
+    },
+    "lines": {
+      "type": "object",
+      "description": "Per-line overrides applied after import. Keys match a line id, import key (OSM relation / GeoJSON `line`), code or name (case-insensitive).",
+      "additionalProperties": { "$ref": "#/definitions/lineOverride" }
+    },
+    "options": {
+      "type": "object",
+      "additionalProperties": false,
+      "description": "Normalization tuning.",
+      "properties": {
+        "stationMergeMeters": { "type": "number", "minimum": 0, "description": "Same-name stations closer than this become one shared (interchange) station. Default 400." },
+        "snapMeters": { "type": "number", "minimum": 0, "description": "GeoJSON/KML only: a station Point attaches to every drawn line within this distance (unless it names its lines with `line`). Default 150." },
+        "simplifyMeters": { "type": "number", "minimum": 0, "description": "Douglas-Peucker tolerance for segment paths, metres. Default 15." },
+        "precision": { "type": "integer", "minimum": 0, "maximum": 8, "description": "Coordinate decimals. Default 5 (~1 m)." }
+      }
+    }
+  },
+  "definitions": {
+    "lngLat": {
+      "type": "array",
+      "items": [
+        { "type": "number", "minimum": -180, "maximum": 180, "description": "Longitude" },
+        { "type": "number", "minimum": -90, "maximum": 90, "description": "Latitude" }
+      ],
+      "minItems": 2,
+      "maxItems": 2,
+      "description": "[longitude, latitude] in WGS84."
+    },
+    "id": { "type": "string", "pattern": "^[a-z0-9]+(-[a-z0-9]+)*$", "description": "Lowercase kebab-case ASCII id." },
+    "status": {
+      "type": "string",
+      "enum": ["operating", "construction", "approved", "planned", "proposed"],
+      "description": "operating = revenue service; construction = physically under construction; approved = investment approved / funded; planned = in an official master plan; proposed = studies, concepts, vision."
+    },
+    "mode": {
+      "type": "string",
+      "enum": ["metro", "commuter", "lrt", "monorail", "tram", "agt", "shinkansen"],
+      "description": "Transit mode: metro, commuter (suburban / regional rail), lrt, monorail, tram, agt (automated guideway), shinkansen (high-speed)."
+    },
+    "color": { "type": "string", "pattern": "^#[0-9a-fA-F]{6}$", "description": "CSS hex color #rrggbb." },
+    "year": { "type": "integer", "minimum": 1800, "maximum": 2300, "description": "Year (actual opening year, or target year for non-operating sections)." },
+    "group": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["id", "name"],
+      "description": "A group of lines (operator / network / mode).",
+      "properties": {
+        "id": { "$ref": "#/definitions/id", "description": "Group id, kebab-case, e.g. \"urban-metro\"." },
+        "name": { "type": "string", "description": "Display name." },
+        "nameLocal": { "type": "string", "description": "Name in the local language." },
+        "parent": { "type": "string", "description": "Id of the parent group (for nesting, e.g. \"jr\" > \"jr-east\")." },
+        "color": { "$ref": "#/definitions/color", "description": "Group color #rrggbb (legend)." },
+        "description": { "type": "string", "description": "Plain-text description." }
+      }
+    },
+    "source": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["id", "title", "url"],
+      "description": "A citation lines can reference by id.",
+      "properties": {
+        "id": { "type": "string", "minLength": 1, "description": "Source id that lines cite, e.g. \"osm\", \"qd-1569\"." },
+        "title": { "type": "string", "description": "Human-readable title." },
+        "url": { "type": "string", "pattern": "^https?://", "description": "http(s) URL." },
+        "accessed": { "type": "string", "description": "ISO date the source was accessed, e.g. \"2026-11-14\"." }
+      }
+    },
+    "defaults": {
+      "type": "object",
+      "additionalProperties": false,
+      "description": "Defaults for every line this import produces; values set in the data win.",
+      "properties": {
+        "group": { "type": "string", "description": "Group id for lines without one." },
+        "status": { "$ref": "#/definitions/status", "description": "Status for segments without one." },
+        "mode": { "$ref": "#/definitions/mode", "description": "Mode for lines without one." },
+        "year": { "$ref": "#/definitions/year", "description": "Year for segments without one." },
+        "sources": { "type": "array", "items": { "type": "string" }, "description": "Source ids for lines that cite none." }
+      }
+    },
+    "import": {
+      "type": "object",
+      "required": ["type"],
+      "description": "One data source. `type` selects the adapter.",
+      "oneOf": [
+        { "$ref": "#/definitions/importOsm" },
+        { "$ref": "#/definitions/importFile" }
+      ]
+    },
+    "importOsm": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["type", "filter"],
+      "description": "Import route relations from OpenStreetMap (Overpass API; cached in <city>/.cache, use --refresh to re-download).",
+      "properties": {
+        "type": { "const": "osm", "description": "OpenStreetMap import." },
+        "filter": {
+          "type": "object",
+          "additionalProperties": false,
+          "required": ["route"],
+          "description": "Which route relations to fetch (inside `bbox`).",
+          "properties": {
+            "route": { "type": "array", "minItems": 1, "items": { "type": "string" }, "description": "OSM route=* values, e.g. [\"subway\", \"light_rail\", \"train\", \"monorail\", \"tram\"]." },
+            "network": { "type": "array", "items": { "type": "string" }, "description": "Keep relations whose network=* is one of these (exact)." },
+            "operator": { "type": "array", "items": { "type": "string" }, "description": "Keep relations whose operator=* is one of these (exact)." },
+            "ref": { "type": "array", "items": { "type": "string" }, "description": "Keep only these ref=* values." },
+            "tags": { "type": "object", "additionalProperties": { "type": "string" }, "description": "Extra exact tag filters, e.g. { \"service\": \"subway\" }." }
+          }
+        },
+        "defaults": { "$ref": "#/definitions/defaults" },
+        "exclude": { "type": "array", "items": { "type": "string" }, "description": "Drop lines whose key / name / ref / code matches." },
+        "groupBy": { "type": "string", "enum": ["route_master", "route"], "description": "One line per route_master (default) or per route relation." }
+      }
+    },
+    "importFile": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["type", "file"],
+      "description": "Import a hand-drawn GeoJSON or KML file. LineStrings are lines (features sharing `line` / `name` are segments of one line), Points are stations.",
+      "properties": {
+        "type": { "type": "string", "enum": ["geojson", "kml"], "description": "\"geojson\" (.geojson / .json) or \"kml\" (Google My Maps / Google Earth / QGIS export)." },
+        "file": { "type": "string", "minLength": 1, "description": "Input file, relative to the folder holding city.config.json." },
+        "defaults": { "$ref": "#/definitions/defaults" }
+      }
+    },
+    "segmentPatch": {
+      "type": "object",
+      "additionalProperties": false,
+      "description": "Patch for one segment (by index).",
+      "properties": {
+        "status": { "$ref": "#/definitions/status" },
+        "year": { "$ref": "#/definitions/year" },
+        "label": { "type": "string", "description": "Segment label, e.g. \"Phase 1: Nhổn – Cầu Giấy\"." }
+      }
+    },
+    "lineOverride": {
+      "type": "object",
+      "additionalProperties": false,
+      "description": "Override fields of one imported line.",
+      "properties": {
+        "id": { "$ref": "#/definitions/id", "description": "Rename the line id." },
+        "skip": { "type": "boolean", "description": "Drop this line entirely." },
+        "code": { "type": "string", "description": "Short code / bullet, e.g. \"2A\"." },
+        "name": { "type": "string", "description": "Line name." },
+        "nameLocal": { "type": "string", "description": "Line name in the local language." },
+        "group": { "type": "string", "description": "Group id." },
+        "color": { "$ref": "#/definitions/color", "description": "Line color #rrggbb." },
+        "textColor": { "$ref": "#/definitions/color", "description": "Bullet text color #rrggbb (default: auto contrast)." },
+        "mode": { "$ref": "#/definitions/mode" },
+        "status": { "$ref": "#/definitions/status", "description": "Status for segments without one." },
+        "opened": { "$ref": "#/definitions/year", "description": "Year the first section opened / opens." },
+        "lengthKm": { "type": "number", "minimum": 0, "description": "Total length in km." },
+        "description": { "type": "string", "description": "Plain-text description." },
+        "sources": { "type": "array", "items": { "type": "string" }, "description": "Source ids (added to the imported ones)." },
+        "segments": {
+          "type": "array",
+          "description": "Patch segments by index; null leaves a segment as is.",
+          "items": { "oneOf": [{ "type": "null" }, { "$ref": "#/definitions/segmentPatch" }] }
+        }
+      }
+    }
+  }
+}

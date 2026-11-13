@@ -1,0 +1,60 @@
+{
+  "$schema": "../../scripts/import/city-config.schema.json",
+  "id": "singapore",
+  "name": "Singapore",
+  "country": "Singapore",
+  "center": [103.835, 1.355],
+  "zoom": 11,
+  "timeline": { "min": 1987, "max": 2040 },
+  "bbox": [103.59, 1.2, 104.08, 1.475],
+  "groups": [
+    { "id": "mrt", "name": "MRT", "description": "Mass Rapid Transit (SMRT Trains, SBS Transit)" },
+    { "id": "lrt", "name": "LRT", "description": "Light Rapid Transit feeder lines and the Sentosa Express monorail" },
+    { "id": "rts", "name": "RTS Link", "description": "Cross-border Johor Bahru–Singapore Rapid Transit System" }
+  ],
+  "sources": [
+    { "id": "lta-ccl6", "title": "LTA: Circle Line Stage 6 to open for public preview on 4 July 2026", "url": "https://www.lta.gov.sg/content/ltagov/en/newsroom/2026/5/news-releases/circle-line-stage-6-to-open-for-public-preview-on-4-july-2026.html", "accessed": "2026-11-14" },
+    { "id": "asiaone-tel5-dtl3e", "title": "AsiaOne: Sungei Bedok, Bedok South and Xilin stations (TEL5 / DTL3e) open 26 Dec 2026", "url": "https://www.asiaone.com/singapore/sungei-bedok-south-xilin-mrt-stations-tel-dtl-opening", "accessed": "2026-11-14" },
+    { "id": "lta-rail-2026", "title": "LTA: Next phase of rail development (Committee of Supply 2026)", "url": "https://www.lta.gov.sg/content/ltagov/en/newsroom/2026/3/news-releases/next-phase-of-rail-development.html", "accessed": "2026-11-14" },
+    { "id": "lta-dtl2e", "title": "LTA: First civil contract for the Downtown Line 2 Extension", "url": "https://www.lta.gov.sg/content/ltagov/en/newsroom/2026/1/news-releases/lta-awards-first-civil-contract-for-the-downtown-line-2-extensio.html", "accessed": "2026-11-14" },
+    { "id": "lta-crl3", "title": "LTA / SLA: Cross Island Line Phase 3 alignment (Jul 2026)", "url": "https://www.lta.gov.sg/content/ltagov/en/newsroom/2026/7/news-releases/joint-news-release-by-the-land-transport-authority--lta----sla--.html", "accessed": "2026-11-14" },
+    { "id": "wiki-jrl", "title": "Wikipedia: Jurong Region MRT line", "url": "https://en.wikipedia.org/wiki/Jurong_Region_MRT_line", "accessed": "2026-11-14" },
+    { "id": "wiki-crl", "title": "Wikipedia: Cross Island MRT line", "url": "https://en.wikipedia.org/wiki/Cross_Island_MRT_line", "accessed": "2026-11-14" },
+    { "id": "rts-2027", "title": "The Malaysia Move: RTS Link opening moved to February 2027", "url": "https://themalaysiamove.com/news-2026-10-rts-link-february-2027/", "accessed": "2026-11-14" }
+  ],
+  "notes": "Operating lines, stations and track geometry © OpenStreetMap contributors (ODbL), imported from route relations (simplified ~15 m). The Circle Line is shown complete (CCL6 Keppel – Cantonment – Prince Edward Road opened 12 Jul 2026). Upcoming lines (TEL Stage 5 and DTL3e opening 26 Dec 2026, DTL2 extension, Jurong Region Line, Cross Island Line, RTS Link) are hand-drawn through their announced stations; their alignments and unbuilt station positions are approximate. JRL Stage 2/3 and CRL Phase 3 have no official opening year and appear at the end of the timeline. Not shown: infill stations (Founders' Memorial, Brickland, JS2A), unopened Mount Pleasant and Marina South, Changi Airport Skytrain.",
+  "imports": [
+    {
+      "type": "osm",
+      "filter": { "route": ["subway"], "network": ["Mass Rapid Transit"] },
+      "defaults": { "group": "mrt", "mode": "metro", "sources": ["osm"] },
+      "exclude": ["JRL"]
+    },
+    {
+      "type": "osm",
+      "filter": { "route": ["light_rail", "monorail"], "network": ["Singapore Rail", "Sentosa"] },
+      "defaults": { "group": "lrt", "mode": "lrt", "sources": ["osm"] }
+    },
+    {
+      "type": "geojson",
+      "file": "future.geojson",
+      "defaults": { "group": "mrt", "mode": "metro", "status": "planned" }
+    }
+  ],
+  "lines": {
+    "osm:route_master/7695961": { "id": "nsl", "name": "North–South Line", "opened": 1987 },
+    "osm:route_master/7981689": { "id": "ewl", "name": "East–West Line", "opened": 1987 },
+    "osm:route_master/7981649": { "id": "nel", "name": "North East Line", "opened": 2003 },
+    "osm:route_master/7981685": { "id": "ccl", "name": "Circle Line", "opened": 2009, "sources": ["osm", "lta-ccl6"] },
+    "osm:route_master/7981644": { "id": "dtl", "name": "Downtown Line", "opened": 2013 },
+    "osm:route_master/9627860": { "id": "tel", "name": "Thomson–East Coast Line", "opened": 2020 },
+    "osm:route_master/9664087": { "id": "bplrt", "name": "Bukit Panjang LRT", "opened": 1999 },
+    "osm:route_master/9663109": { "id": "sklrt", "name": "Sengkang LRT", "opened": 2003 },
+    "osm:route_master/9663921": { "id": "pglrt", "name": "Punggol LRT", "opened": 2005 },
+    "osm:route_master/9663250": { "id": "sentosa-express", "code": "", "mode": "monorail", "opened": 2007 },
+    "tel5": { "id": "tel" },
+    "dtl3e": { "id": "dtl" },
+    "dtl2e": { "id": "dtl" }
+  },
+  "options": { "stationMergeMeters": 400, "simplifyMeters": 15 }
+}

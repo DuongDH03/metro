@@ -1,0 +1,540 @@
+{
+ "id": "fixture",
+ "name": "Fixtureville",
+ "nameLocal": "Test City",
+ "center": [
+  100.5,
+  15.01
+ ],
+ "zoom": 11.6,
+ "updated": "2026-11-13",
+ "timeline": {
+  "min": 2010,
+  "max": 2045
+ },
+ "notes": "Fake data for UI development. Nothing here is real.\nLine 4 has no target year, so it only appears at the end of the timeline.",
+ "groups": [
+  {
+   "id": "metro",
+   "name": "Metro",
+   "description": "Urban metro network"
+  },
+  {
+   "id": "metro-corp",
+   "name": "City Metro Corp",
+   "parent": "metro",
+   "color": "#e11d48"
+  },
+  {
+   "id": "loop-co",
+   "name": "Loop Line Co.",
+   "parent": "metro",
+   "nameLocal": "ループ"
+  },
+  {
+   "id": "rail",
+   "name": "Regional rail"
+  },
+  {
+   "id": "tram",
+   "name": "Tram"
+  }
+ ],
+ "lines": [
+  {
+   "id": "line-1",
+   "code": "1",
+   "name": "Line 1 – East–West",
+   "nameLocal": "Tuyến số 1",
+   "group": "metro-corp",
+   "color": "#e11d48",
+   "mode": "metro",
+   "status": "operating",
+   "opened": 2015,
+   "lengthKm": 13.2,
+   "description": "Elevated east–west line. Airport extension under construction.",
+   "segments": [
+    {
+     "stations": [
+      "west-terminal",
+      "cau-giay",
+      "ho-tay",
+      "dong-da",
+      "central",
+      "ben-thanh",
+      "riverside"
+     ],
+     "status": "operating",
+     "year": 2015,
+     "label": "Phase 1: Western Terminal – Riverside",
+     "path": [
+      [
+       100.44,
+       15
+      ],
+      [
+       100.448,
+       15.003
+      ],
+      [
+       100.455,
+       15.002
+      ],
+      [
+       100.462,
+       14.999
+      ],
+      [
+       100.47,
+       15
+      ],
+      [
+       100.485,
+       15.001
+      ],
+      [
+       100.492,
+       15.0015
+      ],
+      [
+       100.5,
+       15
+      ],
+      [
+       100.515,
+       15
+      ],
+      [
+       100.523,
+       14.9995
+      ],
+      [
+       100.53,
+       14.998
+      ]
+     ]
+    },
+    {
+     "stations": [
+      "riverside",
+      "east-park",
+      "airport"
+     ],
+     "status": "construction",
+     "year": 2027,
+     "label": "Phase 2: Airport extension"
+    }
+   ],
+   "sources": [
+    "src-plan",
+    "src-wiki"
+   ]
+  },
+  {
+   "id": "line-2",
+   "code": "2A",
+   "name": "Line 2A – North–South",
+   "group": "metro-corp",
+   "color": "#2563eb",
+   "mode": "metro",
+   "status": "approved",
+   "opened": 2030,
+   "description": "Underground north–south trunk with a branch to Tech Park.",
+   "segments": [
+    {
+     "stations": [
+      "north-depot",
+      "university",
+      "market",
+      "old-quarter",
+      "central",
+      "south-gate",
+      "harbour"
+     ],
+     "status": "approved",
+     "year": 2030
+    },
+    {
+     "stations": [
+      "market",
+      "tech-park",
+      "new-town"
+     ],
+     "status": "planned",
+     "year": 2035,
+     "label": "Tech Park branch"
+    }
+   ],
+   "sources": [
+    "src-plan"
+   ]
+  },
+  {
+   "id": "loop",
+   "code": "L",
+   "name": "Circle Line",
+   "nameLocal": "ループ線",
+   "group": "loop-co",
+   "color": "#f59e0b",
+   "mode": "metro",
+   "status": "planned",
+   "description": "Planned loop around the centre. Color chosen for the fixture.",
+   "segments": [
+    {
+     "stations": [
+      "dong-da",
+      "lakeside",
+      "market",
+      "museum",
+      "ben-thanh",
+      "stadium",
+      "south-gate",
+      "garden",
+      "dong-da"
+     ],
+     "status": "planned",
+     "year": 2038
+    }
+   ],
+   "sources": [
+    "src-plan"
+   ]
+  },
+  {
+   "id": "regional-4",
+   "code": "R4",
+   "name": "Regional Line 4",
+   "group": "rail",
+   "color": "#7c3aed",
+   "mode": "commuter",
+   "status": "proposed",
+   "description": "Long-range proposal. No target year.",
+   "segments": [
+    {
+     "stations": [
+      "far-west",
+      "west-terminal",
+      "hill-town",
+      "north-depot"
+     ],
+     "status": "proposed"
+    }
+   ],
+   "sources": [
+    "src-wiki"
+   ]
+  },
+  {
+   "id": "tram-t1",
+   "code": "T1",
+   "name": "Harbour Tram",
+   "group": "tram",
+   "color": "#10b981",
+   "textColor": "#062e22",
+   "mode": "tram",
+   "status": "operating",
+   "segments": [
+    {
+     "stations": [
+      "riverside",
+      "pier",
+      "beach"
+     ],
+     "status": "operating"
+    }
+   ],
+   "sources": [
+    "src-wiki"
+   ]
+  }
+ ],
+ "stations": [
+  {
+   "id": "west-terminal",
+   "name": "Western Terminal",
+   "coord": [
+    100.44,
+    15
+   ],
+   "codes": [
+    "A01"
+   ]
+  },
+  {
+   "id": "cau-giay",
+   "name": "Cầu Giấy",
+   "coord": [
+    100.455,
+    15.002
+   ],
+   "codes": [
+    "A02"
+   ]
+  },
+  {
+   "id": "ho-tay",
+   "name": "Hồ Tây",
+   "coord": [
+    100.47,
+    15
+   ],
+   "codes": [
+    "A03"
+   ]
+  },
+  {
+   "id": "dong-da",
+   "name": "Đống Đa",
+   "coord": [
+    100.485,
+    15.001
+   ],
+   "codes": [
+    "A04",
+    "C01"
+   ]
+  },
+  {
+   "id": "central",
+   "name": "Central",
+   "coord": [
+    100.5,
+    15
+   ],
+   "nameLocal": "中央駅",
+   "codes": [
+    "A05",
+    "B05"
+   ]
+  },
+  {
+   "id": "ben-thanh",
+   "name": "Bến Thành",
+   "coord": [
+    100.515,
+    15
+   ],
+   "codes": [
+    "A06",
+    "C05"
+   ]
+  },
+  {
+   "id": "riverside",
+   "name": "Riverside",
+   "coord": [
+    100.53,
+    14.998
+   ],
+   "codes": [
+    "A07"
+   ]
+  },
+  {
+   "id": "east-park",
+   "name": "East Park",
+   "coord": [
+    100.545,
+    14.995
+   ],
+   "codes": [
+    "A08"
+   ]
+  },
+  {
+   "id": "airport",
+   "name": "Airport",
+   "coord": [
+    100.56,
+    14.99
+   ],
+   "codes": [
+    "A09"
+   ]
+  },
+  {
+   "id": "north-depot",
+   "name": "North Depot",
+   "coord": [
+    100.5,
+    15.06
+   ],
+   "codes": [
+    "B01"
+   ]
+  },
+  {
+   "id": "university",
+   "name": "University",
+   "coord": [
+    100.5,
+    15.045
+   ],
+   "codes": [
+    "B02"
+   ]
+  },
+  {
+   "id": "market",
+   "name": "Market Square",
+   "coord": [
+    100.501,
+    15.03
+   ],
+   "codes": [
+    "B03",
+    "C03"
+   ]
+  },
+  {
+   "id": "old-quarter",
+   "name": "Old Quarter",
+   "coord": [
+    100.5,
+    15.015
+   ],
+   "codes": [
+    "B04"
+   ]
+  },
+  {
+   "id": "south-gate",
+   "name": "South Gate",
+   "coord": [
+    100.5,
+    14.985
+   ],
+   "codes": [
+    "B06",
+    "C07"
+   ]
+  },
+  {
+   "id": "harbour",
+   "name": "Harbour",
+   "coord": [
+    100.499,
+    14.97
+   ],
+   "codes": [
+    "B07"
+   ]
+  },
+  {
+   "id": "tech-park",
+   "name": "Tech Park",
+   "coord": [
+    100.515,
+    15.04
+   ],
+   "codes": [
+    "B11"
+   ],
+   "approx": true
+  },
+  {
+   "id": "new-town",
+   "name": "New Town",
+   "coord": [
+    100.53,
+    15.05
+   ],
+   "codes": [
+    "B12"
+   ],
+   "approx": true
+  },
+  {
+   "id": "lakeside",
+   "name": "Lakeside",
+   "coord": [
+    100.488,
+    15.022
+   ],
+   "codes": [
+    "C02"
+   ]
+  },
+  {
+   "id": "museum",
+   "name": "Museum",
+   "coord": [
+    100.515,
+    15.022
+   ],
+   "codes": [
+    "C04"
+   ]
+  },
+  {
+   "id": "stadium",
+   "name": "Stadium",
+   "coord": [
+    100.512,
+    14.982
+   ],
+   "codes": [
+    "C06"
+   ]
+  },
+  {
+   "id": "garden",
+   "name": "Botanic Garden",
+   "coord": [
+    100.488,
+    14.982
+   ],
+   "codes": [
+    "C08"
+   ]
+  },
+  {
+   "id": "far-west",
+   "name": "Far West",
+   "coord": [
+    100.4,
+    14.95
+   ],
+   "approx": true
+  },
+  {
+   "id": "hill-town",
+   "name": "Hill Town",
+   "coord": [
+    100.47,
+    15.05
+   ],
+   "approx": true,
+   "nameLocal": "丘町"
+  },
+  {
+   "id": "pier",
+   "name": "Pier",
+   "coord": [
+    100.54,
+    15.01
+   ]
+  },
+  {
+   "id": "beach",
+   "name": "Beach",
+   "coord": [
+    100.55,
+    15.02
+   ]
+  }
+ ],
+ "sources": [
+  {
+   "id": "src-plan",
+   "title": "Fixtureville Transport Master Plan 2045 (fake)",
+   "url": "https://example.com/plan",
+   "accessed": "2026-11-13"
+  },
+  {
+   "id": "src-wiki",
+   "title": "Example encyclopedia article (fake)",
+   "url": "https://example.org/wiki"
+  }
+ ]
+}

@@ -1,0 +1,23 @@
+{
+  "$schema": "../../scripts/import/city-config.schema.json",
+  "id": "drawn-city",
+  "name": "Drawn City",
+  "nameLocal": "Thành phố Vẽ Tay",
+  "country": "Nowhere",
+  "center": [2.0, 45.0],
+  "zoom": 12,
+  "sources": [
+    { "id": "drawn", "title": "Hand-drawn example (lines.geojson)", "url": "https://geojson.io/" }
+  ],
+  "notes": "Made-up city used to exercise the GeoJSON importer. Not registered in cities.json.",
+  "imports": [
+    {
+      "type": "geojson",
+      "file": "lines.geojson",
+      "defaults": { "mode": "metro", "sources": ["drawn"] }
+    }
+  ],
+  "lines": {
+    "Green Shuttle": { "mode": "tram", "description": "Bare drawn line without station points: both ends become approximate auto stations." }
+  }
+}

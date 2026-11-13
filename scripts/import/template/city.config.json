@@ -1,0 +1,25 @@
+{
+  "$schema": "../../scripts/import/city-config.schema.json",
+  "id": "my-city",
+  "name": "My City",
+  "nameLocal": "",
+  "country": "Country",
+  "center": [0, 0],
+  "zoom": 11,
+  "groups": [
+    { "id": "metro", "name": "Metro", "description": "Hand-drawn lines" }
+  ],
+  "sources": [
+    { "id": "drawn", "title": "Hand-drawn map (lines.geojson)", "url": "https://geojson.io/" }
+  ],
+  "notes": "Hand-drawn, unofficial alignments.",
+  "imports": [
+    {
+      "type": "geojson",
+      "file": "lines.geojson",
+      "defaults": { "group": "metro", "mode": "metro", "status": "proposed", "sources": ["drawn"] }
+    }
+  ],
+  "lines": {},
+  "options": { "stationMergeMeters": 400, "simplifyMeters": 15 }
+}

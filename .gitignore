@@ -1,0 +1,15 @@
+# dependencies & build output
+node_modules
+dist
+*.tsbuildinfo
+*.local
+
+# caches (Overpass/OSM downloads)
+.cache/
+cities/*/.cache
+
+# editor / OS / tooling
+.claude/settings.local.json
+.DS_Store
+Thumbs.db
+*.log

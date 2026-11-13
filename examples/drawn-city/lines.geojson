@@ -1,0 +1,36 @@
+{
+  "type": "FeatureCollection",
+  "features": [
+    {
+      "type": "Feature",
+      "properties": { "line": "red", "name": "Red Line", "code": "R", "color": "#e53935", "group": "City Metro", "status": "đang khai thác", "year": 2019 },
+      "geometry": { "type": "LineString", "coordinates": [[1.95, 45.0], [1.975, 45.0], [2.0, 45.0], [2.025, 45.004], [2.05, 45.01]] }
+    },
+    {
+      "type": "Feature",
+      "properties": { "line": "blue", "name": "Blue Line", "code": "B", "colour": "#1e88e5", "group": "City Metro", "status": "đang xây dựng", "year": "2030", "label": "Phase 1: South Park – Central" },
+      "geometry": { "type": "LineString", "coordinates": [[2.0, 44.96], [2.0, 44.98], [2.0, 45.0]] }
+    },
+    {
+      "type": "Feature",
+      "properties": { "line": "blue", "status": "quy hoạch", "year": "~2040", "label": "Phase 2: Central – North Gate" },
+      "geometry": { "type": "LineString", "coordinates": [[2.0, 45.0], [1.995, 45.02], [1.99, 45.04]] }
+    },
+    {
+      "type": "Feature",
+      "properties": { "name": "Green Shuttle", "stroke": "#43a047", "status": "Proposed", "year": "2040s", "from": "Southfield" },
+      "geometry": { "type": "LineString", "coordinates": [[1.975, 44.985], [1.9752, 45.0], [1.975, 45.02]] }
+    },
+
+    { "type": "Feature", "properties": { "name": "Westgate", "nameLocal": "Cổng Tây", "codes": "R01" }, "geometry": { "type": "Point", "coordinates": [1.95, 45.0] } },
+    { "type": "Feature", "properties": { "name": "Market", "nameLocal": "Chợ", "codes": "R02", "line": "red" }, "geometry": { "type": "Point", "coordinates": [1.975, 45.0005] } },
+    { "type": "Feature", "properties": { "name": "Central", "nameLocal": "Trung Tâm", "codes": ["R03", "B03"] }, "geometry": { "type": "Point", "coordinates": [2.0, 45.0] } },
+    { "type": "Feature", "properties": { "name": "Harbor", "codes": "R04" }, "geometry": { "type": "Point", "coordinates": [2.025, 45.004] } },
+    { "type": "Feature", "properties": { "name": "East End", "codes": "R05" }, "geometry": { "type": "Point", "coordinates": [2.05, 45.01] } },
+    { "type": "Feature", "properties": { "name": "South Park", "approx": "yes" }, "geometry": { "type": "Point", "coordinates": [2.0, 44.96] } },
+    { "type": "Feature", "properties": { "name": "Riverside", "approx": true }, "geometry": { "type": "Point", "coordinates": [2.0008, 44.98] } },
+    { "type": "Feature", "properties": { "name": "Hilltop" }, "geometry": { "type": "Point", "coordinates": [1.995, 45.0201] } },
+    { "type": "Feature", "properties": { "name": "North Gate" }, "geometry": { "type": "Point", "coordinates": [1.99, 45.04] } },
+    { "type": "Feature", "properties": { "name": "Lonely Plaza" }, "geometry": { "type": "Point", "coordinates": [2.03, 44.97] } }
+  ]
+}

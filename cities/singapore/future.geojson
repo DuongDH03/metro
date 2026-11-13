@@ -1,0 +1,1145 @@
+{
+ "type": "FeatureCollection",
+ "features": [
+  {
+   "type": "Feature",
+   "properties": {
+    "line": "TEL5",
+    "id": "tel5",
+    "name": "Thomson–East Coast Line (Stage 5)",
+    "code": "TEL",
+    "color": "#9d5b25",
+    "status": "construction",
+    "sources": "asiaone-tel5-dtl3e;lta-rail-2026",
+    "year": 2026,
+    "label": "TEL Stage 5: Bayshore – Sungei Bedok (opening 26 Dec 2026)"
+   },
+   "geometry": {
+    "type": "LineString",
+    "coordinates": [
+     [103.94231,1.31283],
+     [103.94833,1.31667],
+     [103.95694,1.32028]
+    ]
+   }
+  },
+  {
+   "type": "Feature",
+   "properties": {
+    "line": "TEL5",
+    "id": "tel5",
+    "name": "Thomson–East Coast Line (Stage 5)",
+    "code": "TEL",
+    "color": "#9d5b25",
+    "status": "planned",
+    "sources": "asiaone-tel5-dtl3e;lta-rail-2026",
+    "label": "TEL extension to Changi Airport Terminal 5 (mid-2030s, with T5)"
+   },
+   "geometry": {
+    "type": "LineString",
+    "coordinates": [
+     [103.95694,1.32028],
+     [103.99278,1.32444]
+    ]
+   }
+  },
+  {
+   "type": "Feature",
+   "properties": {
+    "line": "DTL3e",
+    "id": "dtl3e",
+    "name": "Downtown Line 3 Extension",
+    "code": "DTL",
+    "color": "#0354a6",
+    "status": "construction",
+    "sources": "asiaone-tel5-dtl3e;lta-rail-2026",
+    "year": 2026,
+    "label": "DTL3e: Expo – Sungei Bedok (opening 26 Dec 2026)"
+   },
+   "geometry": {
+    "type": "LineString",
+    "coordinates": [
+     [103.96266,1.33508],
+     [103.965,1.32889],
+     [103.95694,1.32028]
+    ]
+   }
+  },
+  {
+   "type": "Feature",
+   "properties": {
+    "line": "DTL2e",
+    "id": "dtl2e",
+    "name": "Downtown Line 2 Extension",
+    "code": "DTL",
+    "color": "#0354a6",
+    "status": "construction",
+    "sources": "lta-dtl2e",
+    "year": 2035,
+    "label": "DTL2 extension: Bukit Panjang – Sungei Kadut (2035)"
+   },
+   "geometry": {
+    "type": "LineString",
+    "coordinates": [
+     [103.76153,1.3791],
+     [103.7585,1.399],
+     [103.7488,1.4133]
+    ]
+   }
+  },
+  {
+   "type": "Feature",
+   "properties": {
+    "line": "JRL",
+    "id": "jrl",
+    "name": "Jurong Region Line",
+    "code": "JRL",
+    "color": "#0099aa",
+    "status": "construction",
+    "sources": "lta-rail-2026;wiki-jrl",
+    "year": 2028,
+    "label": "Stage 1: Choa Chu Kang – Boon Lay (mid-2028)"
+   },
+   "geometry": {
+    "type": "LineString",
+    "coordinates": [
+     [103.74433,1.38532],
+     [103.73944,1.37889],
+     [103.73,1.36639],
+     [103.72583,1.35806],
+     [103.71389,1.35306],
+     [103.70833,1.34917],
+     [103.70254,1.34542],
+     [103.70581,1.33855]
+    ]
+   }
+  },
+  {
+   "type": "Feature",
+   "properties": {
+    "line": "JRL",
+    "id": "jrl",
+    "name": "Jurong Region Line",
+    "code": "JRL",
+    "color": "#0099aa",
+    "status": "construction",
+    "sources": "lta-rail-2026;wiki-jrl",
+    "year": 2028,
+    "label": "Stage 1: Bahar Junction – Tawas (mid-2028)"
+   },
+   "geometry": {
+    "type": "LineString",
+    "coordinates": [
+     [103.70254,1.34542],
+     [103.69806,1.34833],
+     [103.69194,1.35056]
+    ]
+   }
+  },
+  {
+   "type": "Feature",
+   "properties": {
+    "line": "JRL",
+    "id": "jrl",
+    "name": "Jurong Region Line",
+    "code": "JRL",
+    "color": "#0099aa",
+    "status": "construction",
+    "sources": "lta-rail-2026;wiki-jrl",
+    "label": "Stage 2: Tengah – Pandan Reservoir (date TBA; earlier target 2028)"
+   },
+   "geometry": {
+    "type": "LineString",
+    "coordinates": [
+     [103.73,1.36639],
+     [103.73333,1.35722],
+     [103.73667,1.35222],
+     [103.73972,1.34556],
+     [103.7425,1.33972],
+     [103.74229,1.33311],
+     [103.74611,1.32611],
+     [103.745,1.32]
+    ]
+   }
+  },
+  {
+   "type": "Feature",
+   "properties": {
+    "line": "JRL",
+    "id": "jrl",
+    "name": "Jurong Region Line",
+    "code": "JRL",
+    "color": "#0099aa",
+    "status": "construction",
+    "sources": "lta-rail-2026;wiki-jrl",
+    "label": "Stage 3: Boon Lay – Jurong Pier (date TBA; earlier target 2029)"
+   },
+   "geometry": {
+    "type": "LineString",
+    "coordinates": [
+     [103.70581,1.33855],
+     [103.70861,1.33278],
+     [103.70917,1.32528],
+     [103.71028,1.31861],
+     [103.71028,1.31306]
+    ]
+   }
+  },
+  {
+   "type": "Feature",
+   "properties": {
+    "line": "JRL",
+    "id": "jrl",
+    "name": "Jurong Region Line",
+    "code": "JRL",
+    "color": "#0099aa",
+    "status": "construction",
+    "sources": "lta-rail-2026;wiki-jrl",
+    "label": "Stage 3: Tawas – Peng Kang Hill (date TBA; earlier target 2029)"
+   },
+   "geometry": {
+    "type": "LineString",
+    "coordinates": [
+     [103.69194,1.35056],
+     [103.68667,1.35361],
+     [103.68083,1.34833],
+     [103.67861,1.34333]
+    ]
+   }
+  },
+  {
+   "type": "Feature",
+   "properties": {
+    "line": "CRL",
+    "id": "crl",
+    "name": "Cross Island Line",
+    "code": "CRL",
+    "color": "#97c616",
+    "status": "planned",
+    "description": "Colour: lime green as used on LTA maps (approximate hex).",
+    "sources": "lta-crl3;wiki-crl",
+    "label": "CR1 Changi Airport Terminal 5 (mid-2030s)"
+   },
+   "geometry": {
+    "type": "LineString",
+    "coordinates": [
+     [103.99278,1.32444],
+     [104.00306,1.37]
+    ]
+   }
+  },
+  {
+   "type": "Feature",
+   "properties": {
+    "line": "CRL",
+    "id": "crl",
+    "name": "Cross Island Line",
+    "code": "CRL",
+    "color": "#97c616",
+    "status": "construction",
+    "description": "Colour: lime green as used on LTA maps (approximate hex).",
+    "sources": "lta-crl3;wiki-crl",
+    "year": 2030,
+    "label": "Phase 1: Aviation Park – Bright Hill (2030)"
+   },
+   "geometry": {
+    "type": "LineString",
+    "coordinates": [
+     [104.00306,1.37],
+     [103.97194,1.37194],
+     [103.96111,1.36611],
+     [103.94947,1.37129],
+     [103.93778,1.36917],
+     [103.89889,1.36222],
+     [103.89124,1.37078],
+     [103.87361,1.37056],
+     [103.86333,1.37],
+     [103.84952,1.37008],
+     [103.84361,1.36556],
+     [103.83482,1.36306]
+    ]
+   }
+  },
+  {
+   "type": "Feature",
+   "properties": {
+    "line": "CRL",
+    "id": "crl",
+    "name": "Cross Island Line",
+    "code": "CRL",
+    "color": "#97c616",
+    "status": "construction",
+    "description": "Colour: lime green as used on LTA maps (approximate hex).",
+    "sources": "lta-crl3;wiki-crl",
+    "year": 2032,
+    "label": "Phase 2: Bright Hill – Jurong Lake District (2032)"
+   },
+   "geometry": {
+    "type": "LineString",
+    "coordinates": [
+     [103.83482,1.36306],
+     [103.79444,1.34083],
+     [103.78383,1.33566],
+     [103.77694,1.32833],
+     [103.7659,1.31613],
+     [103.75778,1.31083],
+     [103.73917,1.32722]
+    ]
+   }
+  },
+  {
+   "type": "Feature",
+   "properties": {
+    "line": "CRL",
+    "id": "crl",
+    "name": "Cross Island Line",
+    "code": "CRL",
+    "color": "#97c616",
+    "status": "construction",
+    "description": "Colour: lime green as used on LTA maps (approximate hex).",
+    "sources": "lta-crl3;wiki-crl",
+    "year": 2032,
+    "label": "Punggol Extension: Pasir Ris – Punggol (2032)"
+   },
+   "geometry": {
+    "type": "LineString",
+    "coordinates": [
+     [103.94947,1.37129],
+     [103.93806,1.38389],
+     [103.91615,1.39455],
+     [103.90264,1.40538]
+    ]
+   }
+  },
+  {
+   "type": "Feature",
+   "properties": {
+    "line": "CRL",
+    "id": "crl",
+    "name": "Cross Island Line",
+    "code": "CRL",
+    "color": "#97c616",
+    "status": "approved",
+    "description": "Colour: lime green as used on LTA maps (approximate hex).",
+    "sources": "lta-crl3;wiki-crl",
+    "label": "Phase 3: Jurong Lake District – Gul Circle (alignment gazetted Jul 2026, late 2030s)"
+   },
+   "geometry": {
+    "type": "LineString",
+    "coordinates": [
+     [103.73917,1.32722],
+     [103.724,1.318],
+     [103.71028,1.31306],
+     [103.679,1.32],
+     [103.66066,1.31964]
+    ]
+   }
+  },
+  {
+   "type": "Feature",
+   "properties": {
+    "line": "RTS",
+    "id": "rts-link",
+    "name": "Johor Bahru–Singapore RTS Link",
+    "code": "RTS",
+    "color": "#e4002b",
+    "status": "construction",
+    "group": "rts",
+    "description": "No official line colour; red chosen for contrast.",
+    "sources": "rts-2027",
+    "year": 2027,
+    "label": "Woodlands North – Bukit Chagar (target Feb 2027)"
+   },
+   "geometry": {
+    "type": "LineString",
+    "coordinates": [
+     [103.78571,1.44829],
+     [103.76228,1.46651]
+    ]
+   }
+  },
+  {
+   "type": "Feature",
+   "properties": {
+    "name": "Bayshore",
+    "line": "TEL5"
+   },
+   "geometry": {
+    "type": "Point",
+    "coordinates": [103.94231,1.31283]
+   }
+  },
+  {
+   "type": "Feature",
+   "properties": {
+    "name": "Bedok South",
+    "line": "TEL5",
+    "codes": "TE30",
+    "approx": true
+   },
+   "geometry": {
+    "type": "Point",
+    "coordinates": [103.94833,1.31667]
+   }
+  },
+  {
+   "type": "Feature",
+   "properties": {
+    "name": "Sungei Bedok",
+    "line": "TEL5",
+    "codes": "TE31",
+    "approx": true
+   },
+   "geometry": {
+    "type": "Point",
+    "coordinates": [103.95694,1.32028]
+   }
+  },
+  {
+   "type": "Feature",
+   "properties": {
+    "name": "Changi Airport Terminal 5",
+    "line": "TEL5",
+    "codes": "TE32",
+    "approx": true
+   },
+   "geometry": {
+    "type": "Point",
+    "coordinates": [103.99278,1.32444]
+   }
+  },
+  {
+   "type": "Feature",
+   "properties": {
+    "name": "Expo",
+    "line": "DTL3e"
+   },
+   "geometry": {
+    "type": "Point",
+    "coordinates": [103.96266,1.33508]
+   }
+  },
+  {
+   "type": "Feature",
+   "properties": {
+    "name": "Xilin",
+    "line": "DTL3e",
+    "codes": "DT36",
+    "approx": true
+   },
+   "geometry": {
+    "type": "Point",
+    "coordinates": [103.965,1.32889]
+   }
+  },
+  {
+   "type": "Feature",
+   "properties": {
+    "name": "Sungei Bedok",
+    "line": "DTL3e",
+    "codes": "DT37",
+    "approx": true
+   },
+   "geometry": {
+    "type": "Point",
+    "coordinates": [103.95694,1.32028]
+   }
+  },
+  {
+   "type": "Feature",
+   "properties": {
+    "name": "Bukit Panjang",
+    "line": "DTL2e"
+   },
+   "geometry": {
+    "type": "Point",
+    "coordinates": [103.76153,1.3791]
+   }
+  },
+  {
+   "type": "Feature",
+   "properties": {
+    "name": "DTL2e intermediate station (name TBA)",
+    "line": "DTL2e",
+    "approx": true
+   },
+   "geometry": {
+    "type": "Point",
+    "coordinates": [103.7585,1.399]
+   }
+  },
+  {
+   "type": "Feature",
+   "properties": {
+    "name": "Sungei Kadut",
+    "line": "DTL2e",
+    "approx": true
+   },
+   "geometry": {
+    "type": "Point",
+    "coordinates": [103.7488,1.4133]
+   }
+  },
+  {
+   "type": "Feature",
+   "properties": {
+    "name": "Choa Chu Kang",
+    "line": "JRL",
+    "codes": "JS1"
+   },
+   "geometry": {
+    "type": "Point",
+    "coordinates": [103.74433,1.38532]
+   }
+  },
+  {
+   "type": "Feature",
+   "properties": {
+    "name": "Choa Chu Kang West",
+    "line": "JRL",
+    "codes": "JS2",
+    "approx": true
+   },
+   "geometry": {
+    "type": "Point",
+    "coordinates": [103.73944,1.37889]
+   }
+  },
+  {
+   "type": "Feature",
+   "properties": {
+    "name": "Tengah",
+    "line": "JRL",
+    "codes": "JS3",
+    "approx": true
+   },
+   "geometry": {
+    "type": "Point",
+    "coordinates": [103.73,1.36639]
+   }
+  },
+  {
+   "type": "Feature",
+   "properties": {
+    "name": "Hong Kah",
+    "line": "JRL",
+    "codes": "JS4",
+    "approx": true
+   },
+   "geometry": {
+    "type": "Point",
+    "coordinates": [103.72583,1.35806]
+   }
+  },
+  {
+   "type": "Feature",
+   "properties": {
+    "name": "Corporation",
+    "line": "JRL",
+    "codes": "JS5",
+    "approx": true
+   },
+   "geometry": {
+    "type": "Point",
+    "coordinates": [103.71389,1.35306]
+   }
+  },
+  {
+   "type": "Feature",
+   "properties": {
+    "name": "Jurong West",
+    "line": "JRL",
+    "codes": "JS6",
+    "approx": true
+   },
+   "geometry": {
+    "type": "Point",
+    "coordinates": [103.70833,1.34917]
+   }
+  },
+  {
+   "type": "Feature",
+   "properties": {
+    "name": "Bahar Junction",
+    "line": "JRL",
+    "codes": "JS7",
+    "approx": true
+   },
+   "geometry": {
+    "type": "Point",
+    "coordinates": [103.70254,1.34542]
+   }
+  },
+  {
+   "type": "Feature",
+   "properties": {
+    "name": "Boon Lay",
+    "line": "JRL",
+    "codes": "JS8"
+   },
+   "geometry": {
+    "type": "Point",
+    "coordinates": [103.70581,1.33855]
+   }
+  },
+  {
+   "type": "Feature",
+   "properties": {
+    "name": "Gek Poh",
+    "line": "JRL",
+    "codes": "JW1",
+    "approx": true
+   },
+   "geometry": {
+    "type": "Point",
+    "coordinates": [103.69806,1.34833]
+   }
+  },
+  {
+   "type": "Feature",
+   "properties": {
+    "name": "Tawas",
+    "line": "JRL",
+    "codes": "JW2",
+    "approx": true
+   },
+   "geometry": {
+    "type": "Point",
+    "coordinates": [103.69194,1.35056]
+   }
+  },
+  {
+   "type": "Feature",
+   "properties": {
+    "name": "Tengah Plantation",
+    "line": "JRL",
+    "codes": "JE1",
+    "approx": true
+   },
+   "geometry": {
+    "type": "Point",
+    "coordinates": [103.73333,1.35722]
+   }
+  },
+  {
+   "type": "Feature",
+   "properties": {
+    "name": "Tengah Park",
+    "line": "JRL",
+    "codes": "JE2",
+    "approx": true
+   },
+   "geometry": {
+    "type": "Point",
+    "coordinates": [103.73667,1.35222]
+   }
+  },
+  {
+   "type": "Feature",
+   "properties": {
+    "name": "Bukit Batok West",
+    "line": "JRL",
+    "codes": "JE3",
+    "approx": true
+   },
+   "geometry": {
+    "type": "Point",
+    "coordinates": [103.73972,1.34556]
+   }
+  },
+  {
+   "type": "Feature",
+   "properties": {
+    "name": "Toh Guan",
+    "line": "JRL",
+    "codes": "JE4",
+    "approx": true
+   },
+   "geometry": {
+    "type": "Point",
+    "coordinates": [103.7425,1.33972]
+   }
+  },
+  {
+   "type": "Feature",
+   "properties": {
+    "name": "Jurong East",
+    "line": "JRL",
+    "codes": "JE5"
+   },
+   "geometry": {
+    "type": "Point",
+    "coordinates": [103.74229,1.33311]
+   }
+  },
+  {
+   "type": "Feature",
+   "properties": {
+    "name": "Jurong Town Hall",
+    "line": "JRL",
+    "codes": "JE6",
+    "approx": true
+   },
+   "geometry": {
+    "type": "Point",
+    "coordinates": [103.74611,1.32611]
+   }
+  },
+  {
+   "type": "Feature",
+   "properties": {
+    "name": "Pandan Reservoir",
+    "line": "JRL",
+    "codes": "JE7",
+    "approx": true
+   },
+   "geometry": {
+    "type": "Point",
+    "coordinates": [103.745,1.32]
+   }
+  },
+  {
+   "type": "Feature",
+   "properties": {
+    "name": "Enterprise",
+    "line": "JRL",
+    "codes": "JS9",
+    "approx": true
+   },
+   "geometry": {
+    "type": "Point",
+    "coordinates": [103.70861,1.33278]
+   }
+  },
+  {
+   "type": "Feature",
+   "properties": {
+    "name": "Tukang",
+    "line": "JRL",
+    "codes": "JS10",
+    "approx": true
+   },
+   "geometry": {
+    "type": "Point",
+    "coordinates": [103.70917,1.32528]
+   }
+  },
+  {
+   "type": "Feature",
+   "properties": {
+    "name": "Jurong Hill",
+    "line": "JRL",
+    "codes": "JS11",
+    "approx": true
+   },
+   "geometry": {
+    "type": "Point",
+    "coordinates": [103.71028,1.31861]
+   }
+  },
+  {
+   "type": "Feature",
+   "properties": {
+    "name": "Jurong Pier",
+    "line": "JRL",
+    "codes": "JS12",
+    "approx": true
+   },
+   "geometry": {
+    "type": "Point",
+    "coordinates": [103.71028,1.31306]
+   }
+  },
+  {
+   "type": "Feature",
+   "properties": {
+    "name": "Nanyang Gateway",
+    "line": "JRL",
+    "codes": "JW3",
+    "approx": true
+   },
+   "geometry": {
+    "type": "Point",
+    "coordinates": [103.68667,1.35361]
+   }
+  },
+  {
+   "type": "Feature",
+   "properties": {
+    "name": "Nanyang Crescent",
+    "line": "JRL",
+    "codes": "JW4",
+    "approx": true
+   },
+   "geometry": {
+    "type": "Point",
+    "coordinates": [103.68083,1.34833]
+   }
+  },
+  {
+   "type": "Feature",
+   "properties": {
+    "name": "Peng Kang Hill",
+    "line": "JRL",
+    "codes": "JW5",
+    "approx": true
+   },
+   "geometry": {
+    "type": "Point",
+    "coordinates": [103.67861,1.34333]
+   }
+  },
+  {
+   "type": "Feature",
+   "properties": {
+    "name": "Changi Airport Terminal 5",
+    "line": "CRL",
+    "codes": "CR1",
+    "approx": true
+   },
+   "geometry": {
+    "type": "Point",
+    "coordinates": [103.99278,1.32444]
+   }
+  },
+  {
+   "type": "Feature",
+   "properties": {
+    "name": "Aviation Park",
+    "line": "CRL",
+    "codes": "CR2",
+    "approx": true
+   },
+   "geometry": {
+    "type": "Point",
+    "coordinates": [104.00306,1.37]
+   }
+  },
+  {
+   "type": "Feature",
+   "properties": {
+    "name": "Loyang",
+    "line": "CRL",
+    "codes": "CR3",
+    "approx": true
+   },
+   "geometry": {
+    "type": "Point",
+    "coordinates": [103.97194,1.37194]
+   }
+  },
+  {
+   "type": "Feature",
+   "properties": {
+    "name": "Pasir Ris East",
+    "line": "CRL",
+    "codes": "CR4",
+    "approx": true
+   },
+   "geometry": {
+    "type": "Point",
+    "coordinates": [103.96111,1.36611]
+   }
+  },
+  {
+   "type": "Feature",
+   "properties": {
+    "name": "Pasir Ris",
+    "line": "CRL",
+    "codes": "CR5;CP1"
+   },
+   "geometry": {
+    "type": "Point",
+    "coordinates": [103.94947,1.37129]
+   }
+  },
+  {
+   "type": "Feature",
+   "properties": {
+    "name": "Tampines North",
+    "line": "CRL",
+    "codes": "CR6",
+    "approx": true
+   },
+   "geometry": {
+    "type": "Point",
+    "coordinates": [103.93778,1.36917]
+   }
+  },
+  {
+   "type": "Feature",
+   "properties": {
+    "name": "Defu",
+    "line": "CRL",
+    "codes": "CR7",
+    "approx": true
+   },
+   "geometry": {
+    "type": "Point",
+    "coordinates": [103.89889,1.36222]
+   }
+  },
+  {
+   "type": "Feature",
+   "properties": {
+    "name": "Hougang",
+    "line": "CRL",
+    "codes": "CR8"
+   },
+   "geometry": {
+    "type": "Point",
+    "coordinates": [103.89124,1.37078]
+   }
+  },
+  {
+   "type": "Feature",
+   "properties": {
+    "name": "Serangoon North",
+    "line": "CRL",
+    "codes": "CR9",
+    "approx": true
+   },
+   "geometry": {
+    "type": "Point",
+    "coordinates": [103.87361,1.37056]
+   }
+  },
+  {
+   "type": "Feature",
+   "properties": {
+    "name": "Tavistock",
+    "line": "CRL",
+    "codes": "CR10",
+    "approx": true
+   },
+   "geometry": {
+    "type": "Point",
+    "coordinates": [103.86333,1.37]
+   }
+  },
+  {
+   "type": "Feature",
+   "properties": {
+    "name": "Ang Mo Kio",
+    "line": "CRL",
+    "codes": "CR11"
+   },
+   "geometry": {
+    "type": "Point",
+    "coordinates": [103.84952,1.37008]
+   }
+  },
+  {
+   "type": "Feature",
+   "properties": {
+    "name": "Teck Ghee",
+    "line": "CRL",
+    "codes": "CR12",
+    "approx": true
+   },
+   "geometry": {
+    "type": "Point",
+    "coordinates": [103.84361,1.36556]
+   }
+  },
+  {
+   "type": "Feature",
+   "properties": {
+    "name": "Bright Hill",
+    "line": "CRL",
+    "codes": "CR13"
+   },
+   "geometry": {
+    "type": "Point",
+    "coordinates": [103.83482,1.36306]
+   }
+  },
+  {
+   "type": "Feature",
+   "properties": {
+    "name": "Turf City",
+    "line": "CRL",
+    "codes": "CR14",
+    "approx": true
+   },
+   "geometry": {
+    "type": "Point",
+    "coordinates": [103.79444,1.34083]
+   }
+  },
+  {
+   "type": "Feature",
+   "properties": {
+    "name": "King Albert Park",
+    "line": "CRL",
+    "codes": "CR15"
+   },
+   "geometry": {
+    "type": "Point",
+    "coordinates": [103.78383,1.33566]
+   }
+  },
+  {
+   "type": "Feature",
+   "properties": {
+    "name": "Maju",
+    "line": "CRL",
+    "codes": "CR16",
+    "approx": true
+   },
+   "geometry": {
+    "type": "Point",
+    "coordinates": [103.77694,1.32833]
+   }
+  },
+  {
+   "type": "Feature",
+   "properties": {
+    "name": "Clementi",
+    "line": "CRL",
+    "codes": "CR17"
+   },
+   "geometry": {
+    "type": "Point",
+    "coordinates": [103.7659,1.31613]
+   }
+  },
+  {
+   "type": "Feature",
+   "properties": {
+    "name": "West Coast",
+    "line": "CRL",
+    "codes": "CR18",
+    "approx": true
+   },
+   "geometry": {
+    "type": "Point",
+    "coordinates": [103.75778,1.31083]
+   }
+  },
+  {
+   "type": "Feature",
+   "properties": {
+    "name": "Jurong Lake District",
+    "line": "CRL",
+    "codes": "CR19",
+    "approx": true
+   },
+   "geometry": {
+    "type": "Point",
+    "coordinates": [103.73917,1.32722]
+   }
+  },
+  {
+   "type": "Feature",
+   "properties": {
+    "name": "Elias",
+    "line": "CRL",
+    "codes": "CP2",
+    "approx": true
+   },
+   "geometry": {
+    "type": "Point",
+    "coordinates": [103.93806,1.38389]
+   }
+  },
+  {
+   "type": "Feature",
+   "properties": {
+    "name": "Riviera",
+    "line": "CRL",
+    "codes": "CP3"
+   },
+   "geometry": {
+    "type": "Point",
+    "coordinates": [103.91615,1.39455]
+   }
+  },
+  {
+   "type": "Feature",
+   "properties": {
+    "name": "Punggol",
+    "line": "CRL",
+    "codes": "CP4"
+   },
+   "geometry": {
+    "type": "Point",
+    "coordinates": [103.90264,1.40538]
+   }
+  },
+  {
+   "type": "Feature",
+   "properties": {
+    "name": "CR20 (name TBA)",
+    "line": "CRL",
+    "codes": "CR20",
+    "approx": true
+   },
+   "geometry": {
+    "type": "Point",
+    "coordinates": [103.724,1.318]
+   }
+  },
+  {
+   "type": "Feature",
+   "properties": {
+    "name": "Jurong Pier",
+    "line": "CRL",
+    "codes": "CR21",
+    "approx": true
+   },
+   "geometry": {
+    "type": "Point",
+    "coordinates": [103.71028,1.31306]
+   }
+  },
+  {
+   "type": "Feature",
+   "properties": {
+    "name": "CR22 (name TBA)",
+    "line": "CRL",
+    "codes": "CR22",
+    "approx": true
+   },
+   "geometry": {
+    "type": "Point",
+    "coordinates": [103.679,1.32]
+   }
+  },
+  {
+   "type": "Feature",
+   "properties": {
+    "name": "Gul Circle",
+    "line": "CRL",
+    "codes": "CR23"
+   },
+   "geometry": {
+    "type": "Point",
+    "coordinates": [103.66066,1.31964]
+   }
+  },
+  {
+   "type": "Feature",
+   "properties": {
+    "name": "Woodlands North",
+    "line": "RTS"
+   },
+   "geometry": {
+    "type": "Point",
+    "coordinates": [103.78571,1.44829]
+   }
+  },
+  {
+   "type": "Feature",
+   "properties": {
+    "name": "Bukit Chagar",
+    "line": "RTS",
+    "approx": true
+   },
+   "geometry": {
+    "type": "Point",
+    "coordinates": [103.76228,1.46651]
+   }
+  }
+ ]
+}

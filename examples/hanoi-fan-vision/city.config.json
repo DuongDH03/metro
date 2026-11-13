@@ -1,0 +1,20 @@
+{
+  "$schema": "../../scripts/import/city-config.schema.json",
+  "id": "hanoi-fan-vision",
+  "name": "Hanoi (fan vision)",
+  "nameLocal": "Hà Nội",
+  "country": "Vietnam",
+  "center": [105.84, 21.02],
+  "zoom": 10.5,
+  "base": "public/data/hanoi.json",
+  "sources": [
+    { "id": "fan-map", "title": "Fan-made Google My Maps sketch (fan-lines.kml)", "url": "https://www.google.com/maps/about/mymaps/" }
+  ],
+  "imports": [
+    {
+      "type": "kml",
+      "file": "fan-lines.kml",
+      "defaults": { "mode": "metro", "sources": ["fan-map"] }
+    }
+  ]
+}
