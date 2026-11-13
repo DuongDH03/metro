@@ -2,5 +2,6 @@
   { "id": "hanoi", "name": "Hanoi", "nameLocal": "Hà Nội", "country": "Vietnam", "file": "data/hanoi.json", "center": [105.84, 21.02], "zoom": 10.5, "bbox": [105.393, 20.628, 106.249, 21.287] },
   { "id": "hcmc", "name": "Ho Chi Minh City", "nameLocal": "TP. Hồ Chí Minh", "country": "Vietnam", "file": "data/hcmc.json", "center": [106.7, 10.8], "zoom": 10, "bbox": [106.376, 10.305, 107.567, 11.358] },
   { "id": "tokyo", "name": "Tokyo", "nameLocal": "東京", "country": "Japan", "file": "data/tokyo.json", "center": [139.74, 35.68], "zoom": 10.5, "bbox": [138.97, 35.176, 140.425, 36.222] },
-  { "id": "singapore", "name": "Singapore", "country": "Singapore", "file": "data/singapore.json", "center": [103.835, 1.355], "zoom": 11, "bbox": [103.608, 1.224, 104.03, 1.494] }
+  { "id": "singapore", "name": "Singapore", "country": "Singapore", "file": "data/singapore.json", "center": [103.835, 1.355], "zoom": 11, "bbox": [103.608, 1.224, 104.03, 1.494] },
+  { "id": "nagoya", "name": "Nagoya · Gifu", "nameLocal": "名古屋・岐阜", "country": "Japan", "file": "data/nagoya.json", "center": [136.9, 35.2], "zoom": 10, "bbox": [136.417, 34.718, 137.49, 35.673] }
 ]
