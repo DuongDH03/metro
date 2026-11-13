@@ -14,6 +14,8 @@ interface Props {
   onSelectLine(id: string): void;
   onSelectStation(idx: number): void;
   onHoverLine(id: string | null): void;
+  /** Frame the whole (visible part of the) line. */
+  onZoomLine?(id: string): void;
 }
 
 const MODE_LABEL: Record<string, string> = {
@@ -46,7 +48,17 @@ function SourceList({ sources }: { sources: Source[] }) {
   );
 }
 
-function LineDetail({ geo, line, onSelectStation }: { geo: GeoModel; line: Line; onSelectStation(idx: number): void }) {
+function LineDetail({
+  geo,
+  line,
+  onSelectStation,
+  onZoomLine,
+}: {
+  geo: GeoModel;
+  line: Line;
+  onSelectStation(idx: number): void;
+  onZoomLine?(id: string): void;
+}) {
   const path = groupPath(geo, line.group);
   const computedKm = geo.lineKm.get(line.id) ?? 0;
   const years = line.segments.map((s) => s.year).filter((y): y is number => y !== undefined);
@@ -73,6 +85,11 @@ function LineDetail({ geo, line, onSelectStation }: { geo: GeoModel; line: Line;
       <div className="card-tags">
         <StatusBadge status={line.status} />
         {path.length > 0 && <span className="tag">{path.map((g) => g.name).join(' › ')}</span>}
+        {onZoomLine && (
+          <button type="button" className="tag tag-btn" onClick={() => onZoomLine(line.id)}>
+            Zoom to line
+          </button>
+        )}
         {line.mode && <span className="tag">{MODE_LABEL[line.mode] ?? line.mode}</span>}
       </div>
       <dl className="facts">
@@ -223,11 +240,11 @@ function StationDetail({
   );
 }
 
-export default function DetailCard({ geo, selection, onClose, onSelectLine, onSelectStation, onHoverLine }: Props) {
+export default function DetailCard({ geo, selection, onClose, onSelectLine, onSelectStation, onHoverLine, onZoomLine }: Props) {
   let body: ReactNode = null;
   if (selection.kind === 'line') {
     const line = geo.lineById.get(selection.id);
-    if (line) body = <LineDetail geo={geo} line={line} onSelectStation={onSelectStation} />;
+    if (line) body = <LineDetail geo={geo} line={line} onSelectStation={onSelectStation} onZoomLine={onZoomLine} />;
   } else if (geo.stations[selection.idx]) {
     body = <StationDetail geo={geo} idx={selection.idx} onSelectLine={onSelectLine} onHoverLine={onHoverLine} />;
   }
