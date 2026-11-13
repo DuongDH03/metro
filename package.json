@@ -13,7 +13,8 @@
     "index": "node scripts/update-index.mjs",
     "data:hanoi": "node scripts/hanoi/fetch-osm.mjs && node scripts/hanoi/build.mjs && node scripts/validate-data.mjs hanoi && node scripts/update-index.mjs",
     "data:hcmc": "node scripts/hcmc/fetch-osm.mjs && node scripts/hcmc/build-hcmc.mjs && node scripts/validate-data.mjs hcmc && node scripts/update-index.mjs",
-    "data:tokyo": "node scripts/tokyo/build.mjs && npm run import -- tokyo"
+    "data:tokyo": "node scripts/tokyo/build.mjs && npm run import -- tokyo",
+    "data:london": "node scripts/london/build.mjs && node scripts/validate-data.mjs london && node scripts/update-index.mjs"
   },
   "dependencies": {
     "maplibre-gl": "^6.18.0",
