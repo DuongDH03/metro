@@ -37,7 +37,10 @@ export class DataError extends Error {
 async function fetchJson(url: string): Promise<unknown> {
   let res: Response;
   try {
-    res = await fetch(url);
+    // Data files keep fixed URLs (unlike hashed JS/CSS) and GitHub Pages serves them with
+    // max-age=600, so a plain fetch can show a stale city for ~10 min after a deploy.
+    // 'no-cache' revalidates with the ETag every time: a cheap 304 when nothing changed.
+    res = await fetch(url, { cache: 'no-cache' });
   } catch (e) {
     throw new DataError('network', `Network error while loading ${url}: ${(e as Error).message}`);
   }
