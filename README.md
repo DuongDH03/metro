@@ -1,4 +1,5 @@
 # Metro Vision
+Note: Best 30$ of Claude ever spent lmao
 
 **Inspired by this video:** https://www.youtube.com/watch?v=RVjI1erV7pI
 
