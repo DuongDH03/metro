@@ -261,7 +261,7 @@ export const LINES = [
     segments: [
       { stations: ['cat-linh', 'la-thanh', 'thai-ha', 'lang', 'thuong-dinh', 'vanh-dai-3', 'phung-khoang', 'van-quan', 'ha-dong', 'la-khe', 'van-khe', 'yen-nghia'], status: OP, year: 2021, label: 'Cát Linh – Yên Nghĩa (elevated)', path: true },
       { stations: ['yen-nghia', 'chuc-son', 'phu-nghia', 'xuan-mai'], status: PL, year: 2030, label: 'Extension Hà Đông – Xuân Mai (~20 km, target Dec 2030)' },
-      { stations: ['cat-linh', 'ga-ha-noi', 'gia-lam', 'co-loa', 'yen-thuong'], status: PL, year: 2035, label: 'Extension Cát Linh – Gia Lâm – Cổ Loa – Yên Thường (~21 km)' },
+      { stations: ['cat-linh', 'van-mieu', 'ga-ha-noi', 'gia-lam', 'co-loa', 'yen-thuong'], status: PL, year: 2035, label: 'Extension Cát Linh – Gia Lâm – Cổ Loa – Yên Thường (~21 km)' },
     ],
   },
   {
@@ -300,7 +300,7 @@ export const LINES = [
     sources: ['vnx-18-lines', 'vi-wiki-line2', 'en-wiki', 'baoxaydung-5-lines', 'vtc-5-lines', 'osm'],
     geometry: 'l2',
     segments: [
-      { stations: ['noi-bai-south', 'vinh-ngoc', 'xuan-dinh'], status: UC, year: 2030, label: 'Nội Bài – Nam Thăng Long (groundbreaking 22 Jun 2026)' },
+      { stations: ['noi-bai-south', 'vinh-ngoc', 'thuong-thuy', 'xuan-dinh'], status: UC, year: 2030, label: 'Nội Bài – Nam Thăng Long (groundbreaking 22 Jun 2026)' },
       { stations: ['xuan-dinh', 'ngoai-giao-doan', 'tay-ho-tay', 'buoi', 'quan-ngua', 'bach-thao', 'ho-tay', 'hang-dau', 'ho-hoan-kiem', 'tran-hung-dao'], status: UC, year: 2030, label: 'Section 2.1 Nam Thăng Long – Trần Hưng Đạo (groundbreaking 9 Oct 2025)', path: true },
       { stations: ['tran-hung-dao', 'cau-den', 'bach-khoa', 'kim-lien', 'chua-boc', 'nga-tu-so', 'thuong-dinh'], status: UC, year: 2030, label: 'Trần Hưng Đạo – Thượng Đình (groundbreaking 22 Jun 2026)' },
       { stations: ['thuong-dinh', 'tam-hung', 'hung-vuong-stadium'], status: UC, year: 2030, label: 'Thượng Đình – Hùng Vương Stadium (groundbreaking 22 Jun 2026)' },
@@ -313,7 +313,7 @@ export const LINES = [
     description: 'Semi-circular line in the 2031–2035 phase of the 100-year master plan (~60 km). Only waypoints are published; stations shown are indicative interchange points. Color chosen.',
     sources: ['vnx-18-lines', 'vietnamnet-15-lines'],
     segments: [
-      { stations: ['thuong-cat', 'cau-dien', 'le-quang-dao', 'vanh-dai-3', 'linh-dam', 'linh-nam', 'long-bien', 'co-loa', 'dong-anh', 'quang-minh', 'me-linh'], status: PL, year: 2035, label: 'Thượng Cát – Mê Linh (indicative alignment)' },
+      { stations: ['thuong-cat', 'phu-dien-bac', 'cau-dien', 'le-quang-dao', 'vanh-dai-3-pham-hung', 'vanh-dai-3', 'linh-dam', 'giai-phong', 'tam-trinh', 'linh-nam', 'tu-dinh', 'long-bien', 'gia-lam', 'co-loa', 'dong-anh', 'quang-minh', 'me-linh'], status: PL, year: 2035, label: 'Thượng Cát – Mê Linh (indicative alignment)' },
     ],
   },
   {
@@ -334,7 +334,7 @@ export const LINES = [
     description: 'Western semi-ring from south of Nội Bài airport to the Ngọc Hồi rail complex (~42 km), priority for 2031–2035. Drawn along the corridor of earlier plans (Kim Nỗ – Thượng Cát – Phú Diễn – Hà Đông); stations are indicative. Color from the vi.wikipedia planning-map palette.',
     sources: ['vnx-18-lines', 'daidoanket-18-lines', 'en-wiki'],
     segments: [
-      { stations: ['noi-bai-south', 'kim-no', 'thuong-cat', 'phu-dien-bac', 'tay-mo', 'ha-dong-railway', 'ngoc-hoi'], status: PL, year: 2035, label: 'Nội Bài (south) – Ngọc Hồi (indicative alignment)' },
+      { stations: ['noi-bai-south', 'kim-no', 'kcn-thang-long', 'thuong-cat', 'phu-dien-bac', 'phu-dien', 'tay-mo', 'duong-noi', 'van-khe', 'ha-dong-railway', 'ngoc-hoi'], status: PL, year: 2035, label: 'Nội Bài (south) – Ngọc Hồi (indicative alignment)' },
     ],
   },
   {
@@ -343,7 +343,7 @@ export const LINES = [
     description: 'North–south line along the Ring Road 3.5 corridor (~51 km), 2036–2045 phase. Stations are indicative. Color from the vi.wikipedia planning-map palette.',
     sources: ['vnx-18-lines'],
     segments: [
-      { stations: ['me-linh', 'troi', 'an-khanh-1', 'duong-noi', 'yen-nghia', 'tam-hung', 'hung-vuong-stadium'], status: PL, year: 2045, label: 'Mê Linh – Hùng Vương Stadium (indicative alignment)' },
+      { stations: ['me-linh', 'troi', 'di-trach', 'an-khanh-1', 'duong-noi', 'yen-nghia', 'tam-hung', 'hung-vuong-stadium'], status: PL, year: 2045, label: 'Mê Linh – Hùng Vương Stadium (indicative alignment)' },
     ],
   },
   {
@@ -365,7 +365,7 @@ export const LINES = [
     description: 'Northern/eastern line (~46 km), 2036–2045 phase. Stations are indicative. Color chosen.',
     sources: ['vnx-18-lines', 'vietnamnet-15-lines'],
     segments: [
-      { stations: ['me-linh', 'quang-minh', 'dong-anh', 'co-loa', 'yen-thuong', 'duong-xa'], status: PL, year: 2045, label: 'Mê Linh – Cổ Loa – Dương Xá (indicative alignment)' },
+      { stations: ['me-linh', 'quang-minh', 'dong-anh', 'co-loa', 'yen-thuong', 'ha-huy-tap', 'duong-xa'], status: PL, year: 2045, label: 'Mê Linh – Cổ Loa – Dương Xá (indicative alignment)' },
     ],
   },
   {
@@ -375,7 +375,7 @@ export const LINES = [
     sources: ['vnx-18-lines', 'baoxaydung-5-lines', 'vtc-5-lines', 'vnn-contracts', 'osm'],
     geometry: 'l10',
     segments: [
-      { stations: ['nhat-tan', 'vo-chi-cong', 'xuan-la', 'mai-dich', 'le-duc-tho', 'xuan-phuong', 'le-quang-dao', 'duong-dinh-nghe', 'trung-kinh', 'hoang-dao-thuy', 'chinh-kinh', 'thuong-dinh', 'kim-giang', 'dinh-cong', 'giap-bat', 'tan-mai-west', 'tan-mai', 'times-city', 'vinh-tuy', 'tu-dinh', 'long-bien', 'lam-ha', 'gia-thuy', 'gia-quat', 'thuong-thanh', 'nam-duong', 'mai-lam', 'co-loa', 'nhat-tan'], status: UC, year: 2030, label: 'Ring Cổ Loa – Võ Chí Công – Times City – Cổ Loa (groundbreaking 22 Jun 2026)', path: true },
+      { stations: ['nhat-tan', 'vo-chi-cong', 'xuan-la', 'tay-ho-tay', 'mai-dich', 'le-duc-tho', 'xuan-phuong', 'le-quang-dao', 'duong-dinh-nghe', 'trung-kinh', 'hoang-dao-thuy', 'chinh-kinh', 'thuong-dinh', 'kim-giang', 'dinh-cong', 'giap-bat', 'tan-mai-west', 'tan-mai', 'times-city', 'vinh-tuy', 'tu-dinh', 'long-bien', 'lam-ha', 'gia-thuy', 'truong-lam', 'gia-quat', 'thuong-thanh', 'nam-duong', 'mai-lam', 'co-loa', 'nhat-tan'], status: UC, year: 2030, label: 'Ring Cổ Loa – Võ Chí Công – Times City – Cổ Loa (groundbreaking 22 Jun 2026)', path: true },
     ],
   },
   {
@@ -395,7 +395,7 @@ export const LINES = [
     description: 'New line in the 100-year master plan (~43 km), 2036–2045 phase. Only endpoints and West Lake are published; intermediate stations are indicative. Color chosen.',
     sources: ['vnx-18-lines'],
     segments: [
-      { stations: ['lien-ha', 'nhat-tan', 'ho-tay', 'cau-giay', 'trung-kinh', 'duong-noi', 'chuc-son'], status: PL, year: 2045, label: 'Liên Hà – Hồ Tây – Chúc Sơn (indicative alignment)' },
+      { stations: ['lien-ha', 'nhat-tan', 'ho-tay', 'kim-ma', 'cau-giay', 'trung-kinh', 'duong-noi', 'chuc-son'], status: PL, year: 2045, label: 'Liên Hà – Hồ Tây – Chúc Sơn (indicative alignment)' },
     ],
   },
   {
@@ -404,7 +404,7 @@ export const LINES = [
     description: 'New line (~29 km) to the Phú Xuyên satellite town, 2036–2045 phase. Stations are indicative. Color chosen.',
     sources: ['vnx-18-lines'],
     segments: [
-      { stations: ['ngoc-hoi', 'thuong-tin', 'thuong-phuc', 'phu-xuyen'], status: PL, year: 2045, label: 'Ngọc Hồi – Thường Tín – Phú Xuyên (indicative alignment)' },
+      { stations: ['ngoc-hoi', 'quoc-lo-1a', 'thuong-tin', 'thuong-phuc', 'phu-xuyen'], status: PL, year: 2045, label: 'Ngọc Hồi – Thường Tín – Phú Xuyên (indicative alignment)' },
     ],
   },
   {
@@ -422,7 +422,7 @@ export const LINES = [
     description: 'New line (~49 km), 2036–2045 phase. Only "Liên Hà – Ring Road 2.5 – Yên Viên" is published; the drawn route is a rough indication. Color chosen.',
     sources: ['vnx-18-lines'],
     segments: [
-      { stations: ['lien-ha', 'nhat-tan', 'hoang-quoc-viet', 'chinh-kinh', 'dinh-cong', 'linh-nam', 'gia-lam', 'yen-vien'], status: PL, year: 2045, label: 'Liên Hà – Vành đai 2,5 – Yên Viên (indicative alignment)' },
+      { stations: ['lien-ha', 'nhat-tan', 'xuan-la', 'tay-ho-tay', 'hoang-quoc-viet', 'chua-ha', 'vanh-dai-2', 'chinh-kinh', 'thuong-dinh', 'kim-giang', 'dinh-cong', 'tan-mai-west', 'tan-mai', 'linh-nam', 'tu-dinh', 'long-bien', 'gia-lam', 'gia-quat', 'yen-vien'], status: PL, year: 2045, label: 'Liên Hà – Vành đai 2,5 – Yên Viên (indicative alignment)' },
     ],
   },
   {

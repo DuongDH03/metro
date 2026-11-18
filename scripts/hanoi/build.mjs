@@ -35,7 +35,7 @@ function projectOnSegment(p, a, b) {
   const len2 = dx * dx + dy * dy;
   const t = len2 ? Math.max(0, Math.min(1, ((px - ax) * dx + (py - ay) * dy) / len2)) : 0;
   const q = [ax + t * dx, ay + t * dy];
-  return { point: fromXY(q), d: Math.hypot(px - q[0], py - q[1]) };
+  return { point: fromXY(q), t, d: Math.hypot(px - q[0], py - q[1]) };
 }
 
 function douglasPeucker(points, tol) {
@@ -286,7 +286,29 @@ function segmentPath(seg, key) {
     out.push(...piece);
   }
   if (!usedGraph) return undefined;
-  return douglasPeucker(removeSpikes(out), SIMPLIFY_M).map(round);
+  return passThroughStations(douglasPeucker(removeSpikes(out), SIMPLIFY_M), seg.stations).map(round);
+}
+
+// The traced alignment is sometimes sparse or offset from the (OSM / snapped) station position. A path that misses
+// its own station reads as a line cutting through an interchange it does not serve, so bend the path through any
+// station more than 25 m from it by inserting the station coordinate at the nearest point of the polyline.
+function passThroughStations(path, ids) {
+  const pts = path.slice();
+  // Two rounds: bending the path for one station can move it away from a neighbour that was already within tolerance.
+  for (const id of [...ids, ...ids]) {
+    const c = stationCoord.get(id);
+    let best = { d: Infinity, i: 0 };
+    for (let i = 1; i < pts.length; i++) {
+      const p = projectOnSegment(c, pts[i - 1], pts[i]);
+      if (p.d < best.d) best = { d: p.d, i, t: p.t };
+    }
+    if (best.d <= 25) continue;
+    // Nearest point is a path end: extend the path to the station; otherwise insert it mid-polyline.
+    if (best.i === 1 && distM(c, pts[0]) <= distM(c, pts[1]) && best.t <= 0) pts.unshift(c);
+    else if (best.i === pts.length - 1 && best.t >= 1) pts.push(c);
+    else pts.splice(best.i, 0, c);
+  }
+  return pts;
 }
 
 const linesOut = LINES.map((l) => {
