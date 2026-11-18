@@ -365,7 +365,7 @@ const LINES = [
       seg(['ben-thanh', 'tao-dan', 'dan-chu', 'hoa-hung', 'le-thi-rieng', 'pham-van-hai', 'bay-hien', 'nguyen-hong-dao', 'ba-queo', 'pham-van-bach', 'tan-binh'], 'construction', 2030, 'Bến Thành – Tham Lương (construction began 15 Jan 2026)', { pathFrom: 'l2' }),
       seg(['tan-binh', 'an-suong', 'an-ha'], 'planned', 2030, 'Tham Lương – An Hạ (2026-2030 priority list; PPP proposal, alignment indicative)'),
       seg(['an-ha', 'kenh-an-ha', 'tay-bac-cu-chi'], 'planned', 2030, 'Branch 2S An Hạ – Tây Bắc Củ Chi urban area (2026-2030 priority list; alignment indicative)'),
-      seg(['thu-thiem', 'ben-xe-song-tac'], 'planned', undefined, 'Eastern extension Thủ Thiêm – Sông Tắc bus terminal (network plan; no schedule)'),
+      seg(['thu-thiem', 'long-truong', 'ben-xe-song-tac'], 'planned', undefined, 'Eastern extension Thủ Thiêm – Sông Tắc bus terminal (network plan; no schedule)'),
     ],
   },
   {
@@ -383,7 +383,7 @@ const LINES = [
     description: 'Đông Thạnh – Hà Huy Giáp – Nguyễn Oanh – Nguyễn Kiệm – Tân Sơn Nhất airport – Nguyễn Văn Trỗi – Hai Bà Trưng – Bến Thành – Nguyễn Hữu Thọ – Bà Chiêm bridge – Hiệp Phước (47.3 km). Priority line for 2035; Sovico has studied a ~43 km version via the airport. Southern stations (ST.13–ST.30) follow OSM mapping of that study; northern points are waypoints. The Oct 2026 draft plan would extend it north to Thủ Dầu Một.',
     sources: ['tienphong-12', 'tuoitre-10', 'voh-10', 'vtc-5', 'dantri-draft', 'osm-l2', 'wiki-colors'],
     segments: [
-      seg(['dong-thanh', 'ha-huy-giap', 'nguyen-oanh', 'go-vap', 'cong-vien-gia-dinh', 'tan-son-nhat', 'nguyen-van-troi', 'cong-vien-le-van-tam', 'nha-tho-duc-ba', 'ben-thanh', 'cong-vien-khanh-hoi', 'nguyen-thi-thap', 'nguyen-van-linh', 'rach-dia', 'cau-so-1', 'vinh-phuoc', 'kho-b', 'phuoc-kien', 'ba-chiem', 'long-thoi', 'phan-van-bay', 'cong-vien-the-thao', 'trung-tam-hiep-phuoc', 'bau-le', 'hiep-phuoc'], 'planned', 2035, 'Đông Thạnh – Hiệp Phước (target 2035)'),
+      seg(['dong-thanh', 'ha-huy-giap', 'nguyen-oanh', 'go-vap', 'cong-vien-gia-dinh', 'tan-son-nhat', 'nguyen-van-troi', 'cong-vien-le-van-tam', 'nha-tho-duc-ba', 'ben-thanh', 'cau-ong-lanh', 'cong-vien-khanh-hoi', 'nguyen-thi-thap', 'nguyen-van-linh', 'rach-dia', 'cau-so-1', 'vinh-phuoc', 'kho-b', 'phuoc-kien', 'ba-chiem', 'long-thoi', 'phan-van-bay', 'cong-vien-the-thao', 'trung-tam-hiep-phuoc', 'bau-le', 'hiep-phuoc'], 'planned', 2035, 'Đông Thạnh – Hiệp Phước (target 2035)'),
       seg(['dong-thanh', 'go-dau'], 'proposed', undefined, 'Northern extension to Thủ Dầu Một (Oct 2026 draft network plan, not approved)'),
     ],
   },
@@ -393,7 +393,7 @@ const LINES = [
     description: 'Hưng Long university town – new Cần Giuộc bus station – QL50 – Cao Xuân Dục – Phù Đổng Thiên Vương – Lý Thường Kiệt – Hoàng Văn Thụ – Phan Đăng Lưu – Bạch Đằng – Điện Biên Phủ – Võ Nguyên Giáp – Liên Phường – Long Thuận, then branches to Vinhomes Grand Park and Sông Tắc (53.9 km, Decision 1711). Proposed for deferral to 2036-2045 (Sep 2025 priority review). An Aug 2025 description gives a different alignment (Long Trường – Sài Gòn bridge – Bảy Hiền – Đa Phước), and the Oct 2026 draft keeps only the Hoàng Văn Thụ – Tân Cảng branch; treat the alignment as uncertain.',
     sources: ['tienphong-12', 'vietnamnet-12', 'voh-10', 'dbnd-7', 'dantri-draft', 'wiki-colors'],
     segments: [
-      seg(['hung-long', 'ben-xe-can-giuoc', 'binh-hung', 'cao-xuan-duc', 'phu-dong-thien-vuong', 'phu-tho', 'bay-hien', 'hoang-van-thu', 'phan-dang-luu', 'hang-xanh', 'tan-cang', 'rach-chiec', 'lien-phuong', 'long-thuan', 'vinhomes-grand-park'], 'planned', 2045, 'Hưng Long – Vinhomes Grand Park (target 2036-2045)'),
+      seg(['hung-long', 'ben-xe-can-giuoc', 'binh-hung', 'cao-xuan-duc', 'phu-dong-thien-vuong', 'phu-tho', 'bay-hien', 'hoang-van-thu', 'phan-dang-luu', 'le-van-duyet', 'hang-xanh', 'tan-cang', 'thao-dien', 'rach-chiec', 'lien-phuong', 'long-thuan', 'vinhomes-grand-park'], 'planned', 2045, 'Hưng Long – Vinhomes Grand Park (target 2036-2045)'),
       seg(['long-thuan', 'ben-xe-song-tac'], 'planned', 2045, 'Branch to Sông Tắc bus terminal'),
     ],
   },
@@ -404,7 +404,7 @@ const LINES = [
     sources: ['tuoitre-140', 'vtc-5', 'vtc-ttlt', 'hdnd-gantt', 'tienphong-12', 'tuoitre-10', 'osm-l2', 'wiki-colors'],
     segments: [
       seg(L6P1, 'approved', 2030, 'Phase 1 Tân Sơn Nhất (Bà Quẹo) – Phú Hữu (~23 km, target 2030)', { pathFrom: 'l6' }),
-      seg(['phu-huu', 'cat-lai', 'tan-thuan', 'nguyen-thi-thap', 'ta-quang-buu', 'nguyen-van-luong', 'phu-lam', 'luy-ban-bich', 'au-co', 'ba-queo'], 'planned', 2035, 'Phase 2 Phú Hữu – Tân Thuận – Phú Lâm – Bà Quẹo (target 2035)'),
+      seg(['phu-huu', 'cat-lai', 'tan-thuan', 'phu-my-hung', 'nguyen-thi-thap', 'ta-quang-buu', 'nguyen-van-luong', 'phu-lam', 'luy-ban-bich', 'au-co', 'ba-queo'], 'planned', 2035, 'Phase 2 Phú Hữu – Tân Thuận – Phú Lâm – Bà Quẹo (target 2035)'),
     ],
   },
   {
@@ -413,7 +413,7 @@ const LINES = [
     description: 'Tân Kiên – Nguyễn Văn Linh – Bình Hưng Nam – Đào Sư Tích – Phú Mỹ Hưng – Huỳnh Tấn Phát – Trần Bạch Đằng – Trần Não – Thảo Điền – Thanh Đa – Trường Thọ – Rạch Chiếc – High Tech Park (D2) – Vinhomes Grand Park – Long Bình depot (51.2 km). Proposed for deferral to 2036-2045. The Oct 2026 draft plan would extend it north to Biên Hòa and south-west to Tây Ninh.',
     sources: ['tienphong-12', 'voh-10', 'dbnd-7', 'dantri-draft', 'wiki-colors'],
     segments: [
-      seg(['tan-kien', 'phong-phu', 'binh-hung-nam', 'dao-su-tich', 'phu-my-hung', 'tran-bach-dang', 'tran-nao', 'thao-dien', 'thanh-da', 'linh-dong', 'rach-chiec', 'd2-cnc', 'vinhomes-grand-park', 'long-binh'], 'planned', 2045, 'Tân Kiên – Long Bình (target 2036-2045)'),
+      seg(['tan-kien', 'phong-phu', 'binh-hung-nam', 'dao-su-tich', 'phu-my-hung', 'tran-bach-dang', 'benh-vien-quoc-te', 'tran-nao', 'thao-dien', 'thanh-da', 'linh-dong', 'rach-chiec', 'd2-cnc', 'vinhomes-grand-park', 'long-binh'], 'planned', 2045, 'Tân Kiên – Long Bình (target 2036-2045)'),
       seg(['long-binh', 'bien-hoa'], 'proposed', undefined, 'Northern extension to Biên Hòa (Oct 2026 draft network plan, not approved)'),
     ],
   },
@@ -423,7 +423,7 @@ const LINES = [
     description: 'Đa Phước – Chánh Hưng – Phạm Hùng – Ngô Gia Tự – Điện Biên Phủ – Nguyễn Phúc Nguyên – Hòa Hưng (Saigon) railway station – along the national railway – Nguyễn Kiệm – Quang Trung – Quang Trung Software Park – Tô Ký – Tân Chánh Hiệp – Hóc Môn – Bình Mỹ (42.8 km). Part of the 155 km (Lines 8-10) to be added by 2045. The Oct 2026 draft re-uses the number 8 for a new east–west line.',
     sources: ['tienphong-12', 'sggp-355', 'dantri-draft', 'wiki-colors'],
     segments: [
-      seg(['da-phuoc', 'pham-hung', 'chanh-hung', 'hung-vuong', 'ly-thai-to', 'hoa-hung', 'go-vap', 'quang-trung', 'cv-phan-mem-quang-trung', 'to-ky', 'tan-chanh-hiep', 'hoc-mon', 'binh-my'], 'planned', 2045, 'Đa Phước – Bình Mỹ (target 2045)'),
+      seg(['da-phuoc', 'binh-hung-nam', 'pham-hung', 'chanh-hung', 'hung-vuong', 'ly-thai-to', 'hoa-hung', 'nguyen-van-troi', 'go-vap', 'quang-trung', 'cv-phan-mem-quang-trung', 'to-ky', 'tan-chanh-hiep', 'hoc-mon', 'binh-my'], 'planned', 2045, 'Đa Phước – Bình Mỹ (target 2045)'),
     ],
   },
   {
@@ -432,7 +432,7 @@ const LINES = [
     description: 'Bình Triệu station – Nơ Trang Long – Lê Văn Duyệt – Võ Thị Sáu – Hòa Hưng railway station – Tô Hiến Thành – Phú Thọ sports centre – Âu Cơ – Tân Kỳ Tân Quý – Hương Lộ 3 – Vĩnh Lộc A – Thanh Niên canal – An Hạ depot (28.3 km). Part of the 155 km (Lines 8-10) to be added by 2045.',
     sources: ['tienphong-12', 'sggp-355', 'wiki-colors'],
     segments: [
-      seg(['binh-trieu', 'no-trang-long', 'le-van-duyet', 'cong-vien-le-van-tam', 'hoa-hung', 'to-hien-thanh', 'phu-tho', 'au-co', 'tan-ky-tan-quy', 'huong-lo-3', 'vinh-loc-a', 'an-ha'], 'planned', 2045, 'Bình Triệu – An Hạ (target 2045)'),
+      seg(['binh-trieu', 'cau-binh-loi', 'no-trang-long', 'le-van-duyet', 'cong-vien-le-van-tam', 'hoa-hung', 'to-hien-thanh', 'phu-tho', 'au-co', 'tan-ky-tan-quy', 'huong-lo-3', 'vinh-loc-a', 'an-ha'], 'planned', 2045, 'Bình Triệu – An Hạ (target 2045)'),
     ],
   },
   {
@@ -441,7 +441,7 @@ const LINES = [
     description: 'Outer ring (83.9 km): Thủ Thiêm – Trương Văn Bang – Cát Lái – Tam Đa – Long Phước – High Tech Park (D1) – Linh Trung – QL1 – Ngã tư Bình Phước – An Phú Đông – Vàm Thuật river – 19/5 canal – Tham Lương canal – Mã Lò – Tân Tạo IP – Bình Tân medical zone – Hồ Học Lãm – Trịnh Quang Nghị – Phong Phú – Nhơn Đức – Nguyễn Bình – Đào Trí – Tân Thuận – Thủ Thiêm. Part of the 155 km (Lines 8-10) to be added by 2045. In the Oct 2026 draft its western part becomes a new Line 13.',
     sources: ['tienphong-12', 'sggp-355', 'dantri-draft', 'wiki-colors'],
     segments: [
-      seg(['thu-thiem', 'truong-van-bang', 'cat-lai', 'tam-da', 'long-thuan', 'd1-cnc', 'linh-trung', 'linh-xuan', 'nga-tu-binh-phuoc', 'an-phu-dong', 'tan-binh', 'kenh-tham-luong', 'ma-lo', 'kcn-tan-tao', 'an-lac', 'trinh-quang-nghi', 'phong-phu', 'nhon-duc', 'ba-chiem', 'dao-tri', 'tan-thuan', 'thu-thiem'], 'planned', 2045, 'Outer ring loop (target 2045)'),
+      seg(['thu-thiem', 'truong-van-bang', 'cat-lai', 'phu-huu', 'tam-da', 'long-thuan', 'd1-cnc', 'khu-cong-nghe-cao', 'linh-trung', 'linh-xuan', 'nga-tu-binh-phuoc', 'an-phu-dong', 'tan-binh', 'kenh-tham-luong', 'ma-lo', 'kcn-tan-tao', 'an-lac', 'trinh-quang-nghi', 'phong-phu', 'ben-xe-can-giuoc', 'nhon-duc', 'ba-chiem', 'dao-tri', 'tan-thuan', 'thu-thiem'], 'planned', 2045, 'Outer ring loop (target 2045)'),
     ],
   },
   {
@@ -450,7 +450,7 @@ const LINES = [
     description: 'Riverside tram/LRT for tourism: Western Bus Station – Lý Chiêu Hoàng – Võ Văn Kiệt – Mê Linh square – Tôn Đức Thắng – Ba Son – Saigon riverside road – Củ Chi (48.7 km; depot Trung An). In the Decision 1711 network; no schedule.',
     sources: ['tienphong-12', 'vietnamnet-12', 'vi-wiki', 'wiki-colors'],
     segments: [
-      seg(['ben-xe-mien-tay', 'ly-chieu-hoang', 'vo-van-kiet-cho-lon', 'cau-ong-lanh', 'me-linh', 'ba-son', 'binh-quoi', 'thanh-loc', 'binh-my', 'trung-an'], 'planned', undefined, 'Western Bus Station – Củ Chi (no schedule)'),
+      seg(['ben-xe-mien-tay', 'ly-chieu-hoang', 'vo-van-kiet-cho-lon', 'cau-ong-lanh', 'ham-nghi', 'me-linh', 'ba-son', 'binh-quoi', 'binh-trieu-ql13', 'thanh-loc', 'binh-my', 'trung-an'], 'planned', undefined, 'Western Bus Station – Củ Chi (no schedule)'),
     ],
   },
   {
@@ -459,7 +459,7 @@ const LINES = [
     description: 'High-speed (up to 350 km/h) line from 23/9 Park (Bến Thành) along Hoàng Diệu – Nguyễn Văn Linh – Nhà Bè – Bình Khánh to the Cần Giờ coastal reclaimed urban area (54 km). PPP by VinSpeed (Vingroup), ~102,430 bn VND; groundbreaking 19 Dec 2025; operation targeted for 2028. Phase 1 has only 2 stations (Bến Thành, Cần Giờ); 4 intermediate stations may be added later. The Oct 2026 draft envisions a long-term bridge/tunnel link on to Vũng Tàu.',
     sources: ['voh-cangio', 'vtc-5', 'vtc-ttlt', 'vi-wiki', 'dantri-draft', 'wiki-colors'],
     segments: [
-      seg(['ben-thanh', 'can-gio'], 'construction', 2028, 'Bến Thành – Cần Giờ (groundbreaking 19 Dec 2025)', { pathFrom: 'cangio' }),
+      seg(['ben-thanh', 'phu-my-hung', 'tan-thuan', 'can-gio'], 'construction', 2028, 'Bến Thành – Cần Giờ (groundbreaking 19 Dec 2025)', { pathFrom: 'cangio' }),
       seg(['can-gio', 'le-hong-phong'], 'proposed', undefined, 'Long-term link Cần Giờ – Vũng Tàu by bridge or undersea tunnel (Oct 2026 draft, not approved)'),
     ],
   },
@@ -485,7 +485,7 @@ const LINES = [
     id: 'bd-line-1b', code: 'B1B', name: 'Binh Duong Line 1B', nameLocal: 'Tuyến 1B (Tân Đông Hiệp – Ngã tư Gò Dưa)', group: 'regional', color: '#c99700', mode: 'metro', lengthKm: 7.5,
     description: 'Tân Đông Hiệp – Ngã tư Gò Dưa (7.5 km), former Bình Dương provincial plan. Endpoints only; no schedule. Colour chosen for this app.',
     sources: ['vi-wiki', 'vi-wiki-bd'],
-    segments: [seg(['tan-dong-hiep', 'nga-tu-go-dua'], 'planned', undefined, 'Tân Đông Hiệp – Ngã tư Gò Dưa')],
+    segments: [seg(['tan-dong-hiep', 'b1-s13', 'nga-tu-go-dua'], 'planned', undefined, 'Tân Đông Hiệp – Ngã tư Gò Dưa')],
   },
   {
     id: 'bd-line-2', code: 'B2', name: 'Thu Dau Mot – Tao Dan Line', nameLocal: 'Tuyến Thủ Dầu Một – TP.HCM (Đồng Cây Viết – Tao Đàn)', group: 'metro', color: '#00a651', mode: 'metro',
@@ -518,7 +518,7 @@ const LINES = [
     id: 'bd-line-3b', code: 'B3B', name: 'Binh Duong Line 3B', nameLocal: 'Tuyến 3B (Thủ Dầu Một – Biên Hòa)', group: 'regional', color: '#ab47bc', mode: 'metro', lengthKm: 16.5,
     description: 'Thủ Dầu Một – Biên Hòa (16.5 km), former Bình Dương plan. Intermediate point indicative; no schedule. Colour chosen for this app.',
     sources: ['vi-wiki', 'vi-wiki-bd'],
-    segments: [seg(['go-dau', 'tan-phuoc-khanh', 'bien-hoa'], 'planned', undefined, 'Thủ Dầu Một – Biên Hòa')],
+    segments: [seg(['go-dau', 'b1-s7', 'tan-phuoc-khanh', 'bien-hoa'], 'planned', undefined, 'Thủ Dầu Một – Biên Hòa')],
   },
   {
     id: 'bd-line-4', code: 'B4', name: 'Binh Duong Line 4', nameLocal: 'Tuyến 4 (Tân Uyên – TP mới Bình Dương – Tây Nam)', group: 'regional', color: '#795548', mode: 'metro', lengthKm: 32.6,
@@ -530,7 +530,7 @@ const LINES = [
     id: 'bd-line-5', code: 'B5', name: 'Binh Duong Line 5', nameLocal: 'Tuyến 5 (Cầu Thủ Biên – Cầu Phú Thuận)', group: 'regional', color: '#607d8b', mode: 'metro', lengthKm: 48.2,
     description: 'East–west line from Thủ Biên bridge (Thường Tân, Đồng Nai river) to Phú Thuận bridge (Phú An, Saigon river), 48.2 km, former Bình Dương plan. Intermediate points indicative; no schedule. Colour chosen for this app.',
     sources: ['vi-wiki', 'vi-wiki-bd'],
-    segments: [seg(['cau-thu-bien', 'bach-dang-tu', 'tan-uyen', 'b1-s0b', 'phu-an', 'cau-phu-thuan'], 'planned', undefined, 'Cầu Thủ Biên – Cầu Phú Thuận')],
+    segments: [seg(['cau-thu-bien', 'bach-dang-tu', 'tan-uyen', 'b1-s0b', 'b1-s1', 'phu-an', 'cau-phu-thuan'], 'planned', undefined, 'Cầu Thủ Biên – Cầu Phú Thuận')],
   },
   {
     id: 'bd-line-6', code: 'B6', name: 'Binh Duong Line 6', nameLocal: 'Tuyến 6 (TP mới Bình Dương – Bàu Bàng)', group: 'regional', color: '#ff7043', mode: 'metro', lengthKm: 26.1,
@@ -683,17 +683,30 @@ function dijkstra(nodes, src, dst) {
 
 function pathFor(setName, stationIds) {
   const nodes = buildGraph(WAYSETS[setName]);
-  let path = [];
   const anchors = stationIds.map((id) => {
     const [n, d] = nearest(nodes, ST[id].coord);
     if (d > 1.2) console.warn(`  path ${setName}: station ${id} is ${d.toFixed(2)} km from track`);
-    return n;
+    return [n, d];
   });
+  // Legs between consecutive stations; leg boundaries are the (snapped) station positions.
+  const legs = [];
   for (let i = 1; i < anchors.length; i++) {
-    const p = dijkstra(nodes, anchors[i - 1], anchors[i]);
+    const p = dijkstra(nodes, anchors[i - 1][0], anchors[i][0]);
     if (!p) { console.warn(`  path ${setName}: no route ${stationIds[i - 1]} -> ${stationIds[i]}`); return undefined; }
-    path = path.length ? path.concat(p.slice(1)) : p;
+    legs.push(p);
   }
+  // Make the geometry pass through every station that sits > 20 m from the traced track
+  // (interchange stations shared with another line, or stations whose OSM track ends short),
+  // so a station marker is never off its own line.
+  const FAR_KM = 0.02;
+  stationIds.forEach((id, i) => {
+    if (anchors[i][1] <= FAR_KM) return;
+    const c = ST[id].coord;
+    if (i > 0) legs[i - 1][legs[i - 1].length - 1] = c;
+    if (i < legs.length) legs[i][0] = c;
+  });
+  let path = [];
+  for (const p of legs) path = path.length ? path.concat(p.slice(1)) : p;
   return simplify(path, 15).map(round5);
 }
 
