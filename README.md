@@ -1,5 +1,9 @@
 # Metro Vision
 
+**Inspired by this video:** https://www.youtube.com/watch?v=RVjI1erV7pI
+
+[![Video thumbnail](https://img.youtube.com/vi/RVjI1erV7pI/hqdefault.jpg)](https://www.youtube.com/watch?v=RVjI1erV7pI)
+
 Interactive, data-driven map of current and future urban rail networks in **11 cities**: Hanoi, Ho Chi Minh City, Tokyo, Osaka · Kyoto,
 Nagoya · Gifu, Singapore, Taipei, Taichung, Tainan, Kaohsiung and London.
 See what runs today, what is being built, and what is planned, and watch the network grow year by year.
