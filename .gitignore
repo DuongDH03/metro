@@ -15,3 +15,7 @@ Thumbs.db
 *.log
 .geocode-cache.json
 skills/dist
+
+.rtk/
+CLAUDE.md
+install.ps1
