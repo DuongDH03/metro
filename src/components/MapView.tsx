@@ -139,9 +139,24 @@ export default function MapView(props: Props) {
     if (!map.getSource(STATION_SOURCE)) {
       map.addSource(STATION_SOURCE, { type: 'geojson', data: { type: 'FeatureCollection', features: [] } });
     }
-    // Lines go under the basemap labels; stations on top of everything.
-    const firstSymbol = map.getStyle().layers?.find((l) => l.type === 'symbol')?.id;
-    for (const layer of lineLayers(theme)) if (!map.getLayer(layer.id)) map.addLayer(layer, firstSymbol);
+    // CARTO may draw some road strokes after its first symbol layer; put metro lines
+    // after the final road layer but before subsequent labels.
+    const styleLayers = map.getStyle().layers ?? [];
+    const firstSymbol = styleLayers.find((l) => l.type === 'symbol')?.id;
+    const lastRoadIndex = styleLayers.reduce((lastIndex, layer, index) => {
+      const metadata = layer.metadata;
+      return typeof metadata === 'object' &&
+        metadata !== null &&
+        'carto:group' in metadata &&
+        metadata['carto:group'] === 'roads'
+        ? index
+        : lastIndex;
+    }, -1);
+    const lineAnchor =
+      lastRoadIndex >= 0
+        ? styleLayers.slice(lastRoadIndex + 1).find((l) => l.type === 'symbol')?.id
+        : firstSymbol;
+    for (const layer of lineLayers(theme)) if (!map.getLayer(layer.id)) map.addLayer(layer, lineAnchor);
     for (const layer of stationLayers(theme)) if (!map.getLayer(layer.id)) map.addLayer(layer);
     dataGeoRef.current = null;
     readyRef.current = true;
